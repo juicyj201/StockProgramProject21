@@ -23,18 +23,7 @@ namespace StockProgram
 
             openConnection();
             closeConnection();
-        }
 
-        private void openConnection() { 
-            conn.Open();
-        }
-
-        private void closeConnection() {
-            conn.Close();
-        }
-
-        private void stockBtn_Click(object sender, EventArgs e)
-        {
             //the command object
             string selectStock = "SELECT* from Products";
             SQLiteCommand selectComm = new SQLiteCommand(selectStock, conn);
@@ -45,6 +34,14 @@ namespace StockProgram
 
             //actually putting it in the form
             stockView.DataSource = table;
+        }
+
+        private void openConnection() { 
+            conn.Open();
+        }
+
+        private void closeConnection() {
+            conn.Close();
         }
 
         private void sortBtn_Click(object sender, EventArgs e)

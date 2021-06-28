@@ -18,7 +18,7 @@ namespace StockProgram
 
         public Login()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
         private void addUser() { 

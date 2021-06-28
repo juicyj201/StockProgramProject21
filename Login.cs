@@ -24,5 +24,9 @@ namespace StockProgram
         private void addUser() { 
             
         }
+        
+        private void addPass(){
+            //some type of code here
+        }
     }
 }

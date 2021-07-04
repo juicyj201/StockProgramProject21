@@ -87,7 +87,7 @@ namespace StockProgram
             // LoadTimer
             // 
             this.LoadTimer.Enabled = true;
-            this.LoadTimer.Interval = 5000;
+            this.LoadTimer.Interval = 1000;
             this.LoadTimer.Tick += new System.EventHandler(this.LoadTimer_Tick);
             // 
             // loadBar
@@ -95,9 +95,7 @@ namespace StockProgram
             this.loadBar.Location = new System.Drawing.Point(93, 258);
             this.loadBar.Name = "loadBar";
             this.loadBar.Size = new System.Drawing.Size(436, 23);
-            this.loadBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.loadBar.TabIndex = 4;
-            //this.loadBar.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // SplashScreen
             // 

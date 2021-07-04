@@ -22,7 +22,7 @@ namespace StockProgram
             this.Hide();
             MainDatabase mainDatabaseCall = new MainDatabase();
             mainDatabaseCall.Show();
-            this.Close();
+            //this.Close();
         }
 
         private void stockeditingBtn_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace StockProgram
             this.Hide();
             EditPriceStock editStockCall = new EditPriceStock();
             editStockCall.Show();
-            this.Close();
+            //this.Close();
         }
 
         private void stockupdatingBtn_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace StockProgram
             this.Hide();
             UpdateDatabase updateStockCall = new UpdateDatabase();
             updateStockCall.Show();
-            this.Close();
+            //this.Close();
         }
 
         private void stocktrackingBtn_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace StockProgram
             this.Hide();
             StockTracking stockTrackingCall = new StockTracking();
             stockTrackingCall.Show();
-            this.Close();
+            //this.Close();
         }
 
         private void helpBtn_Click(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace StockProgram
             this.Hide();
             Help helpCall = new Help();
             helpCall.Show();
-            this.Close();
+            //this.Close();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)

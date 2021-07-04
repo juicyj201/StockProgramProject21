@@ -19,7 +19,7 @@ namespace StockProgram
 
         private void LoadTimer_Tick(object sender, EventArgs e)
         {
-            loadBar.Increment(50);
+            loadBar.Increment(20);
             if (loadBar.Value == 100)
             {
                 this.Close();

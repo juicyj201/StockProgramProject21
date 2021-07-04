@@ -16,5 +16,10 @@ namespace StockProgram
         {
             InitializeComponent();
         }
+
+        private void LoadTimer_Tick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

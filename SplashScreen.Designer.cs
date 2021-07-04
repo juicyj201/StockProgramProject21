@@ -35,6 +35,7 @@ namespace StockProgram
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LoadTimer = new System.Windows.Forms.Timer(this.components);
+            this.loadBar = new System.Windows.Forms.ProgressBar();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +79,7 @@ namespace StockProgram
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(93, 54);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(508, 122);
             this.panel1.TabIndex = 3;
@@ -89,28 +90,36 @@ namespace StockProgram
             this.LoadTimer.Interval = 5000;
             this.LoadTimer.Tick += new System.EventHandler(this.LoadTimer_Tick);
             // 
+            // loadBar
+            // 
+            this.loadBar.Location = new System.Drawing.Point(93, 258);
+            this.loadBar.Name = "loadBar";
+            this.loadBar.Size = new System.Drawing.Size(436, 23);
+            this.loadBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.loadBar.TabIndex = 4;
+            //this.loadBar.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
             // SplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(701, 275);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(600, 300);
+            this.Controls.Add(this.loadBar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Yi Baiti", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(719, 322);
+            this.MaximumSize = new System.Drawing.Size(600, 300);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(719, 322);
+            this.MinimumSize = new System.Drawing.Size(600, 300);
             this.Name = "SplashScreen";
             this.ShowIcon = false;
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreen";
-            this.TopMost = true;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -125,5 +134,6 @@ namespace StockProgram
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer LoadTimer;
+        private System.Windows.Forms.ProgressBar loadBar;
     }
 }

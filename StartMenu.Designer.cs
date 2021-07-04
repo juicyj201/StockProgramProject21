@@ -44,7 +44,7 @@ namespace StockProgram
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(319, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(125, 74);
             this.panel1.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace StockProgram
             this.label1.Location = new System.Drawing.Point(22, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 34);
+            this.label1.Size = new System.Drawing.Size(78, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Menu";
             // 
@@ -130,7 +130,7 @@ namespace StockProgram
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(782, 640);
+            this.ClientSize = new System.Drawing.Size(782, 633);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.helpBtn);
             this.Controls.Add(this.stocktrackingBtn);
@@ -140,8 +140,12 @@ namespace StockProgram
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximumSize = new System.Drawing.Size(800, 680);
+            this.MinimumSize = new System.Drawing.Size(800, 680);
             this.Name = "StartMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartMenu";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

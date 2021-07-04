@@ -51,12 +51,10 @@ namespace StockProgram
 
         private void helpBtn_Click(object sender, EventArgs e)
         {
-            /**
             this.Hide();
             Help helpCall = new Help();
             helpCall.Show();
             this.Close();
-            **/
         }
 
         private void exitBtn_Click(object sender, EventArgs e)

@@ -15,6 +15,14 @@ namespace StockProgram
         public UpdateDatabase()
         {
             InitializeComponent();
+
+            openConnection();
+            showStock();
+            closeConnection();
+        }
+
+        private void showStock() {
+            getTable();
         }
     }
 }

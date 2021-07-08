@@ -45,7 +45,7 @@ namespace StockProgram
         }
 
         //method for showing the database
-        protected void showStock() {
+        private void showStock() {
             //the command object
             string selectStock = "SELECT* from Products";
             SQLiteCommand selectComm = new SQLiteCommand(selectStock, conn);
@@ -105,14 +105,15 @@ namespace StockProgram
             table = new DataTable();
         }
 
+        //add method to check items into the stock database
         private void submitStockBtn_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(enterIdTb.Text))
             {
                 string enterId;
                 enterId = enterIdTb.Text;
-                string command = "INSERT into Products(Id) VALUES(enterId)";
-                SQLiteCommand enterIdComm = new SQLiteCommand(command);
+                SQLiteCommand enterIdComm = new SQLiteCommand("INSERT into Products(Id) VALUES(?)");
+                enterIdComm.Parameters.Add(enterId);
                 SQLiteDataAdapter enterIdAdpt = new SQLiteDataAdapter(enterIdComm);
                 enterIdAdpt.Update(table);
             }
@@ -120,8 +121,8 @@ namespace StockProgram
             {
                 string enterName;
                 enterName = enterNameTb.Text;
-                string command = "INSERT into Products(Name) VALUES(enterName)";
-                SQLiteCommand enterNameComm = new SQLiteCommand(command);
+                SQLiteCommand enterNameComm = new SQLiteCommand("INSERT into Products(Name) VALUES(?)");
+                enterNameComm.Parameters.Add(enterName);
                 SQLiteDataAdapter enterNameAdpt = new SQLiteDataAdapter(enterNameComm);
                 enterNameAdpt.Update(table);
             }
@@ -129,8 +130,8 @@ namespace StockProgram
             {
                 string enterPrice;
                 enterPrice = enterPriceTb.Text;
-                string command = "INSERT into Products(Price) VALUES(enterPrice)";
-                SQLiteCommand enterPriceComm = new SQLiteCommand(command);
+                SQLiteCommand enterPriceComm = new SQLiteCommand("INSERT into Products(Price) VALUES(?)");
+                enterPriceComm.Parameters.Add(enterPrice);
                 SQLiteDataAdapter enterPriceAdpt = new SQLiteDataAdapter(enterPriceComm);
                 enterPriceAdpt.Update(table);
             }
@@ -138,8 +139,8 @@ namespace StockProgram
             {
                 string enterQuant;
                 enterQuant = enterQuantityTb.Text;
-                string command = "INSERT into Products(Quantity) VALUES(enterQuant)";
-                SQLiteCommand enterQuantComm = new SQLiteCommand(command);
+                SQLiteCommand enterQuantComm = new SQLiteCommand("INSERT into Products(Quantity) VALUES(?)");
+                enterQuantComm.Parameters.Add(enterQuant);
                 SQLiteDataAdapter enterQuantAdpt = new SQLiteDataAdapter(enterQuantComm);
                 enterQuantAdpt.Update(table);
             }

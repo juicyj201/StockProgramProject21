@@ -182,6 +182,7 @@ namespace StockProgram
             this.Controls.Add(this.sortBtn);
             this.Controls.Add(this.stockView);
             this.Name = "MainDatabase";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainDatabase";
             ((System.ComponentModel.ISupportInitialize)(this.stockView)).EndInit();
             this.ResumeLayout(false);

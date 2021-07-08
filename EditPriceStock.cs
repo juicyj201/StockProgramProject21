@@ -16,6 +16,14 @@ namespace StockProgram
         public EditPriceStock()
         {
             InitializeComponent();
+
+            openConnection();
+            showStock();
+            closeConnection();
+        }
+
+        private void showStock() {
+            getTable();
         }
     }
 }

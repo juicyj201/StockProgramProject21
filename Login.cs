@@ -17,9 +17,14 @@ namespace StockProgram
         {
             InitializeComponent();
 
-            
+            openConnection();
+
+            showStock();
+            closeConnection();
         }
 
-
+        private showStock() {
+            getTable();
+        }
     }   
 }

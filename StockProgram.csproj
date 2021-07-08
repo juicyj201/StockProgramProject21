@@ -129,6 +129,9 @@
     <EmbeddedResource Include="StartMenu.resx">
       <DependentUpon>StartMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StockTracking.resx">
+      <DependentUpon>StockTracking.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,7 +142,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="README.md" />
-    <None Include="StockDatabase.sqlite" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

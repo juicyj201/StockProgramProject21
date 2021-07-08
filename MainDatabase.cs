@@ -14,8 +14,23 @@ namespace StockProgram
     public partial class MainDatabase : Form
     {
         //global variables
-        private SQLiteConnection conn = new SQLiteConnection(@"data source=C:\Users\joshu\source\repos\StockProgram\StockDatabase.sqlite");
-        private DataTable table = new DataTable();
+        private SQLiteConnection conn {
+            get {
+                return conn;
+            }
+            set { 
+                new SQLiteConnection(@"data source=database\StockDatabase.sqlite");
+            }
+
+        } 
+        private DataTable table
+        {
+            get {
+                return table;
+            }
+            set { new DataTable(); 
+            }
+        } 
 
         public MainDatabase()
         {
@@ -26,15 +41,15 @@ namespace StockProgram
             closeConnection();
         }
 
-        private void openConnection() { 
+        protected void openConnection() { 
             conn.Open();
         }
 
-        private void closeConnection() {
+        protected void closeConnection() {
             conn.Close();
         }
 
-        private void showStock() { 
+        protected void showStock() { 
             //the command object
             string selectStock = "SELECT* from Products";
             SQLiteCommand selectComm = new SQLiteCommand(selectStock, conn);

@@ -14,7 +14,7 @@ namespace StockProgram
     public partial class StockTracking : Form
     {
         //global variables
-        private SQLiteConnection conn = new SQLiteConnection(@"data source=C:\Users\joshu\source\repos\StockProgram\StockDatabase.sqlite");
+        private SQLiteConnection conn = new SQLiteConnection(@"data source=database\StockDatabase.sqlite");
         private DataTable table = new DataTable();
 
         public StockTracking()

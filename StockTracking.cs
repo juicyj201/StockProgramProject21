@@ -34,5 +34,9 @@ namespace StockProgram
         {
             conn.Close();
         }
+
+        private void viewDatabase() { 
+            
+        }
     }
 }

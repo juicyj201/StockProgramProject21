@@ -62,7 +62,7 @@ namespace StockProgram
         private void sortBtn_Click(object sender, EventArgs e)
         {
             //the command object
-            string sortStock = "SELECT* from Products ORDER BY ProductId";
+            string sortStock = "SELECT* from Products ORDER BY Id";
             SQLiteCommand sortComm = new SQLiteCommand(sortStock, conn);
 
             //the adapter
@@ -94,7 +94,7 @@ namespace StockProgram
         }
 
         private void SetConn() {
-            conn = new SQLiteConnection(@"data source=.\StockDatabase.sqlite");
+            conn = new SQLiteConnection(@"data source=.\StockDatabase.db");
         }
 
         public DataTable GetTable() {
@@ -105,7 +105,11 @@ namespace StockProgram
             table = new DataTable();
         }
 
-        
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         //add method to check items into the stock database
         private void SubmitStockBtn_Click(object sender, EventArgs e)
         {
@@ -146,6 +150,5 @@ namespace StockProgram
                 enterQuantAdpt.Update(table);
             }
         }
-        
     }
 }

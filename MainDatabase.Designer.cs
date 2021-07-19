@@ -42,6 +42,7 @@ namespace StockProgram
             this.enterQuantityTb = new System.Windows.Forms.TextBox();
             this.enterQuantityLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.exitBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.stockView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +101,6 @@ namespace StockProgram
             this.submitStockBtn.TabIndex = 8;
             this.submitStockBtn.Text = "Submit Stock";
             this.submitStockBtn.UseVisualStyleBackColor = true;
-            //this.submitStockBtn.Click += new System.EventHandler(this.submitStockBtn_Click);
             // 
             // enterNameTb
             // 
@@ -163,11 +163,22 @@ namespace StockProgram
             this.label1.TabIndex = 18;
             this.label1.Text = "Main Database";
             // 
+            // exitBtn
+            // 
+            this.exitBtn.Location = new System.Drawing.Point(881, 12);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(135, 35);
+            this.exitBtn.TabIndex = 19;
+            this.exitBtn.Text = "Exit";
+            this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
             // MainDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 758);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.enterQuantityTb);
             this.Controls.Add(this.enterQuantityLbl);
@@ -205,6 +216,7 @@ namespace StockProgram
         private System.Windows.Forms.TextBox enterQuantityTb;
         private System.Windows.Forms.Label enterQuantityLbl;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button exitBtn;
     }
 }
 

@@ -128,13 +128,15 @@ namespace StockProgram
             // 
             // testBtn
             // 
+            this.testBtn.BackColor = System.Drawing.Color.White;
             this.testBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.testBtn.ForeColor = System.Drawing.Color.Black;
             this.testBtn.Location = new System.Drawing.Point(576, 17);
             this.testBtn.Name = "testBtn";
             this.testBtn.Size = new System.Drawing.Size(152, 124);
             this.testBtn.TabIndex = 7;
             this.testBtn.Text = "Test button";
-            this.testBtn.UseVisualStyleBackColor = true;
+            this.testBtn.UseVisualStyleBackColor = false;
             this.testBtn.Click += new System.EventHandler(this.testBtn_Click);
             // 
             // StartMenu

@@ -105,7 +105,7 @@ namespace StockProgram
             table = new DataTable();
         }
 
-        /**
+        
         //add method to check items into the stock database
         private void SubmitStockBtn_Click(object sender, EventArgs e)
         {
@@ -146,6 +146,6 @@ namespace StockProgram
                 enterQuantAdpt.Update(table);
             }
         }
-        **/
+        
     }
 }

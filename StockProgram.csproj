@@ -56,6 +56,12 @@
     <Compile Include="EditPriceStock.Designer.cs">
       <DependentUpon>EditPriceStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Help.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <EmbeddedResource Include="EditPriceStock.resx">
       <DependentUpon>EditPriceStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,7 +152,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="README.md" />
-    <None Include="StockDatabase.sqlite" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

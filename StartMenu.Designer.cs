@@ -37,6 +37,7 @@ namespace StockProgram
             this.stocktrackingBtn = new System.Windows.Forms.Button();
             this.helpBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
+            this.testBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -125,12 +126,24 @@ namespace StockProgram
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
+            // testBtn
+            // 
+            this.testBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.testBtn.Location = new System.Drawing.Point(576, 17);
+            this.testBtn.Name = "testBtn";
+            this.testBtn.Size = new System.Drawing.Size(152, 124);
+            this.testBtn.TabIndex = 7;
+            this.testBtn.Text = "Test button";
+            this.testBtn.UseVisualStyleBackColor = true;
+            this.testBtn.Click += new System.EventHandler(this.testBtn_Click);
+            // 
             // StartMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(782, 633);
+            this.Controls.Add(this.testBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.helpBtn);
             this.Controls.Add(this.stocktrackingBtn);
@@ -163,5 +176,6 @@ namespace StockProgram
         private System.Windows.Forms.Button stocktrackingBtn;
         private System.Windows.Forms.Button helpBtn;
         private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Button testBtn;
     }
 }

@@ -66,7 +66,7 @@ namespace StockProgram
         private void testBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 testForm = new Form1();
+            TestForm testForm = new TestForm();
             testForm.Show();
             //this.Close();
         }

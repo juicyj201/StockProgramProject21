@@ -107,6 +107,7 @@ namespace StockProgram
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             this.Close();
         }
 

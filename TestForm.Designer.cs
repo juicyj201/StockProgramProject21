@@ -1,7 +1,7 @@
 ﻿
 namespace StockProgram
 {
-    partial class Form1
+    partial class TestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -42,14 +42,14 @@ namespace StockProgram
             this.dataGridView1.Size = new System.Drawing.Size(1023, 441);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Form1
+            // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 603);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "TestForm";
+            this.Text = "TestForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

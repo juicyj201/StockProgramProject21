@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockProgram;
 
 namespace StockProgram
 {
@@ -17,13 +18,12 @@ namespace StockProgram
         {
             InitializeComponent();
 
-            //openConnection();
-            //showStock();
-            //closeConnection();
+            MainDatabase maindb = new MainDatabase();
+
+            maindb.OpenConnection();
+            maindb.ShowStock();
+            maindb.CloseConnection();
         }
 
-        private void showStock() {
-            //getTable();
-        }
     }
 }

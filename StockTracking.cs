@@ -18,8 +18,11 @@ namespace StockProgram
         {
             InitializeComponent();
 
-            //openConnection();
-            //closeConnection();
+            MainDatabase maindb = new MainDatabase();
+
+            maindb.OpenConnection();
+            maindb.ShowStock();
+            maindb.CloseConnection();
         }
 
         

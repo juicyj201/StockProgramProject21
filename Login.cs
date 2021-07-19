@@ -16,14 +16,7 @@ namespace StockProgram
         public Login()
         {
             InitializeComponent();
-
-            //openConnection();
-            //showStock();
-            //closeConnection();
         }
 
-        private void showStock() {
-            //getTable();
-        }
     }   
 }

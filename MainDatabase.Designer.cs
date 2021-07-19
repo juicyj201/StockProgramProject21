@@ -100,7 +100,7 @@ namespace StockProgram
             this.submitStockBtn.TabIndex = 8;
             this.submitStockBtn.Text = "Submit Stock";
             this.submitStockBtn.UseVisualStyleBackColor = true;
-            this.submitStockBtn.Click += new System.EventHandler(this.submitStockBtn_Click);
+            //this.submitStockBtn.Click += new System.EventHandler(this.submitStockBtn_Click);
             // 
             // enterNameTb
             // 

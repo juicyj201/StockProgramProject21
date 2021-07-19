@@ -18,23 +18,21 @@ namespace StockProgram
         {
             InitializeComponent();
 
-            openConnection();
-            closeConnection();
+            //openConnection();
+            //closeConnection();
         }
 
-        /**
+        
         private void openConnection()
         {
-            conn.Open();
+            //conn.Open();
         }
 
         private void closeConnection()
         {
-            conn.Close();
+            //conn.Close();
         }
 
-
-        **/
         private void viewDatabase() { 
             
         }

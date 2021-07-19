@@ -22,30 +22,30 @@ namespace StockProgram
             InitializeComponent();
 
             //initialising (or setting) the connection variable as well as the table variable
-            setConn();
-            setTable();
+            SetConn();
+            SetTable();
 
             //open connection to database
-            openConnection();
+            OpenConnection();
 
             //show stock
-            showStock();
+            ShowStock();
 
             //close connection to database
-            closeConnection();
+            CloseConnection();
         }
 
         //methods for opening and closing database
-        public void openConnection() {
-            getConn().Open();
+        public void OpenConnection() {
+            GetConn().Open();
         }
 
-        public void closeConnection() {
-            getConn().Close();
+        public void CloseConnection() {
+            GetConn().Close();
         }
 
         //method for showing the database
-        private void showStock() {
+        public void ShowStock() {
             //the command object
             string selectStock = "SELECT* from Products";
             SQLiteCommand selectComm = new SQLiteCommand(selectStock, conn);
@@ -89,24 +89,25 @@ namespace StockProgram
         }
 
         //methods for initialising the connection and table variables
-        public SQLiteConnection getConn() {
+        public SQLiteConnection GetConn() {
             return conn;
         }
 
-        private void setConn() {
-            conn = new SQLiteConnection(@"data source=database\StockDatabase.sqlite");
+        private void SetConn() {
+            conn = new SQLiteConnection(@"data source=.\StockDatabase.sqlite");
         }
 
-        public DataTable getTable() {
+        public DataTable GetTable() {
             return table;
         }
 
-        private void setTable() {
+        private void SetTable() {
             table = new DataTable();
         }
 
+        /**
         //add method to check items into the stock database
-        private void submitStockBtn_Click(object sender, EventArgs e)
+        private void SubmitStockBtn_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(enterIdTb.Text))
             {
@@ -145,5 +146,6 @@ namespace StockProgram
                 enterQuantAdpt.Update(table);
             }
         }
+        **/
     }
 }

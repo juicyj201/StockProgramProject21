@@ -16,6 +16,10 @@ namespace StockProgram
         //global variables
         private SQLiteConnection conn;
         private DataTable table;
+        
+        private string selectStock;
+        private string sortStock;
+        private string sortStockName;
 
         public MainDatabase()
         {
@@ -44,10 +48,25 @@ namespace StockProgram
             GetConn().Close();
         }
 
+
+        //showing the database
+        private void SelectStock() {
+            selectStock = "select* from Products";
+        }
+
+        private void SelectStockId() {
+            sortStock = "select* from Products order by Id";
+        }
+
+        private void SelectStockName() {
+            sortStockName = "select* from Products order by Name";
+        }
+
         //method for showing the database
         public void ShowStock() {
             //the command object
-            string selectStock = "SELECT* from Products";
+            //string selectStock = "SELECT* from Products";
+            SelectStock();
             SQLiteCommand selectComm = new SQLiteCommand(selectStock, conn);
 
             //the adapter
@@ -62,7 +81,8 @@ namespace StockProgram
         private void sortBtn_Click(object sender, EventArgs e)
         {
             //the command object
-            string sortStock = "SELECT* from Products ORDER BY Id";
+            //string sortStock = "SELECT* from Products ORDER BY Id";
+            SelectStockId();
             SQLiteCommand sortComm = new SQLiteCommand(sortStock, conn);
 
             //the adapter
@@ -77,7 +97,8 @@ namespace StockProgram
         private void sortNameBtn_Click(object sender, EventArgs e)
         {
             //the command object
-            string sortStock = "SELECT* from Products ORDER BY Name";
+            //string sortStockName = "SELECT* from Products ORDER BY Name";
+            SelectStockName();
             SQLiteCommand sortNameComm = new SQLiteCommand(sortStock, conn);
 
             //the adapter
@@ -105,28 +126,41 @@ namespace StockProgram
             table = new DataTable();
         }
 
-        private void exitBtn_Click(object sender, EventArgs e)
+        private void returnBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            this.Close();
+            StartMenu startMenuCall = new StartMenu();
+            startMenuCall.Show();
         }
 
         //add method to check items into the stock database
         private void SubmitStockBtn_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(enterIdTb.Text))
-            {
-                string enterId;
-                enterId = enterIdTb.Text;
-                SQLiteCommand enterIdComm = new SQLiteCommand("INSERT into Products(Id) VALUES(?)");
-                enterIdComm.Parameters.Add(enterId);
-                SQLiteDataAdapter enterIdAdpt = new SQLiteDataAdapter(enterIdComm);
-                enterIdAdpt.Update(table);
-            }
+            string enterName;
+            enterName = enterNameTb.Text;
+            SQLiteCommand enterNameComm = new SQLiteCommand("INSERT into Products(Name) VALUES(@enterName)");
+            SQLiteDataAdapter enterNameAdpt = new SQLiteDataAdapter(enterNameComm);
+            enterNameAdpt.Update(table);
+
+            string enterPrice;
+            enterPrice = enterPriceTb.Text;
+            SQLiteCommand enterPriceComm = new SQLiteCommand("INSERT into Products(Price) VALUES(@enterPrice)");
+            SQLiteDataAdapter enterPriceAdpt = new SQLiteDataAdapter(enterPriceComm);
+            enterPriceAdpt.Update(table);
+
+            string enterQuant;
+            enterQuant = enterQuantityTb.Text;
+            SQLiteCommand enterQuantComm = new SQLiteCommand("INSERT into Products(Quantity) VALUES(@enterQuant)");
+            SQLiteDataAdapter enterQuantAdpt = new SQLiteDataAdapter(enterQuantComm);
+            enterQuantAdpt.Update(table);
+
+            ShowStock();
+
+            /**
             if (!String.IsNullOrEmpty(enterNameTb.Text))
             {
-                string enterName;
-                enterName = enterNameTb.Text;
+                string enterName = "";
+                enterNameTb.Text = enterName;
                 SQLiteCommand enterNameComm = new SQLiteCommand("INSERT into Products(Name) VALUES(?)");
                 enterNameComm.Parameters.Add(enterName);
                 SQLiteDataAdapter enterNameAdpt = new SQLiteDataAdapter(enterNameComm);
@@ -134,8 +168,8 @@ namespace StockProgram
             }
             if (!String.IsNullOrEmpty(enterPriceTb.Text))
             {
-                string enterPrice;
-                enterPrice = enterPriceTb.Text;
+                string enterPrice = "";
+                enterPriceTb.Text = enterPrice;
                 SQLiteCommand enterPriceComm = new SQLiteCommand("INSERT into Products(Price) VALUES(?)");
                 enterPriceComm.Parameters.Add(enterPrice);
                 SQLiteDataAdapter enterPriceAdpt = new SQLiteDataAdapter(enterPriceComm);
@@ -143,13 +177,14 @@ namespace StockProgram
             }
             if (!String.IsNullOrEmpty(enterQuantityTb.Text))
             {
-                string enterQuant;
-                enterQuant = enterQuantityTb.Text;
+                string enterQuant = "";
+                enterQuantityTb.Text = enterQuant;
                 SQLiteCommand enterQuantComm = new SQLiteCommand("INSERT into Products(Quantity) VALUES(?)");
                 enterQuantComm.Parameters.Add(enterQuant);
                 SQLiteDataAdapter enterQuantAdpt = new SQLiteDataAdapter(enterQuantComm);
                 enterQuantAdpt.Update(table);
             }
+            **/
         }
     }
 }

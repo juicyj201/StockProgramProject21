@@ -34,9 +34,9 @@ namespace StockProgram
             // 
             // returnBtn
             // 
-            this.returnBtn.Location = new System.Drawing.Point(32, 539);
+            this.returnBtn.Location = new System.Drawing.Point(716, 12);
             this.returnBtn.Name = "returnBtn";
-            this.returnBtn.Size = new System.Drawing.Size(290, 86);
+            this.returnBtn.Size = new System.Drawing.Size(170, 51);
             this.returnBtn.TabIndex = 0;
             this.returnBtn.Text = "Return";
             this.returnBtn.UseVisualStyleBackColor = true;
@@ -46,9 +46,10 @@ namespace StockProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1063, 647);
+            this.ClientSize = new System.Drawing.Size(897, 496);
             this.Controls.Add(this.returnBtn);
             this.Name = "Help";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Help";
             this.ResumeLayout(false);
 

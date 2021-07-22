@@ -22,7 +22,6 @@ namespace StockProgram
             this.Hide();
             StartMenu startMenuCall = new StartMenu();
             startMenuCall.Show();
-            this.Hide();
         }
     }
 }

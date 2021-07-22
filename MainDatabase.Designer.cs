@@ -29,11 +29,10 @@ namespace StockProgram
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.stockView = new System.Windows.Forms.DataGridView();
             this.sortBtn = new System.Windows.Forms.Button();
             this.sortNameBtn = new System.Windows.Forms.Button();
-            this.IdLbl = new System.Windows.Forms.Label();
-            this.enterIdTb = new System.Windows.Forms.TextBox();
             this.submitStockBtn = new System.Windows.Forms.Button();
             this.enterNameTb = new System.Windows.Forms.TextBox();
             this.enterNameLbl = new System.Windows.Forms.Label();
@@ -42,13 +41,22 @@ namespace StockProgram
             this.enterQuantityTb = new System.Windows.Forms.TextBox();
             this.enterQuantityLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.exitBtn = new System.Windows.Forms.Button();
+            this.returnBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.stockView)).BeginInit();
             this.SuspendLayout();
             // 
             // stockView
             // 
+            this.stockView.BackgroundColor = System.Drawing.Color.White;
             this.stockView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.stockView.DefaultCellStyle = dataGridViewCellStyle2;
             this.stockView.Location = new System.Drawing.Point(46, 193);
             this.stockView.Name = "stockView";
             this.stockView.RowHeadersWidth = 51;
@@ -76,35 +84,18 @@ namespace StockProgram
             this.sortNameBtn.UseVisualStyleBackColor = true;
             this.sortNameBtn.Click += new System.EventHandler(this.sortNameBtn_Click);
             // 
-            // IdLbl
-            // 
-            this.IdLbl.AutoSize = true;
-            this.IdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdLbl.Location = new System.Drawing.Point(43, 491);
-            this.IdLbl.Name = "IdLbl";
-            this.IdLbl.Size = new System.Drawing.Size(167, 31);
-            this.IdLbl.TabIndex = 6;
-            this.IdLbl.Text = "Enter item Id";
-            // 
-            // enterIdTb
-            // 
-            this.enterIdTb.Location = new System.Drawing.Point(326, 501);
-            this.enterIdTb.Name = "enterIdTb";
-            this.enterIdTb.Size = new System.Drawing.Size(422, 22);
-            this.enterIdTb.TabIndex = 7;
-            // 
             // submitStockBtn
             // 
-            this.submitStockBtn.Location = new System.Drawing.Point(770, 500);
+            this.submitStockBtn.Location = new System.Drawing.Point(770, 478);
             this.submitStockBtn.Name = "submitStockBtn";
-            this.submitStockBtn.Size = new System.Drawing.Size(208, 174);
+            this.submitStockBtn.Size = new System.Drawing.Size(208, 121);
             this.submitStockBtn.TabIndex = 8;
             this.submitStockBtn.Text = "Submit Stock";
             this.submitStockBtn.UseVisualStyleBackColor = true;
             // 
             // enterNameTb
             // 
-            this.enterNameTb.Location = new System.Drawing.Point(326, 553);
+            this.enterNameTb.Location = new System.Drawing.Point(327, 478);
             this.enterNameTb.Name = "enterNameTb";
             this.enterNameTb.Size = new System.Drawing.Size(422, 22);
             this.enterNameTb.TabIndex = 10;
@@ -113,7 +104,7 @@ namespace StockProgram
             // 
             this.enterNameLbl.AutoSize = true;
             this.enterNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterNameLbl.Location = new System.Drawing.Point(43, 543);
+            this.enterNameLbl.Location = new System.Drawing.Point(44, 468);
             this.enterNameLbl.Name = "enterNameLbl";
             this.enterNameLbl.Size = new System.Drawing.Size(230, 31);
             this.enterNameLbl.TabIndex = 9;
@@ -121,7 +112,7 @@ namespace StockProgram
             // 
             // enterPriceTb
             // 
-            this.enterPriceTb.Location = new System.Drawing.Point(326, 602);
+            this.enterPriceTb.Location = new System.Drawing.Point(327, 527);
             this.enterPriceTb.Name = "enterPriceTb";
             this.enterPriceTb.Size = new System.Drawing.Size(422, 22);
             this.enterPriceTb.TabIndex = 13;
@@ -130,7 +121,7 @@ namespace StockProgram
             // 
             this.enterPriceLbl.AutoSize = true;
             this.enterPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterPriceLbl.Location = new System.Drawing.Point(43, 592);
+            this.enterPriceLbl.Location = new System.Drawing.Point(44, 517);
             this.enterPriceLbl.Name = "enterPriceLbl";
             this.enterPriceLbl.Size = new System.Drawing.Size(206, 31);
             this.enterPriceLbl.TabIndex = 12;
@@ -138,7 +129,7 @@ namespace StockProgram
             // 
             // enterQuantityTb
             // 
-            this.enterQuantityTb.Location = new System.Drawing.Point(326, 652);
+            this.enterQuantityTb.Location = new System.Drawing.Point(327, 577);
             this.enterQuantityTb.Name = "enterQuantityTb";
             this.enterQuantityTb.Size = new System.Drawing.Size(422, 22);
             this.enterQuantityTb.TabIndex = 16;
@@ -147,7 +138,7 @@ namespace StockProgram
             // 
             this.enterQuantityLbl.AutoSize = true;
             this.enterQuantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enterQuantityLbl.Location = new System.Drawing.Point(44, 642);
+            this.enterQuantityLbl.Location = new System.Drawing.Point(45, 567);
             this.enterQuantityLbl.Name = "enterQuantityLbl";
             this.enterQuantityLbl.Size = new System.Drawing.Size(246, 31);
             this.enterQuantityLbl.TabIndex = 15;
@@ -163,22 +154,22 @@ namespace StockProgram
             this.label1.TabIndex = 18;
             this.label1.Text = "Main Database";
             // 
-            // exitBtn
+            // returnBtn
             // 
-            this.exitBtn.Location = new System.Drawing.Point(881, 12);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(135, 35);
-            this.exitBtn.TabIndex = 19;
-            this.exitBtn.Text = "Exit";
-            this.exitBtn.UseVisualStyleBackColor = true;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            this.returnBtn.Location = new System.Drawing.Point(875, 12);
+            this.returnBtn.Name = "returnBtn";
+            this.returnBtn.Size = new System.Drawing.Size(131, 46);
+            this.returnBtn.TabIndex = 19;
+            this.returnBtn.Text = "Return";
+            this.returnBtn.UseVisualStyleBackColor = true;
+            this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
             // 
             // MainDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 758);
-            this.Controls.Add(this.exitBtn);
+            this.ClientSize = new System.Drawing.Size(1018, 645);
+            this.Controls.Add(this.returnBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.enterQuantityTb);
             this.Controls.Add(this.enterQuantityLbl);
@@ -187,8 +178,6 @@ namespace StockProgram
             this.Controls.Add(this.enterNameTb);
             this.Controls.Add(this.enterNameLbl);
             this.Controls.Add(this.submitStockBtn);
-            this.Controls.Add(this.enterIdTb);
-            this.Controls.Add(this.IdLbl);
             this.Controls.Add(this.sortNameBtn);
             this.Controls.Add(this.sortBtn);
             this.Controls.Add(this.stockView);
@@ -206,8 +195,6 @@ namespace StockProgram
         private System.Windows.Forms.DataGridView stockView;
         private System.Windows.Forms.Button sortBtn;
         private System.Windows.Forms.Button sortNameBtn;
-        private System.Windows.Forms.Label IdLbl;
-        private System.Windows.Forms.TextBox enterIdTb;
         private System.Windows.Forms.Button submitStockBtn;
         private System.Windows.Forms.TextBox enterNameTb;
         private System.Windows.Forms.Label enterNameLbl;
@@ -216,7 +203,7 @@ namespace StockProgram
         private System.Windows.Forms.TextBox enterQuantityTb;
         private System.Windows.Forms.Label enterQuantityLbl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Button returnBtn;
     }
 }
 

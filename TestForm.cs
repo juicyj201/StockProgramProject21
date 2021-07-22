@@ -18,5 +18,12 @@ namespace StockProgram
             maindb.ShowStock();
             maindb.CloseConnection();
         }
+
+        private void returnBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartMenu startMenuCall = new StartMenu();
+            startMenuCall.Show();
+        }
     }
 }

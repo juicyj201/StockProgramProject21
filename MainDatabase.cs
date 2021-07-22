@@ -16,10 +16,6 @@ namespace StockProgram
         //global variables
         private SQLiteConnection conn;
         private DataTable table;
-        
-        private string selectStock;
-        private string sortStock;
-        private string sortStockName;
 
         public MainDatabase()
         {
@@ -48,25 +44,10 @@ namespace StockProgram
             GetConn().Close();
         }
 
-
-        //showing the database
-        private void SelectStock() {
-            selectStock = "select* from Products";
-        }
-
-        private void SelectStockId() {
-            sortStock = "select* from Products order by Id";
-        }
-
-        private void SelectStockName() {
-            sortStockName = "select* from Products order by Name";
-        }
-
         //method for showing the database
         public void ShowStock() {
             //the command object
-            //string selectStock = "SELECT* from Products";
-            SelectStock();
+            string selectStock = "SELECT* from Products";
             SQLiteCommand selectComm = new SQLiteCommand(selectStock, conn);
 
             //the adapter
@@ -81,8 +62,7 @@ namespace StockProgram
         private void sortBtn_Click(object sender, EventArgs e)
         {
             //the command object
-            //string sortStock = "SELECT* from Products ORDER BY Id";
-            SelectStockId();
+            string sortStock = "SELECT* from Products ORDER BY Id";
             SQLiteCommand sortComm = new SQLiteCommand(sortStock, conn);
 
             //the adapter
@@ -97,9 +77,8 @@ namespace StockProgram
         private void sortNameBtn_Click(object sender, EventArgs e)
         {
             //the command object
-            //string sortStockName = "SELECT* from Products ORDER BY Name";
-            SelectStockName();
-            SQLiteCommand sortNameComm = new SQLiteCommand(sortStock, conn);
+            string sortStockName = "SELECT* from Products ORDER BY Name";
+            SQLiteCommand sortNameComm = new SQLiteCommand(sortStockName, conn);
 
             //the adapter
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(sortNameComm);

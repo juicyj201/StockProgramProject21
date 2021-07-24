@@ -88,6 +88,11 @@ namespace StockProgram
             stockView.DataSource = table;
         }
 
+        //method/s for editing the datatable and allowing the database to be change in turn
+        private void EditItems() {
+            
+        }
+
         //methods for initialising the connection and table variables
         public SQLiteConnection GetConn() {
             return conn;
@@ -112,6 +117,7 @@ namespace StockProgram
             startMenuCall.Show();
         }
 
+        /**
         //add method to check items into the stock database
         private void SubmitStockBtn_Click(object sender, EventArgs e)
         {
@@ -164,6 +170,5 @@ namespace StockProgram
                 enterQuantAdpt.Update(table);
             }
             **/
-        }
     }
 }

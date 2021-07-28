@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace StockProgram
 {
-    public partial class TestForm : Form
+    public partial class TestForm : System.Windows.Forms.Form
     {
         public TestForm()
         {

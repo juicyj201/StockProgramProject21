@@ -115,6 +115,9 @@
     <EmbeddedResource Include="EditPriceStock.resx">
       <DependentUpon>EditPriceStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +145,9 @@
     <EmbeddedResource Include="StockTracking.resx">
       <DependentUpon>StockTracking.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Login.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -158,6 +164,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CodeStuff.txt" />
+    <Content Include="SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="System.Data.SQLite_DLL\System.Data.SQLite.dll" />
+    <Content Include="System.Data.SQLite_DLL\System.Data.SQLite.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

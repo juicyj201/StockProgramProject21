@@ -11,7 +11,7 @@ using System.Data.SQLite;
 
 namespace StockProgram
 {
-    public partial class MainDatabase : Form
+    public partial class MainDatabase : System.Windows.Forms.Form
     {
         //global variables
         private SQLiteConnection conn;

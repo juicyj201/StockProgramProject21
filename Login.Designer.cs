@@ -3,7 +3,7 @@ using System;
 
 namespace StockProgram
 {
-    partial class Login
+    partial class Form
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@ namespace StockProgram
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Login = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@ namespace StockProgram
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.Login);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.textBox2);
@@ -62,17 +62,17 @@ namespace StockProgram
             this.panel2.Size = new System.Drawing.Size(799, 349);
             this.panel2.TabIndex = 1;
             // 
-            // button1
+            // Login
             // 
-            this.button1.BackColor = System.Drawing.Color.Gray;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(453, 222);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 77);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Login.BackColor = System.Drawing.Color.Gray;
+            this.Login.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login.Location = new System.Drawing.Point(453, 222);
+            this.Login.Name = "Login";
+            this.Login.Size = new System.Drawing.Size(114, 77);
+            this.Login.TabIndex = 4;
+            this.Login.Text = "LOGIN";
+            this.Login.UseVisualStyleBackColor = false;
+            this.Login.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -110,15 +110,16 @@ namespace StockProgram
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(403, 40);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // Login
+            // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Login";
+            this.Name = "Form";
             this.Text = "Login";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -126,16 +127,11 @@ namespace StockProgram
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         #endregion
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Login;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;

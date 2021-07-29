@@ -70,5 +70,12 @@ namespace StockProgram
             testForm.Show();
             //this.Close();
         }
+
+        private void aboutUsBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AboutBox AboutCall = new AboutBox();
+            AboutCall.Show();
+        }
     }
 }

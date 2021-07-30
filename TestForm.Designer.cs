@@ -40,7 +40,7 @@ namespace StockProgram
             this.dataGridView1.Location = new System.Drawing.Point(21, 98);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1023, 441);
+            this.dataGridView1.Size = new System.Drawing.Size(1023, 302);
             this.dataGridView1.TabIndex = 0;
             // 
             // returnBtn
@@ -63,7 +63,6 @@ namespace StockProgram
             this.Name = "TestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TestForm";
-            this.Load += new System.EventHandler(this.TestForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

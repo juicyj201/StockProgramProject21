@@ -13,6 +13,6 @@ namespace StockProgram
         public int ProdPrice { get; set; }
         public int ProdQuantity { get; set; }
 
-
+        
     }
 }

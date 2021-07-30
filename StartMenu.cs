@@ -61,6 +61,7 @@ namespace StockProgram
         {
             this.Hide();
             this.Close();
+            this.Dispose();
         }
 
         private void testBtn_Click(object sender, EventArgs e)

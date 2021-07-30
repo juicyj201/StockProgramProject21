@@ -62,6 +62,7 @@
     <Compile Include="EditPriceStock.Designer.cs">
       <DependentUpon>EditPriceStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs" />
     <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
     </Compile>

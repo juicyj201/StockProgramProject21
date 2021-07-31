@@ -32,9 +32,6 @@ namespace StockProgram
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.maindatabaseBtn = new System.Windows.Forms.Button();
-            this.stockeditingBtn = new System.Windows.Forms.Button();
-            this.stockupdatingBtn = new System.Windows.Forms.Button();
-            this.stocktrackingBtn = new System.Windows.Forms.Button();
             this.helpBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.testBtn = new System.Windows.Forms.Button();
@@ -72,43 +69,10 @@ namespace StockProgram
             this.maindatabaseBtn.UseVisualStyleBackColor = true;
             this.maindatabaseBtn.Click += new System.EventHandler(this.maindatabaseBtn_Click);
             // 
-            // stockeditingBtn
-            // 
-            this.stockeditingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stockeditingBtn.Location = new System.Drawing.Point(235, 224);
-            this.stockeditingBtn.Name = "stockeditingBtn";
-            this.stockeditingBtn.Size = new System.Drawing.Size(299, 62);
-            this.stockeditingBtn.TabIndex = 2;
-            this.stockeditingBtn.Text = "Stock Editing";
-            this.stockeditingBtn.UseVisualStyleBackColor = true;
-            this.stockeditingBtn.Click += new System.EventHandler(this.stockeditingBtn_Click);
-            // 
-            // stockupdatingBtn
-            // 
-            this.stockupdatingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stockupdatingBtn.Location = new System.Drawing.Point(235, 312);
-            this.stockupdatingBtn.Name = "stockupdatingBtn";
-            this.stockupdatingBtn.Size = new System.Drawing.Size(299, 58);
-            this.stockupdatingBtn.TabIndex = 3;
-            this.stockupdatingBtn.Text = "Stock Updating";
-            this.stockupdatingBtn.UseVisualStyleBackColor = true;
-            this.stockupdatingBtn.Click += new System.EventHandler(this.stockupdatingBtn_Click);
-            // 
-            // stocktrackingBtn
-            // 
-            this.stocktrackingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stocktrackingBtn.Location = new System.Drawing.Point(235, 398);
-            this.stocktrackingBtn.Name = "stocktrackingBtn";
-            this.stocktrackingBtn.Size = new System.Drawing.Size(299, 57);
-            this.stocktrackingBtn.TabIndex = 4;
-            this.stocktrackingBtn.Text = "Stock Tracking";
-            this.stocktrackingBtn.UseVisualStyleBackColor = true;
-            this.stocktrackingBtn.Click += new System.EventHandler(this.stocktrackingBtn_Click);
-            // 
             // helpBtn
             // 
             this.helpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.helpBtn.Location = new System.Drawing.Point(235, 481);
+            this.helpBtn.Location = new System.Drawing.Point(235, 217);
             this.helpBtn.Name = "helpBtn";
             this.helpBtn.Size = new System.Drawing.Size(299, 59);
             this.helpBtn.TabIndex = 5;
@@ -119,7 +83,7 @@ namespace StockProgram
             // exitBtn
             // 
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Location = new System.Drawing.Point(235, 650);
+            this.exitBtn.Location = new System.Drawing.Point(235, 386);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(299, 57);
             this.exitBtn.TabIndex = 6;
@@ -132,7 +96,7 @@ namespace StockProgram
             this.testBtn.BackColor = System.Drawing.Color.White;
             this.testBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testBtn.ForeColor = System.Drawing.Color.Black;
-            this.testBtn.Location = new System.Drawing.Point(576, 17);
+            this.testBtn.Location = new System.Drawing.Point(618, 12);
             this.testBtn.Name = "testBtn";
             this.testBtn.Size = new System.Drawing.Size(152, 124);
             this.testBtn.TabIndex = 7;
@@ -143,7 +107,7 @@ namespace StockProgram
             // aboutUsBtn
             // 
             this.aboutUsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aboutUsBtn.Location = new System.Drawing.Point(235, 566);
+            this.aboutUsBtn.Location = new System.Drawing.Point(235, 302);
             this.aboutUsBtn.Name = "aboutUsBtn";
             this.aboutUsBtn.Size = new System.Drawing.Size(299, 57);
             this.aboutUsBtn.TabIndex = 8;
@@ -156,22 +120,19 @@ namespace StockProgram
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(782, 733);
+            this.ClientSize = new System.Drawing.Size(782, 503);
             this.Controls.Add(this.aboutUsBtn);
             this.Controls.Add(this.testBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.helpBtn);
-            this.Controls.Add(this.stocktrackingBtn);
-            this.Controls.Add(this.stockupdatingBtn);
-            this.Controls.Add(this.stockeditingBtn);
             this.Controls.Add(this.maindatabaseBtn);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.MaximumSize = new System.Drawing.Size(800, 780);
-            this.MinimumSize = new System.Drawing.Size(800, 780);
+            this.MaximumSize = new System.Drawing.Size(800, 550);
+            this.MinimumSize = new System.Drawing.Size(800, 550);
             this.Name = "StartMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartMenu";
@@ -186,9 +147,6 @@ namespace StockProgram
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button maindatabaseBtn;
-        private System.Windows.Forms.Button stockeditingBtn;
-        private System.Windows.Forms.Button stockupdatingBtn;
-        private System.Windows.Forms.Button stocktrackingBtn;
         private System.Windows.Forms.Button helpBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button testBtn;

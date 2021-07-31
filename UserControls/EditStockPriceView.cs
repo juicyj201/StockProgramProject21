@@ -16,5 +16,6 @@ namespace StockProgram.UserControls
         {
             InitializeComponent();
         }
+
     }
 }

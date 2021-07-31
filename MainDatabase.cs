@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using StockProgram.UserControls;
 
 namespace StockProgram
 {
@@ -30,6 +31,9 @@ namespace StockProgram
 
             //show stock
             ShowStock();
+
+            //show controls
+            AddControls();
 
             //close connection to database
             CloseConnection();
@@ -117,6 +121,12 @@ namespace StockProgram
             startMenuCall.Show();
         }
 
+        private void AddControls() {
+            EditStockPriceView editstuff = new EditStockPriceView();
+            editstuff.Dock = DockStyle.Fill;
+            EditPriceStockPage.Controls.Add(editstuff);
+            UserControls.TabPages.Add(EditPriceStockPage);
+        }
 
     }
 }

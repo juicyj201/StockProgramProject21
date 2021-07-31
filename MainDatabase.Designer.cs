@@ -29,14 +29,14 @@ namespace StockProgram
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.stockView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.returnBtn = new System.Windows.Forms.Button();
             this.UserControls = new System.Windows.Forms.TabControl();
-            this.EditPriceStock = new System.Windows.Forms.TabPage();
-            this.StockTracking = new System.Windows.Forms.TabPage();
-            this.UpdateDatabase = new System.Windows.Forms.TabPage();
+            this.EditPriceStockPage = new System.Windows.Forms.TabPage();
+            this.StockTrackingPage = new System.Windows.Forms.TabPage();
+            this.UpdateDatabasePage = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.stockView)).BeginInit();
             this.UserControls.SuspendLayout();
             this.SuspendLayout();
@@ -45,19 +45,19 @@ namespace StockProgram
             // 
             this.stockView.BackgroundColor = System.Drawing.Color.White;
             this.stockView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.stockView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.stockView.DefaultCellStyle = dataGridViewCellStyle1;
             this.stockView.Location = new System.Drawing.Point(50, 115);
             this.stockView.Name = "stockView";
             this.stockView.RowHeadersWidth = 51;
             this.stockView.RowTemplate.Height = 24;
-            this.stockView.Size = new System.Drawing.Size(932, 203);
+            this.stockView.Size = new System.Drawing.Size(932, 184);
             this.stockView.TabIndex = 0;
             // 
             // label1
@@ -72,7 +72,7 @@ namespace StockProgram
             // 
             // returnBtn
             // 
-            this.returnBtn.Location = new System.Drawing.Point(875, 12);
+            this.returnBtn.Location = new System.Drawing.Point(851, 35);
             this.returnBtn.Name = "returnBtn";
             this.returnBtn.Size = new System.Drawing.Size(131, 46);
             this.returnBtn.TabIndex = 19;
@@ -82,45 +82,44 @@ namespace StockProgram
             // 
             // UserControls
             // 
-            this.UserControls.Controls.Add(this.EditPriceStock);
-            this.UserControls.Controls.Add(this.StockTracking);
-            this.UserControls.Controls.Add(this.UpdateDatabase);
+            this.UserControls.Controls.Add(this.EditPriceStockPage);
+            this.UserControls.Controls.Add(this.StockTrackingPage);
+            this.UserControls.Controls.Add(this.UpdateDatabasePage);
             this.UserControls.Location = new System.Drawing.Point(50, 340);
             this.UserControls.Name = "UserControls";
             this.UserControls.SelectedIndex = 0;
             this.UserControls.Size = new System.Drawing.Size(932, 377);
             this.UserControls.TabIndex = 20;
             // 
-            // EditPriceStock
+            // EditPriceStockPage
             // 
-            this.EditPriceStock.Location = new System.Drawing.Point(4, 25);
-            this.EditPriceStock.Name = "EditPriceStock";
-            this.EditPriceStock.Padding = new System.Windows.Forms.Padding(3);
-            this.EditPriceStock.Size = new System.Drawing.Size(924, 348);
-            this.EditPriceStock.TabIndex = 0;
-            this.EditPriceStock.Text = "Editing and Calculations";
-            this.EditPriceStock.UseVisualStyleBackColor = true;
-            //this.EditPriceStock.Click += new System.EventHandler(this.EditPriceStock_Click);
+            this.EditPriceStockPage.Location = new System.Drawing.Point(4, 25);
+            this.EditPriceStockPage.Name = "EditPriceStockPage";
+            this.EditPriceStockPage.Padding = new System.Windows.Forms.Padding(3);
+            this.EditPriceStockPage.Size = new System.Drawing.Size(924, 348);
+            this.EditPriceStockPage.TabIndex = 0;
+            this.EditPriceStockPage.Text = "Editing and Calculations";
+            this.EditPriceStockPage.UseVisualStyleBackColor = true;
             // 
-            // StockTracking
+            // StockTrackingPage
             // 
-            this.StockTracking.Location = new System.Drawing.Point(4, 25);
-            this.StockTracking.Name = "StockTracking";
-            this.StockTracking.Padding = new System.Windows.Forms.Padding(3);
-            this.StockTracking.Size = new System.Drawing.Size(924, 315);
-            this.StockTracking.TabIndex = 1;
-            this.StockTracking.Text = "Stock Tracking";
-            this.StockTracking.UseVisualStyleBackColor = true;
+            this.StockTrackingPage.Location = new System.Drawing.Point(4, 25);
+            this.StockTrackingPage.Name = "StockTrackingPage";
+            this.StockTrackingPage.Padding = new System.Windows.Forms.Padding(3);
+            this.StockTrackingPage.Size = new System.Drawing.Size(924, 348);
+            this.StockTrackingPage.TabIndex = 1;
+            this.StockTrackingPage.Text = "Stock Tracking";
+            this.StockTrackingPage.UseVisualStyleBackColor = true;
             // 
-            // UpdateDatabase
+            // UpdateDatabasePage
             // 
-            this.UpdateDatabase.Location = new System.Drawing.Point(4, 25);
-            this.UpdateDatabase.Name = "UpdateDatabase";
-            this.UpdateDatabase.Padding = new System.Windows.Forms.Padding(3);
-            this.UpdateDatabase.Size = new System.Drawing.Size(924, 315);
-            this.UpdateDatabase.TabIndex = 2;
-            this.UpdateDatabase.Text = "Update database";
-            this.UpdateDatabase.UseVisualStyleBackColor = true;
+            this.UpdateDatabasePage.Location = new System.Drawing.Point(4, 25);
+            this.UpdateDatabasePage.Name = "UpdateDatabasePage";
+            this.UpdateDatabasePage.Padding = new System.Windows.Forms.Padding(3);
+            this.UpdateDatabasePage.Size = new System.Drawing.Size(924, 348);
+            this.UpdateDatabasePage.TabIndex = 2;
+            this.UpdateDatabasePage.Text = "Update database";
+            this.UpdateDatabasePage.UseVisualStyleBackColor = true;
             // 
             // MainDatabase
             // 
@@ -147,9 +146,9 @@ namespace StockProgram
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button returnBtn;
         private System.Windows.Forms.TabControl UserControls;
-        private System.Windows.Forms.TabPage EditPriceStock;
-        private System.Windows.Forms.TabPage StockTracking;
-        private System.Windows.Forms.TabPage UpdateDatabase;
+        private System.Windows.Forms.TabPage EditPriceStockPage;
+        private System.Windows.Forms.TabPage StockTrackingPage;
+        private System.Windows.Forms.TabPage UpdateDatabasePage;
     }
 }
 

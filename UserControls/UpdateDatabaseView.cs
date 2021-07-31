@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StockProgram
+namespace StockProgram.UserControls
 {
-    public partial class UpdateDatabase : Form
+    public partial class UpdateDatabaseView : UserControl
     {
-        public UpdateDatabase()
+        public UpdateDatabaseView()
         {
             InitializeComponent();
-
-            MainDatabase maindb = new MainDatabase();
-
-            maindb.OpenConnection();
-            maindb.ShowStock();
-            maindb.CloseConnection();
         }
     }
 }

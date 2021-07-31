@@ -56,12 +56,6 @@
     <Compile Include="AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditPriceStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditPriceStock.Designer.cs">
-      <DependentUpon>EditPriceStock.cs</DependentUpon>
-    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
@@ -107,23 +101,26 @@
     <Compile Include="StartMenu.Designer.cs">
       <DependentUpon>StartMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="StockTracking.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\EditStockPriceView.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StockTracking.Designer.cs">
-      <DependentUpon>StockTracking.cs</DependentUpon>
+    <Compile Include="UserControls\EditStockPriceView.Designer.cs">
+      <DependentUpon>EditStockPriceView.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateDatabase.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\StockTrackingView.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UpdateDatabase.Designer.cs">
-      <DependentUpon>UpdateDatabase.cs</DependentUpon>
+    <Compile Include="UserControls\StockTrackingView.Designer.cs">
+      <DependentUpon>StockTrackingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UpdateDatabaseView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UpdateDatabaseView.Designer.cs">
+      <DependentUpon>UpdateDatabaseView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditPriceStock.resx">
-      <DependentUpon>EditPriceStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
@@ -149,8 +146,8 @@
     <EmbeddedResource Include="StartMenu.resx">
       <DependentUpon>StartMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StockTracking.resx">
-      <DependentUpon>StockTracking.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\EditStockPriceView.resx">
+      <DependentUpon>EditStockPriceView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -169,5 +166,6 @@
   <ItemGroup>
     <Content Include="CodeStuff.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

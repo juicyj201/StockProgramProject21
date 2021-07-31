@@ -117,58 +117,6 @@ namespace StockProgram
             startMenuCall.Show();
         }
 
-        /**
-        //add method to check items into the stock database
-        private void SubmitStockBtn_Click(object sender, EventArgs e)
-        {
-            string enterName;
-            enterName = enterNameTb.Text;
-            SQLiteCommand enterNameComm = new SQLiteCommand("INSERT into Products(Name) VALUES(@enterName)");
-            SQLiteDataAdapter enterNameAdpt = new SQLiteDataAdapter(enterNameComm);
-            enterNameAdpt.Update(table);
 
-            string enterPrice;
-            enterPrice = enterPriceTb.Text;
-            SQLiteCommand enterPriceComm = new SQLiteCommand("INSERT into Products(Price) VALUES(@enterPrice)");
-            SQLiteDataAdapter enterPriceAdpt = new SQLiteDataAdapter(enterPriceComm);
-            enterPriceAdpt.Update(table);
-
-            string enterQuant;
-            enterQuant = enterQuantityTb.Text;
-            SQLiteCommand enterQuantComm = new SQLiteCommand("INSERT into Products(Quantity) VALUES(@enterQuant)");
-            SQLiteDataAdapter enterQuantAdpt = new SQLiteDataAdapter(enterQuantComm);
-            enterQuantAdpt.Update(table);
-
-            ShowStock();
-
-            /**
-            if (!String.IsNullOrEmpty(enterNameTb.Text))
-            {
-                string enterName = "";
-                enterNameTb.Text = enterName;
-                SQLiteCommand enterNameComm = new SQLiteCommand("INSERT into Products(Name) VALUES(?)");
-                enterNameComm.Parameters.Add(enterName);
-                SQLiteDataAdapter enterNameAdpt = new SQLiteDataAdapter(enterNameComm);
-                enterNameAdpt.Update(table);
-            }
-            if (!String.IsNullOrEmpty(enterPriceTb.Text))
-            {
-                string enterPrice = "";
-                enterPriceTb.Text = enterPrice;
-                SQLiteCommand enterPriceComm = new SQLiteCommand("INSERT into Products(Price) VALUES(?)");
-                enterPriceComm.Parameters.Add(enterPrice);
-                SQLiteDataAdapter enterPriceAdpt = new SQLiteDataAdapter(enterPriceComm);
-                enterPriceAdpt.Update(table);
-            }
-            if (!String.IsNullOrEmpty(enterQuantityTb.Text))
-            {
-                string enterQuant = "";
-                enterQuantityTb.Text = enterQuant;
-                SQLiteCommand enterQuantComm = new SQLiteCommand("INSERT into Products(Quantity) VALUES(?)");
-                enterQuantComm.Parameters.Add(enterQuant);
-                SQLiteDataAdapter enterQuantAdpt = new SQLiteDataAdapter(enterQuantComm);
-                enterQuantAdpt.Update(table);
-            }
-            **/
     }
 }

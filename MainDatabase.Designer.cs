@@ -34,11 +34,7 @@ namespace StockProgram
             this.label1 = new System.Windows.Forms.Label();
             this.returnBtn = new System.Windows.Forms.Button();
             this.UserControls = new System.Windows.Forms.TabControl();
-            this.EditPriceStockPage = new System.Windows.Forms.TabPage();
-            this.StockTrackingPage = new System.Windows.Forms.TabPage();
-            this.UpdateDatabasePage = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.stockView)).BeginInit();
-            this.UserControls.SuspendLayout();
             this.SuspendLayout();
             // 
             // stockView
@@ -82,44 +78,11 @@ namespace StockProgram
             // 
             // UserControls
             // 
-            this.UserControls.Controls.Add(this.EditPriceStockPage);
-            this.UserControls.Controls.Add(this.StockTrackingPage);
-            this.UserControls.Controls.Add(this.UpdateDatabasePage);
             this.UserControls.Location = new System.Drawing.Point(50, 340);
             this.UserControls.Name = "UserControls";
             this.UserControls.SelectedIndex = 0;
             this.UserControls.Size = new System.Drawing.Size(932, 377);
             this.UserControls.TabIndex = 20;
-            // 
-            // EditPriceStockPage
-            // 
-            this.EditPriceStockPage.Location = new System.Drawing.Point(4, 25);
-            this.EditPriceStockPage.Name = "EditPriceStockPage";
-            this.EditPriceStockPage.Padding = new System.Windows.Forms.Padding(3);
-            this.EditPriceStockPage.Size = new System.Drawing.Size(924, 348);
-            this.EditPriceStockPage.TabIndex = 0;
-            this.EditPriceStockPage.Text = "Editing and Calculations";
-            this.EditPriceStockPage.UseVisualStyleBackColor = true;
-            // 
-            // StockTrackingPage
-            // 
-            this.StockTrackingPage.Location = new System.Drawing.Point(4, 25);
-            this.StockTrackingPage.Name = "StockTrackingPage";
-            this.StockTrackingPage.Padding = new System.Windows.Forms.Padding(3);
-            this.StockTrackingPage.Size = new System.Drawing.Size(924, 348);
-            this.StockTrackingPage.TabIndex = 1;
-            this.StockTrackingPage.Text = "Stock Tracking";
-            this.StockTrackingPage.UseVisualStyleBackColor = true;
-            // 
-            // UpdateDatabasePage
-            // 
-            this.UpdateDatabasePage.Location = new System.Drawing.Point(4, 25);
-            this.UpdateDatabasePage.Name = "UpdateDatabasePage";
-            this.UpdateDatabasePage.Padding = new System.Windows.Forms.Padding(3);
-            this.UpdateDatabasePage.Size = new System.Drawing.Size(924, 348);
-            this.UpdateDatabasePage.TabIndex = 2;
-            this.UpdateDatabasePage.Text = "Update database";
-            this.UpdateDatabasePage.UseVisualStyleBackColor = true;
             // 
             // MainDatabase
             // 
@@ -134,7 +97,6 @@ namespace StockProgram
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainDatabase";
             ((System.ComponentModel.ISupportInitialize)(this.stockView)).EndInit();
-            this.UserControls.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,9 +108,6 @@ namespace StockProgram
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button returnBtn;
         private System.Windows.Forms.TabControl UserControls;
-        private System.Windows.Forms.TabPage EditPriceStockPage;
-        private System.Windows.Forms.TabPage StockTrackingPage;
-        private System.Windows.Forms.TabPage UpdateDatabasePage;
     }
 }
 

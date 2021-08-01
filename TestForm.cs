@@ -13,7 +13,7 @@ namespace StockProgram
         private SQLiteConnection conn;
         // new SQLiteConnection(@"Data source=.\TestDatabase.db");
         private SQLiteCommand comm;
-        private SQLiteDataAdapter adapter;
+        private SQLiteDataAdapter dadapter;
         private DataSet set;
         private DataTable table;
 
@@ -64,9 +64,9 @@ namespace StockProgram
 
             comm = conn.CreateCommand();
             string CommandText = "SELECT* from Products";
-            adapter = new SQLiteDataAdapter(CommandText, conn);
+            dadapter = new SQLiteDataAdapter(CommandText, conn);
             set.Reset();
-            adapter.Fill(set);
+            dadapter.Fill(set);
             table = set.Tables[0];
             dataGridView1.DataSource = table;
         }

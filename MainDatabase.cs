@@ -62,36 +62,6 @@ namespace StockProgram
             stockView.DataSource = table;
         }
 
-        //method for sorting name by product id
-        private void sortBtn_Click(object sender, EventArgs e)
-        {
-            //the command object
-            string sortStock = "SELECT* from Products ORDER BY Id";
-            SQLiteCommand sortComm = new SQLiteCommand(sortStock, conn);
-
-            //the adapter
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter(sortComm);
-            adapter.Fill(table);
-
-            //actually putting it in the form
-            stockView.DataSource = table;
-        }
-
-        //method for sorting name alphabetically
-        private void sortNameBtn_Click(object sender, EventArgs e)
-        {
-            //the command object
-            string sortStockName = "SELECT* from Products ORDER BY Name";
-            SQLiteCommand sortNameComm = new SQLiteCommand(sortStockName, conn);
-
-            //the adapter
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter(sortNameComm);
-            adapter.Fill(table);
-
-            //actually putting it in the form
-            stockView.DataSource = table;
-        }
-
         //method/s for editing the datatable and allowing the database to be change in turn
         private void EditItems() {
             
@@ -124,8 +94,21 @@ namespace StockProgram
         private void AddControls() {
             EditStockPriceView editstuff = new EditStockPriceView();
             editstuff.Dock = DockStyle.Fill;
+            TabPage EditPriceStockPage = new TabPage();
             EditPriceStockPage.Controls.Add(editstuff);
             UserControls.TabPages.Add(EditPriceStockPage);
+            
+            StockTrackingView stocktrackstuff = new StockTrackingView();
+            stocktrackstuff.Dock = DockStyle.Fill;
+            TabPage StockTrackingPage = new TabPage();
+            StockTrackingPage.Controls.Add(stocktrackstuff);
+            UserControls.TabPages.Add(StockTrackingPage);
+            
+            UpdateDatabaseView updatestuff = new UpdateDatabaseView();
+            updatestuff.Dock = DockStyle.Fill;
+            TabPage UpdateDatabasePage = new TabPage();
+            UpdateDatabasePage.Controls.Add(updatestuff);
+            UserControls.TabPages.Add(UpdateDatabasePage);
         }
 
     }

@@ -32,11 +32,7 @@ namespace StockProgram
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.returnBtn = new System.Windows.Forms.Button();
             this.UserControls = new System.Windows.Forms.TabControl();
-            this.EditPriceStock = new System.Windows.Forms.TabPage();
-            this.StockTracking = new System.Windows.Forms.TabPage();
-            this.UpdateDatabase = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.UserControls.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -60,44 +56,11 @@ namespace StockProgram
             // 
             // UserControls
             // 
-            this.UserControls.Controls.Add(this.EditPriceStock);
-            this.UserControls.Controls.Add(this.StockTracking);
-            this.UserControls.Controls.Add(this.UpdateDatabase);
             this.UserControls.Location = new System.Drawing.Point(45, 454);
             this.UserControls.Name = "UserControls";
             this.UserControls.SelectedIndex = 0;
             this.UserControls.Size = new System.Drawing.Size(966, 300);
             this.UserControls.TabIndex = 21;
-            // 
-            // EditPriceStock
-            // 
-            this.EditPriceStock.Location = new System.Drawing.Point(4, 25);
-            this.EditPriceStock.Name = "EditPriceStock";
-            this.EditPriceStock.Padding = new System.Windows.Forms.Padding(3);
-            this.EditPriceStock.Size = new System.Drawing.Size(958, 271);
-            this.EditPriceStock.TabIndex = 0;
-            this.EditPriceStock.Text = "Editing and Calculations";
-            this.EditPriceStock.UseVisualStyleBackColor = true;
-            // 
-            // StockTracking
-            // 
-            this.StockTracking.Location = new System.Drawing.Point(4, 25);
-            this.StockTracking.Name = "StockTracking";
-            this.StockTracking.Padding = new System.Windows.Forms.Padding(3);
-            this.StockTracking.Size = new System.Drawing.Size(924, 348);
-            this.StockTracking.TabIndex = 1;
-            this.StockTracking.Text = "Stock Tracking";
-            this.StockTracking.UseVisualStyleBackColor = true;
-            // 
-            // UpdateDatabase
-            // 
-            this.UpdateDatabase.Location = new System.Drawing.Point(4, 25);
-            this.UpdateDatabase.Name = "UpdateDatabase";
-            this.UpdateDatabase.Padding = new System.Windows.Forms.Padding(3);
-            this.UpdateDatabase.Size = new System.Drawing.Size(924, 348);
-            this.UpdateDatabase.TabIndex = 2;
-            this.UpdateDatabase.Text = "Update database";
-            this.UpdateDatabase.UseVisualStyleBackColor = true;
             // 
             // TestForm
             // 
@@ -111,7 +74,6 @@ namespace StockProgram
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TestForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.UserControls.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -121,8 +83,5 @@ namespace StockProgram
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button returnBtn;
         private System.Windows.Forms.TabControl UserControls;
-        private System.Windows.Forms.TabPage EditPriceStock;
-        private System.Windows.Forms.TabPage StockTracking;
-        private System.Windows.Forms.TabPage UpdateDatabase;
     }
 }

@@ -101,5 +101,12 @@ namespace StockProgram
             }
         }
         #endregion
+
+        private void ReturnBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartMenu startMenuCall = new StartMenu();
+            startMenuCall.Show();
+        }
     }
 }

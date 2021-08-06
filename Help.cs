@@ -23,5 +23,9 @@ namespace StockProgram
             StartMenu startMenuCall = new StartMenu();
             startMenuCall.Show();
         }
+
+        private void ShowHelp() { 
+            
+        }
     }
 }

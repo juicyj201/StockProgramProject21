@@ -106,6 +106,12 @@
     <Compile Include="UserControls\EditStockPriceView.Designer.cs">
       <DependentUpon>EditStockPriceView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\HelpView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HelpView.Designer.cs">
+      <DependentUpon>HelpView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\StockTrackingView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <EmbeddedResource Include="UserControls\EditStockPriceView.resx">
       <DependentUpon>EditStockPriceView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HelpView.resx">
+      <DependentUpon>HelpView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\StockTrackingView.resx">
       <DependentUpon>StockTrackingView.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CodeStuff.txt" />
+    <Content Include="HelpText.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

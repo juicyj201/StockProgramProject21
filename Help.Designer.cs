@@ -30,11 +30,12 @@ namespace StockProgram
         private void InitializeComponent()
         {
             this.returnBtn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // returnBtn
             // 
-            this.returnBtn.Location = new System.Drawing.Point(716, 12);
+            this.returnBtn.Location = new System.Drawing.Point(548, 12);
             this.returnBtn.Name = "returnBtn";
             this.returnBtn.Size = new System.Drawing.Size(170, 51);
             this.returnBtn.TabIndex = 0;
@@ -42,11 +43,19 @@ namespace StockProgram
             this.returnBtn.UseVisualStyleBackColor = true;
             this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 69);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(707, 415);
+            this.panel1.TabIndex = 1;
+            // 
             // Help
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 496);
+            this.ClientSize = new System.Drawing.Size(731, 496);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.returnBtn);
             this.Name = "Help";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -58,5 +67,6 @@ namespace StockProgram
         #endregion
 
         private System.Windows.Forms.Button returnBtn;
+        private System.Windows.Forms.Panel panel1;
     }
 }

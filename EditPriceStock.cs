@@ -12,7 +12,7 @@ using StockProgram;
 
 namespace StockProgram
 {
-    public partial class EditPriceStock : System.Windows.Forms.Form
+    public partial class EditPriceStock : Form
     {
         public EditPriceStock()
         {

@@ -62,9 +62,8 @@ namespace StockProgram
             stockView.DataSource = table;
         }
 
-        //method/s for editing the datatable and allowing the database to be change in turn
         private void EditItems() {
-            
+            //TODO add code in that will allow the user to add items in
         }
 
         //methods for initialising the connection and table variables

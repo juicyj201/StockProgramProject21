@@ -63,7 +63,6 @@ namespace StockProgram
         }
 
         private void EditItems() {
-            //TODO add code in that will allow the user to add items in
         }
 
         //methods for initialising the connection and table variables

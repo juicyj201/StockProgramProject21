@@ -62,9 +62,7 @@ namespace StockProgram
             stockView.DataSource = table;
         }
 
-        //method/s for editing the datatable and allowing the database to be change in turn
         private void EditItems() {
-            
         }
 
         //methods for initialising the connection and table variables

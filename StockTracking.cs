@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace StockProgram
 {
-    public partial class StockTracking : System.Windows.Forms.Form
+    public partial class StockTracking : Form
     {
 
         public StockTracking()

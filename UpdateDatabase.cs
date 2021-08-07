@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace StockProgram
 {
-    public partial class UpdateDatabase : System.Windows.Forms.Form
+    public partial class UpdateDatabase : Form
     {
         public UpdateDatabase()
         {

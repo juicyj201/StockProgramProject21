@@ -11,7 +11,7 @@ using System.Data.SQLite;
 
 namespace StockProgram
 {
-    public partial class Form : System.Windows.Forms.Form
+    public partial class Form : Form
     {
         public Form()
         {

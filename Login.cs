@@ -11,9 +11,8 @@ using System.Data.SQLite;
 
 namespace StockProgram
 {
-    public partial class Form : Form
-    {
-        public Form()
+    public partial class Login : Form
+        public Login()
         {
             InitializeComponent();
         }

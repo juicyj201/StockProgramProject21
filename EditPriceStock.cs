@@ -16,12 +16,6 @@ namespace StockProgram
         public EditPriceStock()
         {
             InitializeComponent();
-
-            MainDatabase maindb = new MainDatabase();
-
-            maindb.OpenConnection();
-            maindb.ShowStock();
-            maindb.CloseConnection();
         }
 
     }

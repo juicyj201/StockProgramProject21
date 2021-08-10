@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace StockProgram
 {
-    public partial class Help : System.Windows.Forms.Form
+    public partial class Help : Form
     {
         public Help()
         {

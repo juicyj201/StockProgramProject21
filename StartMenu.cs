@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace StockProgram
 {
-    public partial class StartMenu : System.Windows.Forms.Form
+    public partial class StartMenu : Form
     {
         public StartMenu()
         {

@@ -12,7 +12,7 @@ using StockProgram.UserControls;
 
 namespace StockProgram
 {
-    public partial class MainDatabase : System.Windows.Forms.Form
+    public partial class MainDatabase : Form
     {
         //global variables
         private SQLiteConnection conn;

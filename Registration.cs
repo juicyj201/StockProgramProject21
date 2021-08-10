@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace StockProgram
 {
-    public partial class Registration : System.Windows.Forms.Form
+    public partial class Registration : Form
     {
         public Registration()
         {

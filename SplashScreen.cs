@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace StockProgram
 {
-    public partial class SplashScreen : System.Windows.Forms.Form
+    public partial class SplashScreen : Form
     {
         public SplashScreen()
         {

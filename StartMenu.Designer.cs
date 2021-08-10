@@ -29,12 +29,12 @@ namespace StockProgram
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartMenu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.maindatabaseBtn = new System.Windows.Forms.Button();
             this.helpBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
-            this.testBtn = new System.Windows.Forms.Button();
             this.aboutUsBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -91,19 +91,6 @@ namespace StockProgram
             this.exitBtn.UseVisualStyleBackColor = true;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // testBtn
-            // 
-            this.testBtn.BackColor = System.Drawing.Color.White;
-            this.testBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.testBtn.ForeColor = System.Drawing.Color.Black;
-            this.testBtn.Location = new System.Drawing.Point(618, 12);
-            this.testBtn.Name = "testBtn";
-            this.testBtn.Size = new System.Drawing.Size(152, 124);
-            this.testBtn.TabIndex = 7;
-            this.testBtn.Text = "Test button";
-            this.testBtn.UseVisualStyleBackColor = false;
-            this.testBtn.Click += new System.EventHandler(this.testBtn_Click);
-            // 
             // aboutUsBtn
             // 
             this.aboutUsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -122,7 +109,6 @@ namespace StockProgram
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(782, 503);
             this.Controls.Add(this.aboutUsBtn);
-            this.Controls.Add(this.testBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.helpBtn);
             this.Controls.Add(this.maindatabaseBtn);
@@ -130,6 +116,7 @@ namespace StockProgram
             this.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximumSize = new System.Drawing.Size(800, 550);
             this.MinimumSize = new System.Drawing.Size(800, 550);
@@ -149,7 +136,6 @@ namespace StockProgram
         private System.Windows.Forms.Button maindatabaseBtn;
         private System.Windows.Forms.Button helpBtn;
         private System.Windows.Forms.Button exitBtn;
-        private System.Windows.Forms.Button testBtn;
         private System.Windows.Forms.Button aboutUsBtn;
     }
 }

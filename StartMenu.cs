@@ -39,15 +39,6 @@ namespace StockProgram
             this.Close();
             this.Dispose();
         }
-
-        private void testBtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            TestForm testForm = new TestForm();
-            testForm.Show();
-            //this.Close();
-        }
-
         private void aboutUsBtn_Click(object sender, EventArgs e)
         {
             this.Hide();

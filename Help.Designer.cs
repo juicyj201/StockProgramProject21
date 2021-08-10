@@ -35,6 +35,8 @@ namespace StockProgram
             // 
             // returnBtn
             // 
+            this.returnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.returnBtn.ForeColor = System.Drawing.Color.White;
             this.returnBtn.Location = new System.Drawing.Point(548, 12);
             this.returnBtn.Name = "returnBtn";
             this.returnBtn.Size = new System.Drawing.Size(170, 51);
@@ -45,6 +47,7 @@ namespace StockProgram
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(12, 69);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(707, 415);
@@ -54,6 +57,7 @@ namespace StockProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(731, 496);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.returnBtn);

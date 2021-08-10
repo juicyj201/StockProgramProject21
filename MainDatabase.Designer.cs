@@ -61,6 +61,7 @@ namespace StockProgram
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(42, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(300, 48);
@@ -69,6 +70,8 @@ namespace StockProgram
             // 
             // returnBtn
             // 
+            this.returnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.returnBtn.ForeColor = System.Drawing.Color.White;
             this.returnBtn.Location = new System.Drawing.Point(851, 35);
             this.returnBtn.Name = "returnBtn";
             this.returnBtn.Size = new System.Drawing.Size(131, 46);
@@ -89,6 +92,7 @@ namespace StockProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1025, 750);
             this.Controls.Add(this.UserControls);
             this.Controls.Add(this.returnBtn);

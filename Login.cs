@@ -35,7 +35,7 @@ namespace StockProgram
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                if (dt.Rows.Count >0)
+                if (dt.Rows.Count < 0)
                 {
                     MessageBox.Show("You are Logged in", "Login successful");
                     CloseForm();

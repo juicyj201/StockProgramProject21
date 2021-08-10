@@ -9,7 +9,7 @@ using StockProgram.UserControls;
 
 namespace StockProgram
 {
-    public partial class TestForm : Form
+    public partial class TestForm : System.Windows.Forms.Form
     {
         private SQLiteConnection conn;
         private SQLiteCommand comm;

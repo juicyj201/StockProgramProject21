@@ -127,6 +127,9 @@
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +163,9 @@
     <EmbeddedResource Include="UserControls\StockTrackingView.resx">
       <DependentUpon>StockTrackingView.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Login.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -176,7 +182,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CodeStuff.txt" />
-    <Content Include="HelpText.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

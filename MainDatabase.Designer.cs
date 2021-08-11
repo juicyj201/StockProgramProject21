@@ -58,13 +58,12 @@ namespace StockProgram
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.stockView.DefaultCellStyle = dataGridViewCellStyle1;
-            this.stockView.Location = new System.Drawing.Point(50, 115);
+            this.stockView.Location = new System.Drawing.Point(53, 111);
             this.stockView.Name = "stockView";
             this.stockView.RowHeadersWidth = 51;
             this.stockView.RowTemplate.Height = 24;
-            this.stockView.Size = new System.Drawing.Size(932, 184);
+            this.stockView.Size = new System.Drawing.Size(685, 259);
             this.stockView.TabIndex = 0;
-            this.stockView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockView_CellClick);
             this.stockView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.stockView_MouseDoubleClick);
             // 
             // label1
@@ -72,7 +71,7 @@ namespace StockProgram
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(42, 35);
+            this.label1.Location = new System.Drawing.Point(45, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(300, 48);
             this.label1.TabIndex = 18;
@@ -82,7 +81,7 @@ namespace StockProgram
             // 
             this.returnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.returnBtn.ForeColor = System.Drawing.Color.White;
-            this.returnBtn.Location = new System.Drawing.Point(851, 35);
+            this.returnBtn.Location = new System.Drawing.Point(607, 33);
             this.returnBtn.Name = "returnBtn";
             this.returnBtn.Size = new System.Drawing.Size(131, 46);
             this.returnBtn.TabIndex = 19;
@@ -92,10 +91,10 @@ namespace StockProgram
             // 
             // UserControls
             // 
-            this.UserControls.Location = new System.Drawing.Point(50, 544);
+            this.UserControls.Location = new System.Drawing.Point(780, 33);
             this.UserControls.Name = "UserControls";
             this.UserControls.SelectedIndex = 0;
-            this.UserControls.Size = new System.Drawing.Size(932, 316);
+            this.UserControls.Size = new System.Drawing.Size(593, 555);
             this.UserControls.TabIndex = 20;
             // 
             // label2
@@ -111,16 +110,16 @@ namespace StockProgram
             // 
             // nameTb
             // 
-            this.nameTb.Location = new System.Drawing.Point(176, 20);
+            this.nameTb.Location = new System.Drawing.Point(232, 22);
             this.nameTb.Name = "nameTb";
-            this.nameTb.Size = new System.Drawing.Size(259, 22);
+            this.nameTb.Size = new System.Drawing.Size(414, 22);
             this.nameTb.TabIndex = 22;
             // 
             // priceTb
             // 
-            this.priceTb.Location = new System.Drawing.Point(176, 76);
+            this.priceTb.Location = new System.Drawing.Point(232, 78);
             this.priceTb.Name = "priceTb";
-            this.priceTb.Size = new System.Drawing.Size(259, 22);
+            this.priceTb.Size = new System.Drawing.Size(414, 22);
             this.priceTb.TabIndex = 24;
             // 
             // priceLbl
@@ -136,9 +135,9 @@ namespace StockProgram
             // 
             // quantityTb
             // 
-            this.quantityTb.Location = new System.Drawing.Point(634, 20);
+            this.quantityTb.Location = new System.Drawing.Point(232, 132);
             this.quantityTb.Name = "quantityTb";
-            this.quantityTb.Size = new System.Drawing.Size(259, 22);
+            this.quantityTb.Size = new System.Drawing.Size(414, 22);
             this.quantityTb.TabIndex = 26;
             // 
             // label4
@@ -146,7 +145,7 @@ namespace StockProgram
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(476, 22);
+            this.label4.Location = new System.Drawing.Point(18, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 20);
             this.label4.TabIndex = 25;
@@ -160,9 +159,9 @@ namespace StockProgram
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.priceLbl);
             this.panel1.Controls.Add(this.priceTb);
-            this.panel1.Location = new System.Drawing.Point(50, 347);
+            this.panel1.Location = new System.Drawing.Point(53, 400);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(932, 126);
+            this.panel1.Size = new System.Drawing.Size(685, 188);
             this.panel1.TabIndex = 27;
             // 
             // MainDatabase
@@ -170,7 +169,7 @@ namespace StockProgram
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1025, 883);
+            this.ClientSize = new System.Drawing.Size(1420, 639);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.UserControls);
             this.Controls.Add(this.returnBtn);

@@ -17,25 +17,29 @@ namespace StockProgram
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CloseForm() {
+            this.Close();
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
         {
             if (textBox1.Text.Trim() == "" && textBox2.Text.Trim() == "")
             {
                 MessageBox.Show("Empty Fields", "Error");
             }
-            else 
+            else
             {
-                string query = "SELECT * FROM users WHERE email = @textBox1 AND password = @textBox2";
+                //string query = "SELECT * FROM users WHERE email = @textBox1 AND password = @textBox2";
+                string query = "SELECT * FROM users WHERE password = @password";
                 SQLiteConnection conn = new SQLiteConnection("Data Source = Login.db; Version = 3;");
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                cmd.Parameters.AddWithValue("@textBox1", textBox1.Text);
-                cmd.Parameters.AddWithValue("@textBox2", textBox2.Text);
-                SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                cmd.Parameters.AddWithValue("@password", textBox2.Text);
+                int alright = 0;
+                cmd.ExecuteNonQuery();
+                alright = cmd.ExecuteNonQuery();
 
-                if (dt.Rows.Count > 1)
+                if (alright > 0)
                 {
                     MessageBox.Show("You are Logged in", "Login successful");
                     CloseForm();
@@ -44,16 +48,8 @@ namespace StockProgram
                 {
                     MessageBox.Show("Login Failed", "An error occurs");
                 }
+                conn.Close();
             }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CloseForm() {
-            this.Close();
         }
     }   
 }

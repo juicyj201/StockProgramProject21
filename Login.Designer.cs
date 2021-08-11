@@ -76,6 +76,7 @@ namespace StockProgram
             this.LoginBtn.TabIndex = 4;
             this.LoginBtn.Text = "LOGIN";
             this.LoginBtn.UseVisualStyleBackColor = false;
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // label2
             // 
@@ -126,6 +127,7 @@ namespace StockProgram
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

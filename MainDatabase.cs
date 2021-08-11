@@ -15,16 +15,12 @@ namespace StockProgram
     public partial class MainDatabase : Form
     {
         //global variables
-        private SQLiteConnection conn;
-        private DataTable table;
+        private SQLiteConnection conn = new SQLiteConnection(@"data source=.\StockDatabase.db");
+        private DataTable table = new DataTable();
 
         public MainDatabase()
         {
             InitializeComponent();
-
-            //initialising (or setting) the connection variable as well as the table variable
-            SetConn();
-            SetTable();
 
             //open connection to database
             OpenConnection();
@@ -41,11 +37,11 @@ namespace StockProgram
 
         //methods for opening and closing database
         public void OpenConnection() {
-            GetConn().Open();
+            conn.Open();
         }
 
         public void CloseConnection() {
-            GetConn().Close();
+            conn.Close();
         }
 
         //method for showing the database
@@ -60,23 +56,6 @@ namespace StockProgram
 
             //actually putting it in the form
             stockView.DataSource = table;
-        }      
-
-        //methods for initialising the connection and table variables
-        public SQLiteConnection GetConn() {
-            return conn;
-        }
-
-        private void SetConn() {
-            conn = new SQLiteConnection(@"data source=.\StockDatabase.db");
-        }
-
-        public DataTable GetTable() {
-            return table;
-        }
-
-        private void SetTable() {
-            table = new DataTable();
         }
 
         private void returnBtn_Click(object sender, EventArgs e)
@@ -86,7 +65,12 @@ namespace StockProgram
             startMenuCall.Show();
         }
 
+        //method for showing tab control
         private void AddControls() {
+            UserControls.SizeMode = TabSizeMode.Normal;
+            UserControls.Appearance = TabAppearance.Normal;
+            UserControls.SizeMode = TabSizeMode.Fixed;
+
             EditStockPriceView editstuff = new EditStockPriceView();
             editstuff.Dock = DockStyle.Fill;
             TabPage EditPriceStockPage = new TabPage();
@@ -109,12 +93,7 @@ namespace StockProgram
             UserControls.TabPages.Add(UpdateDatabasePage);
         }
 
-        private void stockView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //stockView.CurrentCell = stockView.Rows[0].Cells[0];
-            //stockView.Rows[0].Selected = true;
-        }
-
+        //method for showing the values inside dataGridView
         private void stockView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             //string values = stockView.SelectedRows.ToString();

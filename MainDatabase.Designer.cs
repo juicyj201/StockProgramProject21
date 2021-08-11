@@ -35,7 +35,15 @@ namespace StockProgram
             this.label1 = new System.Windows.Forms.Label();
             this.returnBtn = new System.Windows.Forms.Button();
             this.UserControls = new System.Windows.Forms.TabControl();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nameTb = new System.Windows.Forms.TextBox();
+            this.priceTb = new System.Windows.Forms.TextBox();
+            this.priceLbl = new System.Windows.Forms.Label();
+            this.quantityTb = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.stockView)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // stockView
@@ -56,6 +64,8 @@ namespace StockProgram
             this.stockView.RowTemplate.Height = 24;
             this.stockView.Size = new System.Drawing.Size(932, 184);
             this.stockView.TabIndex = 0;
+            this.stockView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockView_CellClick);
+            this.stockView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.stockView_MouseDoubleClick);
             // 
             // label1
             // 
@@ -82,18 +92,86 @@ namespace StockProgram
             // 
             // UserControls
             // 
-            this.UserControls.Location = new System.Drawing.Point(50, 340);
+            this.UserControls.Location = new System.Drawing.Point(50, 544);
             this.UserControls.Name = "UserControls";
             this.UserControls.SelectedIndex = 0;
-            this.UserControls.Size = new System.Drawing.Size(932, 377);
+            this.UserControls.Size = new System.Drawing.Size(932, 316);
             this.UserControls.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(18, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 20);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Product Name";
+            // 
+            // nameTb
+            // 
+            this.nameTb.Location = new System.Drawing.Point(176, 20);
+            this.nameTb.Name = "nameTb";
+            this.nameTb.Size = new System.Drawing.Size(259, 22);
+            this.nameTb.TabIndex = 22;
+            // 
+            // priceTb
+            // 
+            this.priceTb.Location = new System.Drawing.Point(176, 76);
+            this.priceTb.Name = "priceTb";
+            this.priceTb.Size = new System.Drawing.Size(259, 22);
+            this.priceTb.TabIndex = 24;
+            // 
+            // priceLbl
+            // 
+            this.priceLbl.AutoSize = true;
+            this.priceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceLbl.ForeColor = System.Drawing.Color.White;
+            this.priceLbl.Location = new System.Drawing.Point(18, 78);
+            this.priceLbl.Name = "priceLbl";
+            this.priceLbl.Size = new System.Drawing.Size(111, 20);
+            this.priceLbl.TabIndex = 23;
+            this.priceLbl.Text = "Product Price";
+            // 
+            // quantityTb
+            // 
+            this.quantityTb.Location = new System.Drawing.Point(634, 20);
+            this.quantityTb.Name = "quantityTb";
+            this.quantityTb.Size = new System.Drawing.Size(259, 22);
+            this.quantityTb.TabIndex = 26;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(476, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(134, 20);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Product Quantity";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.quantityTb);
+            this.panel1.Controls.Add(this.nameTb);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.priceLbl);
+            this.panel1.Controls.Add(this.priceTb);
+            this.panel1.Location = new System.Drawing.Point(50, 347);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(932, 126);
+            this.panel1.TabIndex = 27;
             // 
             // MainDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1025, 750);
+            this.ClientSize = new System.Drawing.Size(1025, 883);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.UserControls);
             this.Controls.Add(this.returnBtn);
             this.Controls.Add(this.label1);
@@ -103,6 +181,8 @@ namespace StockProgram
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainDatabase";
             ((System.ComponentModel.ISupportInitialize)(this.stockView)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,6 +194,13 @@ namespace StockProgram
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button returnBtn;
         private System.Windows.Forms.TabControl UserControls;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox nameTb;
+        private System.Windows.Forms.TextBox priceTb;
+        private System.Windows.Forms.Label priceLbl;
+        private System.Windows.Forms.TextBox quantityTb;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

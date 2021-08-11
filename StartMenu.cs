@@ -38,6 +38,7 @@ namespace StockProgram
             this.Hide();
             this.Close();
             this.Dispose();
+            Application.Exit();
         }
         private void aboutUsBtn_Click(object sender, EventArgs e)
         {

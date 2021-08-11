@@ -60,10 +60,7 @@ namespace StockProgram
 
             //actually putting it in the form
             stockView.DataSource = table;
-        }
-
-        private void EditItems() {
-        }
+        }      
 
         //methods for initialising the connection and table variables
         public SQLiteConnection GetConn() {
@@ -112,5 +109,23 @@ namespace StockProgram
             UserControls.TabPages.Add(UpdateDatabasePage);
         }
 
+        private void stockView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //stockView.CurrentCell = stockView.Rows[0].Cells[0];
+            //stockView.Rows[0].Selected = true;
+        }
+
+        private void stockView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            //string values = stockView.SelectedRows.ToString();
+            //MessageBox.Show(values);
+            string namecell = stockView.CurrentCell.OwningRow.Cells[1].Value.ToString();
+            string pricecell = stockView.CurrentCell.OwningRow.Cells[2].Value.ToString();
+            string quantitycell = stockView.CurrentCell.OwningRow.Cells[3].Value.ToString();
+
+            nameTb.Text = namecell;
+            priceTb.Text = pricecell;
+            quantityTb.Text = quantitycell;
+        }
     }
 }

@@ -1,3 +1,0 @@
-﻿1. Create the user controls
-2. Replace each of the coded forms
-3. Implement the user controls

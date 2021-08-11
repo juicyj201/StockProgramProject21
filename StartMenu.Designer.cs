@@ -36,6 +36,7 @@ namespace StockProgram
             this.helpBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.aboutUsBtn = new System.Windows.Forms.Button();
+            this.settingsBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@ namespace StockProgram
             // exitBtn
             // 
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Location = new System.Drawing.Point(235, 386);
+            this.exitBtn.Location = new System.Drawing.Point(235, 468);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(299, 57);
             this.exitBtn.TabIndex = 6;
@@ -102,12 +103,24 @@ namespace StockProgram
             this.aboutUsBtn.UseVisualStyleBackColor = true;
             this.aboutUsBtn.Click += new System.EventHandler(this.aboutUsBtn_Click);
             // 
+            // settingsBtn
+            // 
+            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsBtn.Location = new System.Drawing.Point(235, 385);
+            this.settingsBtn.Name = "settingsBtn";
+            this.settingsBtn.Size = new System.Drawing.Size(299, 57);
+            this.settingsBtn.TabIndex = 9;
+            this.settingsBtn.Text = "Settings";
+            this.settingsBtn.UseVisualStyleBackColor = true;
+            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
+            // 
             // StartMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(782, 503);
+            this.ClientSize = new System.Drawing.Size(782, 603);
+            this.Controls.Add(this.settingsBtn);
             this.Controls.Add(this.aboutUsBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.helpBtn);
@@ -118,8 +131,8 @@ namespace StockProgram
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.MaximumSize = new System.Drawing.Size(800, 550);
-            this.MinimumSize = new System.Drawing.Size(800, 550);
+            this.MaximumSize = new System.Drawing.Size(800, 650);
+            this.MinimumSize = new System.Drawing.Size(800, 650);
             this.Name = "StartMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartMenu";
@@ -137,5 +150,6 @@ namespace StockProgram
         private System.Windows.Forms.Button helpBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button aboutUsBtn;
+        private System.Windows.Forms.Button settingsBtn;
     }
 }

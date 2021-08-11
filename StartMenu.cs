@@ -46,5 +46,10 @@ namespace StockProgram
             AboutBox AboutCall = new AboutBox();
             AboutCall.Show();
         }
+
+        private void settingsBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -56,6 +56,18 @@ namespace StockProgram
 
             //actually putting it in the form
             stockView.DataSource = table;
+
+            stockView.RowsDefaultCellStyle.BackColor = Color.White;
+            stockView.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+            stockView.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            stockView.DefaultCellStyle.SelectionBackColor = Color.Black;
+            stockView.DefaultCellStyle.SelectionForeColor = Color.White;
+            stockView.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            stockView.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            stockView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            stockView.AllowUserToResizeColumns = false;
+            stockView.SuspendLayout();
+            
         }
 
         private void returnBtn_Click(object sender, EventArgs e)
@@ -67,9 +79,8 @@ namespace StockProgram
 
         //method for showing tab control
         private void AddControls() {
-            UserControls.SizeMode = TabSizeMode.Normal;
+            UserControls.SizeMode = TabSizeMode.FillToRight;
             UserControls.Appearance = TabAppearance.Normal;
-            UserControls.SizeMode = TabSizeMode.Fixed;
 
             EditStockPriceView editstuff = new EditStockPriceView();
             editstuff.Dock = DockStyle.Fill;

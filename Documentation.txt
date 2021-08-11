@@ -1,0 +1,4 @@
+﻿/**This is the actual "Readme File" :)
+
+Stock Inventory Control Software
+

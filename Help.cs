@@ -12,6 +12,11 @@ namespace StockProgram
 {
     public partial class Help : Form
     {
+        /// <summary>
+        /// This is the help form.
+        /// If the user needs help figuring out how to use the program, they can go to this form for additional help.
+        /// </summary>
+        
         public Help()
         {
             InitializeComponent();

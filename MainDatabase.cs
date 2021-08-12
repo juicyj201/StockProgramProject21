@@ -14,28 +14,28 @@ namespace StockProgram
 {
     public partial class MainDatabase : Form
     {
-        //global variables
+        /// <summary>
+        /// These are the global variables for the MainDatabase class
+        /// </summary>
         private SQLiteConnection conn = new SQLiteConnection(@"data source=.\StockDatabase.db");
         private DataTable table = new DataTable();
 
         public MainDatabase()
         {
+            ///<summary>
+            /// We initialise the components and reference the methods that the program uses, inside this constructor
+            ///<summary>
             InitializeComponent();
 
-            //open connection to database
             OpenConnection();
-
-            //show stock
             ShowStock();
-
-            //show controls
             AddControls();
-
-            //close connection to database
             CloseConnection();
         }
 
-        //methods for opening and closing database
+        /// <summary>
+        /// These are the methods used for opening and closing the connection to the sqlite database.
+        /// </summary>
         public void OpenConnection() {
             conn.Open();
         }
@@ -44,7 +44,9 @@ namespace StockProgram
             conn.Close();
         }
 
-        //method for showing the database
+        /// <summary>
+        /// This is a method used to show the items inside the sqlite database
+        /// </summary>
         public void ShowStock() {
             //the command object
             string selectStock = "SELECT* from Products";
@@ -77,7 +79,9 @@ namespace StockProgram
             startMenuCall.Show();
         }
 
-        //method for showing tab control
+        /// <summary>
+        /// This is a method used to add the user controls, to the tab control in the MainDatabase form
+        /// </summary>
         private void AddControls() {
             UserControls.SizeMode = TabSizeMode.FillToRight;
             UserControls.Appearance = TabAppearance.Normal;
@@ -104,11 +108,14 @@ namespace StockProgram
             UserControls.TabPages.Add(UpdateDatabasePage);
         }
 
-        //method for showing the values inside dataGridView
+        /// <summary>
+        /// This is a method used to display an item in a selected row.
+        /// If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void stockView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            //string values = stockView.SelectedRows.ToString();
-            //MessageBox.Show(values);
             string namecell = stockView.CurrentCell.OwningRow.Cells[1].Value.ToString();
             string pricecell = stockView.CurrentCell.OwningRow.Cells[2].Value.ToString();
             string quantitycell = stockView.CurrentCell.OwningRow.Cells[3].Value.ToString();

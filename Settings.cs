@@ -12,6 +12,12 @@ namespace StockProgram
 {
     public partial class Settings : Form
     {
+        /// <summary>
+        /// This is an experimental form, that allows the user to change the colour scheme of the program.
+        /// There are only two colour themes currently: White and Black.
+        /// (In future, I would like to add more settings and more colour themes to the program)
+        /// </summary>
+
         public Settings()
         {
             InitializeComponent();

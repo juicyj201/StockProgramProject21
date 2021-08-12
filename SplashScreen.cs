@@ -12,6 +12,11 @@ namespace StockProgram
 {
     public partial class SplashScreen : Form
     {
+        /// <summary>
+        /// This is the Splash screen.
+        /// It loads for a couple of seconds, and once it is finished loading it closes and the Start menu opens.
+        /// </summary>
+
         public SplashScreen()
         {
             InitializeComponent();

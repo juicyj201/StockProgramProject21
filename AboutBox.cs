@@ -11,6 +11,11 @@ namespace StockProgram
 {
     partial class AboutBox : Form
     {
+        /// <summary>
+        /// This is the About box.
+        /// It shows information about the group and other additional information the user might need.
+        /// </summary>
+
         public AboutBox()
         {
             InitializeComponent();

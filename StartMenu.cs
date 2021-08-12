@@ -12,6 +12,11 @@ namespace StockProgram
 {
     public partial class StartMenu : Form
     {
+        /// <summary>
+        /// This is the menu form that holds all of the buttons for each of the seperate forms.
+        /// When the user clicks on a button the form is hidden (and not closed), and a new instance of another form is created and called.
+        /// </summary>
+ 
         public StartMenu()
         {
             InitializeComponent();
@@ -22,7 +27,6 @@ namespace StockProgram
             this.Hide();
             MainDatabase mainDatabaseCall = new MainDatabase();
             mainDatabaseCall.Show();
-            //this.Close();
         }
 
         private void helpBtn_Click(object sender, EventArgs e)
@@ -30,7 +34,6 @@ namespace StockProgram
             this.Hide();
             Help helpCall = new Help();
             helpCall.Show();
-            //this.Close();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)

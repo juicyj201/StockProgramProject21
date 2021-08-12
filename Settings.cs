@@ -17,24 +17,35 @@ namespace StockProgram
             InitializeComponent();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            Settings.ActiveForm.BackColor = Color.White;
-            Settings.ActiveForm.ForeColor = Color.Black;
-            
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            Settings.ActiveForm.BackColor = Color.White;
-            Settings.ActiveForm.ForeColor = Color.Black;
-        }
-
         private void returnBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
             StartMenu menuCall = new StartMenu();
             menuCall.Show();
+        }
+
+        private void blackBtn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (blackBtn.Checked == true && whiteBtn.Checked == false)
+            {
+                Settings.ActiveForm.BackColor = Color.Black;
+                Settings.ActiveForm.ForeColor = Color.White;
+            }
+        }
+        private void whiteBtn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (whiteBtn.Checked == true && blackBtn.Checked == false)
+            {
+
+                Settings.ActiveForm.BackColor = Color.White;
+                Settings.ActiveForm.ForeColor = Color.Black;
+                settingsLbl.ForeColor = Color.Black;
+                colourGb.ForeColor = Color.Black;
+                blackBtn.ForeColor = Color.Black;
+                whiteBtn.ForeColor = Color.Black;
+                returnBtn.ForeColor = Color.Black;
+                returnBtn.FlatStyle = FlatStyle.Flat;
+            }
         }
     }
 }

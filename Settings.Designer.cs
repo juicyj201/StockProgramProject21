@@ -30,11 +30,11 @@ namespace StockProgram
         private void InitializeComponent()
         {
             this.returnBtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.groupBox1.SuspendLayout();
+            this.settingsLbl = new System.Windows.Forms.Label();
+            this.colourGb = new System.Windows.Forms.GroupBox();
+            this.blackBtn = new System.Windows.Forms.RadioButton();
+            this.whiteBtn = new System.Windows.Forms.RadioButton();
+            this.colourGb.SuspendLayout();
             this.SuspendLayout();
             // 
             // returnBtn
@@ -49,51 +49,53 @@ namespace StockProgram
             this.returnBtn.UseVisualStyleBackColor = true;
             this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
             // 
-            // label2
+            // settingsLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(28, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 39);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Settings";
+            this.settingsLbl.AutoSize = true;
+            this.settingsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsLbl.ForeColor = System.Drawing.Color.White;
+            this.settingsLbl.Location = new System.Drawing.Point(28, 29);
+            this.settingsLbl.Name = "settingsLbl";
+            this.settingsLbl.Size = new System.Drawing.Size(140, 39);
+            this.settingsLbl.TabIndex = 2;
+            this.settingsLbl.Text = "Settings";
             // 
-            // groupBox1
+            // colourGb
             // 
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(67, 119);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(401, 151);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Colour theme";
+            this.colourGb.Controls.Add(this.whiteBtn);
+            this.colourGb.Controls.Add(this.blackBtn);
+            this.colourGb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colourGb.ForeColor = System.Drawing.Color.White;
+            this.colourGb.Location = new System.Drawing.Point(67, 119);
+            this.colourGb.Name = "colourGb";
+            this.colourGb.Size = new System.Drawing.Size(401, 151);
+            this.colourGb.TabIndex = 3;
+            this.colourGb.TabStop = false;
+            this.colourGb.Text = "Colour theme";
             // 
-            // checkBox1
+            // blackBtn
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(44, 52);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(168, 29);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Black (Modern)";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.blackBtn.AutoSize = true;
+            this.blackBtn.Location = new System.Drawing.Point(33, 48);
+            this.blackBtn.Name = "blackBtn";
+            this.blackBtn.Size = new System.Drawing.Size(167, 29);
+            this.blackBtn.TabIndex = 2;
+            this.blackBtn.TabStop = true;
+            this.blackBtn.Text = "Black (Modern)";
+            this.blackBtn.UseVisualStyleBackColor = true;
+            this.blackBtn.CheckedChanged += new System.EventHandler(this.blackBtn_CheckedChanged);
             // 
-            // checkBox2
+            // whiteBtn
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(44, 98);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(171, 29);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "White (Modern)";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.whiteBtn.AutoSize = true;
+            this.whiteBtn.Location = new System.Drawing.Point(33, 96);
+            this.whiteBtn.Name = "whiteBtn";
+            this.whiteBtn.Size = new System.Drawing.Size(170, 29);
+            this.whiteBtn.TabIndex = 3;
+            this.whiteBtn.TabStop = true;
+            this.whiteBtn.Text = "White (Modern)";
+            this.whiteBtn.UseVisualStyleBackColor = true;
+            this.whiteBtn.CheckedChanged += new System.EventHandler(this.whiteBtn_CheckedChanged);
             // 
             // Settings
             // 
@@ -101,13 +103,14 @@ namespace StockProgram
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(536, 307);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.colourGb);
+            this.Controls.Add(this.settingsLbl);
             this.Controls.Add(this.returnBtn);
             this.Name = "Settings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.colourGb.ResumeLayout(false);
+            this.colourGb.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,9 +119,9 @@ namespace StockProgram
         #endregion
 
         private System.Windows.Forms.Button returnBtn;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label settingsLbl;
+        private System.Windows.Forms.GroupBox colourGb;
+        private System.Windows.Forms.RadioButton whiteBtn;
+        private System.Windows.Forms.RadioButton blackBtn;
     }
 }

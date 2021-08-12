@@ -49,7 +49,9 @@ namespace StockProgram
 
         private void settingsBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Settings settingsCall = new Settings();
+            settingsCall.Show();
         }
     }
 }

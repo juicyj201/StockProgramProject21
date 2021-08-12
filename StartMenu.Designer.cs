@@ -31,7 +31,7 @@ namespace StockProgram
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartMenu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.menuLbl = new System.Windows.Forms.Label();
             this.maindatabaseBtn = new System.Windows.Forms.Button();
             this.helpBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
@@ -42,22 +42,22 @@ namespace StockProgram
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.menuLbl);
             this.panel1.Location = new System.Drawing.Point(319, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(125, 74);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // menuLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 33);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Menu";
+            this.menuLbl.AutoSize = true;
+            this.menuLbl.Location = new System.Drawing.Point(22, 19);
+            this.menuLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.menuLbl.Name = "menuLbl";
+            this.menuLbl.Size = new System.Drawing.Size(78, 33);
+            this.menuLbl.TabIndex = 0;
+            this.menuLbl.Text = "Menu";
             // 
             // maindatabaseBtn
             // 
@@ -145,7 +145,7 @@ namespace StockProgram
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label menuLbl;
         private System.Windows.Forms.Button maindatabaseBtn;
         private System.Windows.Forms.Button helpBtn;
         private System.Windows.Forms.Button exitBtn;

@@ -24,18 +24,14 @@ namespace StockProgram
 
         private void maindatabaseBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            //MainDatabase mainDatabaseCall = new MainDatabase();
-            //mainDatabaseCall.Show();
             FormControl.main2.Show();
+            this.Hide();
         }
 
         private void helpBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            //Help helpCall = new Help();
-            //helpCall.Show();
             FormControl.help2.Show();
+            this.Hide();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
@@ -47,18 +43,14 @@ namespace StockProgram
         }
         private void aboutUsBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            //AboutBox AboutCall = new AboutBox();
-            //AboutCall.Show();
             FormControl.about2.Show();
+            this.Hide();
         }
 
         private void settingsBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            //Settings settingsCall = new Settings();
-            //settingsCall.Show();
             FormControl.settings2.Show();
+            this.Hide();
         }
     }
 }

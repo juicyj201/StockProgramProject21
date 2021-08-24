@@ -26,8 +26,6 @@ namespace StockProgram
         private void returnBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //StartMenu menuCall = new StartMenu();
-            //menuCall.Show();
             FormControl.menu2.Show();
         }
 
@@ -35,15 +33,33 @@ namespace StockProgram
         {
             if (blackBtn.Checked == true && whiteBtn.Checked == false)
             {
+                //settings
                 Settings.ActiveForm.BackColor = Color.Black;
                 Settings.ActiveForm.ForeColor = Color.White;
+                settingsLbl.ForeColor = Color.White;
+                colourGb.ForeColor = Color.White;
+                blackBtn.ForeColor = Color.White;
+                whiteBtn.ForeColor = Color.White;
+                returnBtn.ForeColor = Color.White;
+                returnBtn.FlatStyle = FlatStyle.Flat;
+
+                /**
+                //menu
+                StartMenu.ActiveForm.BackColor = Color.Black;
+                StartMenu.ActiveForm.ForeColor = Color.White;
+                StartMenu.menuLbl2.ForeColor = Color.White;
+                StartMenu.mainsdatabaseBtn2.ForeColor = Color.White;
+                StartMenu.helpBtn2.ForeColor = Color.White;
+                StartMenu.helpBtn2.ForeColor = Color.White;
+                StartMenu.aboutUsBtn2.ForeColor = Color.White;
+                **/
             }
         }
         private void whiteBtn_CheckedChanged(object sender, EventArgs e)
         {
             if (whiteBtn.Checked == true && blackBtn.Checked == false)
             {
-
+                //settings
                 Settings.ActiveForm.BackColor = Color.White;
                 Settings.ActiveForm.ForeColor = Color.Black;
                 settingsLbl.ForeColor = Color.Black;
@@ -52,6 +68,18 @@ namespace StockProgram
                 whiteBtn.ForeColor = Color.Black;
                 returnBtn.ForeColor = Color.Black;
                 returnBtn.FlatStyle = FlatStyle.Flat;
+
+                /**
+                //menu
+                StartMenu.ActiveForm.BackColor = Color.Black;
+                StartMenu.ActiveForm.ForeColor = Color.White;
+                StartMenu.menuLbl2.ForeColor = Color.White;
+                StartMenu.mainsdatabaseBtn2.ForeColor = Color.White;
+                StartMenu.helpBtn2.ForeColor = Color.White;
+                StartMenu.helpBtn2.ForeColor = Color.White;
+                StartMenu.aboutUsBtn2.ForeColor = Color.White;
+                StartMenu.settingsBtn2.ForeColor = Color.White
+                **/
             }
         }
     }

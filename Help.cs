@@ -25,8 +25,6 @@ namespace StockProgram
         private void returnBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //StartMenu startMenuCall = new StartMenu();
-            //startMenuCall.Show();
             FormControl.menu2.Show();
         }
 

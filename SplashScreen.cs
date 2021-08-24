@@ -28,9 +28,9 @@ namespace StockProgram
             if (loadBar.Value == 100)
             {
                 this.Hide();
-                FormControl.login2.Show();
+                this.Close();
+                //FormControl.menu2.Show();
             }
-            
         }
     }
 }

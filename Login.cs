@@ -19,7 +19,7 @@ namespace StockProgram
 
         private void CloseForm() {
             this.Hide();
-            FormControl.menu2.Show();
+            //FormControl.menu2.Show();
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)

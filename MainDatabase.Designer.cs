@@ -170,12 +170,15 @@ namespace StockProgram
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1420, 639);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.UserControls);
             this.Controls.Add(this.returnBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.stockView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainDatabase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainDatabase";

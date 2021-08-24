@@ -27,7 +27,8 @@ namespace StockProgram
             loadBar.Increment(20);
             if (loadBar.Value == 100)
             {
-                this.Close();
+                this.Hide();
+                FormControl.login2.Show();
             }
             
         }

@@ -26,8 +26,9 @@ namespace StockProgram
         private void returnBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            StartMenu menuCall = new StartMenu();
-            menuCall.Show();
+            //StartMenu menuCall = new StartMenu();
+            //menuCall.Show();
+            FormControl.menu2.Show();
         }
 
         private void blackBtn_CheckedChanged(object sender, EventArgs e)

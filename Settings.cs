@@ -16,6 +16,9 @@ namespace StockProgram
         /// This is an experimental form, that allows the user to change the colour scheme of the program.
         /// There are only two colour themes currently: White and Black.
         /// (In future, I would like to add more settings and more colour themes to the program)
+        /// 
+        /// Currently, I will not implement the form as it still needs to be worked on and as I said, it is still experimental.
+        /// After creating a release for the program, I will implement the settings section as a new feature.
         /// </summary>
 
         public Settings()

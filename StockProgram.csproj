@@ -155,6 +155,7 @@
     <EmbeddedResource Include="UserControls\StockTrackingView.resx">
       <DependentUpon>StockTrackingView.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="backups%28general%29\README.md" />
     <None Include="Login.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -174,7 +175,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\StockProgram.xml" />
-    <Content Include="Documentation.txt" />
+    <Content Include="readme.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

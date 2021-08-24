@@ -47,10 +47,12 @@ namespace StockProgram
             this.Hide();
         }
 
+        /**
         private void settingsBtn_Click(object sender, EventArgs e)
         {
             FormControl.settings2.Show();
             this.Hide();
         }
+        **/
     }
 }

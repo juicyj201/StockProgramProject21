@@ -52,5 +52,17 @@ namespace StockProgram
             FormControl.settings2.Show();
             this.Hide();
         }
+
+        private void registerBtn_Click(object sender, EventArgs e)
+        {
+            FormControl.register2.Show();
+            this.Hide();
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            FormControl.login2.Show();
+            this.Hide();
+        }
     }
 }

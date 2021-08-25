@@ -37,9 +37,8 @@ namespace StockProgram
             {
                 conn.Open();
                 //string register = "INSERT INTO users VALUES('" + txtName.Text + "', '" + txtEmail.Text + "', '" + txtPass.Text + "')";
-                string register = "insert into users values(@id, @email, @password)";
+                string register = "insert into users values(@name, @email, @password)";
                 cmd = new SQLiteCommand(register, conn);
-                cmd.Parameters.AddWithValue("@id", userIncrement());
                 cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@password", txtPass.Text);
                 int yer = 0;

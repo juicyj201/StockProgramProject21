@@ -24,7 +24,7 @@ namespace StockProgram
             FormControl.menu2.Show();
         }
 
-        SQLiteConnection conn = new SQLiteConnection("Data Source = Login.db; Version = 3;");
+        SQLiteConnection conn = new SQLiteConnection("Data Source = Login_Registration.db; Version = 3;");
         SQLiteCommand cmd = new SQLiteCommand();
 
         private void RegisterBtn_Click(object sender, EventArgs e)
@@ -37,9 +37,9 @@ namespace StockProgram
             {
                 conn.Open();
                 //string register = "INSERT INTO users VALUES('" + txtName.Text + "', '" + txtEmail.Text + "', '" + txtPass.Text + "')";
-                string register = "insert into users values(@id, @email, @password)";
+                string register = "insert into users values(@name, @email, @password)";
                 cmd = new SQLiteCommand(register, conn);
-                cmd.Parameters.AddWithValue("@id", userIncrement());
+                cmd.Parameters.AddWithValue("@name", txtName.Text);
                 cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@password", txtPass.Text);
                 int yer = 0;
@@ -62,16 +62,6 @@ namespace StockProgram
                 txtCPass.Text = "";
                 txtPass.Focus();
             }
-        }
-
-        private int userIncrement() {
-            int userNum = 1;
-            bool userNumActive = true;
-            if (userNumActive) {
-                userNum += 1;
-            }
-
-            return userNum;
         }
 
         private void Registration_FormClosing(object sender, FormClosingEventArgs e)

@@ -47,12 +47,6 @@ namespace StockProgram
             this.Hide();
         }
 
-        private void settingsBtn_Click(object sender, EventArgs e)
-        {
-            FormControl.settings2.Show();
-            this.Hide();
-        }
-
         private void registerBtn_Click(object sender, EventArgs e)
         {
             FormControl.register2.Show();

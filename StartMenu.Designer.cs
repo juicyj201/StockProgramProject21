@@ -36,9 +36,6 @@ namespace StockProgram
             this.helpBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.aboutUsBtn = new System.Windows.Forms.Button();
-            this.settingsBtn = new System.Windows.Forms.Button();
-            this.registerBtn = new System.Windows.Forms.Button();
-            this.loginBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,17 +102,6 @@ namespace StockProgram
             this.aboutUsBtn.UseVisualStyleBackColor = true;
             this.aboutUsBtn.Click += new System.EventHandler(this.aboutUsBtn_Click);
             // 
-            // settingsBtn
-            // 
-            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsBtn.Location = new System.Drawing.Point(235, 385);
-            this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.Size = new System.Drawing.Size(299, 57);
-            this.settingsBtn.TabIndex = 9;
-            this.settingsBtn.Text = "Settings";
-            this.settingsBtn.UseVisualStyleBackColor = true;
-            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
-            // 
             // registerBtn
             // 
             this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -143,11 +129,12 @@ namespace StockProgram
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(782, 503);
+            this.ControlBox = false;
             this.ClientSize = new System.Drawing.Size(782, 753);
             this.ControlBox = false;
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.registerBtn);
-            this.Controls.Add(this.settingsBtn);
             this.Controls.Add(this.aboutUsBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.helpBtn);
@@ -159,6 +146,9 @@ namespace StockProgram
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(800, 550);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(800, 550);
             this.MaximumSize = new System.Drawing.Size(800, 800);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(800, 800);
@@ -179,7 +169,6 @@ namespace StockProgram
         private System.Windows.Forms.Button helpBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button aboutUsBtn;
-        private System.Windows.Forms.Button settingsBtn;
         private System.Windows.Forms.Button registerBtn;
         private System.Windows.Forms.Button loginBtn;
     }

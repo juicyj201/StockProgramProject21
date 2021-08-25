@@ -47,12 +47,16 @@ namespace StockProgram
             this.Hide();
         }
 
-        /**
-        private void settingsBtn_Click(object sender, EventArgs e)
+        private void registerBtn_Click(object sender, EventArgs e)
         {
-            FormControl.settings2.Show();
+            FormControl.register2.Show();
             this.Hide();
         }
-        **/
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            FormControl.login2.Show();
+            this.Hide();
+        }
     }
 }

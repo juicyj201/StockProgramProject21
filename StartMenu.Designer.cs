@@ -104,25 +104,25 @@ namespace StockProgram
             // 
             // registerBtn
             // 
-            this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerBtn.Location = new System.Drawing.Point(235, 468);
-            this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(299, 57);
-            this.registerBtn.TabIndex = 10;
-            this.registerBtn.Text = "Register";
-            this.registerBtn.UseVisualStyleBackColor = true;
-            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
+            //this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.registerBtn.Location = new System.Drawing.Point(235, 468);
+            //this.registerBtn.Name = "registerBtn";
+            //this.registerBtn.Size = new System.Drawing.Size(299, 57);
+            //this.registerBtn.TabIndex = 10;
+            //this.registerBtn.Text = "Register";
+            //this.registerBtn.UseVisualStyleBackColor = true;
+            //this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // loginBtn
             // 
-            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Location = new System.Drawing.Point(235, 553);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(299, 57);
-            this.loginBtn.TabIndex = 11;
-            this.loginBtn.Text = "Login";
-            this.loginBtn.UseVisualStyleBackColor = true;
-            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            //this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.loginBtn.Location = new System.Drawing.Point(235, 553);
+            //this.loginBtn.Name = "loginBtn";
+            //this.loginBtn.Size = new System.Drawing.Size(299, 57);
+            //this.loginBtn.TabIndex = 11;
+            //this.loginBtn.Text = "Login";
+            //this.loginBtn.UseVisualStyleBackColor = true;
+            //this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // StartMenu
             // 
@@ -163,13 +163,13 @@ namespace StockProgram
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label menuLbl;
-        private System.Windows.Forms.Button maindatabaseBtn;
-        private System.Windows.Forms.Button helpBtn;
-        private System.Windows.Forms.Button exitBtn;
-        private System.Windows.Forms.Button aboutUsBtn;
-        private System.Windows.Forms.Button registerBtn;
-        private System.Windows.Forms.Button loginBtn;
+        System.Windows.Forms.Panel panel1;
+        System.Windows.Forms.Label menuLbl;
+        System.Windows.Forms.Button maindatabaseBtn;
+        System.Windows.Forms.Button helpBtn;
+        System.Windows.Forms.Button exitBtn;
+        System.Windows.Forms.Button aboutUsBtn;
+        System.Windows.Forms.Button registerBtn;
+        System.Windows.Forms.Button loginBtn;
     }
 }

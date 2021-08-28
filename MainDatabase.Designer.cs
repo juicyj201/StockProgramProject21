@@ -58,12 +58,14 @@ namespace StockProgram
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.stockView.DefaultCellStyle = dataGridViewCellStyle1;
-            this.stockView.Location = new System.Drawing.Point(53, 111);
+            this.stockView.Location = new System.Drawing.Point(40, 90);
+            this.stockView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.stockView.Name = "stockView";
             this.stockView.RowHeadersWidth = 51;
             this.stockView.RowTemplate.Height = 24;
-            this.stockView.Size = new System.Drawing.Size(685, 259);
+            this.stockView.Size = new System.Drawing.Size(514, 210);
             this.stockView.TabIndex = 0;
+            this.stockView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockView_CellContentClick);
             this.stockView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.stockView_MouseDoubleClick);
             // 
             // label1
@@ -71,9 +73,10 @@ namespace StockProgram
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(45, 33);
+            this.label1.Location = new System.Drawing.Point(34, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 48);
+            this.label1.Size = new System.Drawing.Size(246, 39);
             this.label1.TabIndex = 18;
             this.label1.Text = "Main Database";
             // 
@@ -81,9 +84,10 @@ namespace StockProgram
             // 
             this.returnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.returnBtn.ForeColor = System.Drawing.Color.White;
-            this.returnBtn.Location = new System.Drawing.Point(607, 33);
+            this.returnBtn.Location = new System.Drawing.Point(455, 27);
+            this.returnBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.returnBtn.Name = "returnBtn";
-            this.returnBtn.Size = new System.Drawing.Size(131, 46);
+            this.returnBtn.Size = new System.Drawing.Size(98, 37);
             this.returnBtn.TabIndex = 19;
             this.returnBtn.Text = "Return";
             this.returnBtn.UseVisualStyleBackColor = true;
@@ -91,10 +95,11 @@ namespace StockProgram
             // 
             // UserControls
             // 
-            this.UserControls.Location = new System.Drawing.Point(780, 33);
+            this.UserControls.Location = new System.Drawing.Point(585, 27);
+            this.UserControls.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UserControls.Name = "UserControls";
             this.UserControls.SelectedIndex = 0;
-            this.UserControls.Size = new System.Drawing.Size(593, 555);
+            this.UserControls.Size = new System.Drawing.Size(445, 451);
             this.UserControls.TabIndex = 20;
             // 
             // label2
@@ -102,24 +107,27 @@ namespace StockProgram
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(18, 22);
+            this.label2.Location = new System.Drawing.Point(14, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 20);
+            this.label2.Size = new System.Drawing.Size(98, 17);
             this.label2.TabIndex = 21;
             this.label2.Text = "Product Name";
             // 
             // nameTb
             // 
-            this.nameTb.Location = new System.Drawing.Point(232, 22);
+            this.nameTb.Location = new System.Drawing.Point(174, 18);
+            this.nameTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nameTb.Name = "nameTb";
-            this.nameTb.Size = new System.Drawing.Size(414, 22);
+            this.nameTb.Size = new System.Drawing.Size(312, 20);
             this.nameTb.TabIndex = 22;
             // 
             // priceTb
             // 
-            this.priceTb.Location = new System.Drawing.Point(232, 78);
+            this.priceTb.Location = new System.Drawing.Point(174, 63);
+            this.priceTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.priceTb.Name = "priceTb";
-            this.priceTb.Size = new System.Drawing.Size(414, 22);
+            this.priceTb.Size = new System.Drawing.Size(312, 20);
             this.priceTb.TabIndex = 24;
             // 
             // priceLbl
@@ -127,17 +135,19 @@ namespace StockProgram
             this.priceLbl.AutoSize = true;
             this.priceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceLbl.ForeColor = System.Drawing.Color.White;
-            this.priceLbl.Location = new System.Drawing.Point(18, 78);
+            this.priceLbl.Location = new System.Drawing.Point(14, 63);
+            this.priceLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.priceLbl.Name = "priceLbl";
-            this.priceLbl.Size = new System.Drawing.Size(111, 20);
+            this.priceLbl.Size = new System.Drawing.Size(93, 17);
             this.priceLbl.TabIndex = 23;
             this.priceLbl.Text = "Product Price";
             // 
             // quantityTb
             // 
-            this.quantityTb.Location = new System.Drawing.Point(232, 132);
+            this.quantityTb.Location = new System.Drawing.Point(174, 107);
+            this.quantityTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.quantityTb.Name = "quantityTb";
-            this.quantityTb.Size = new System.Drawing.Size(414, 22);
+            this.quantityTb.Size = new System.Drawing.Size(312, 20);
             this.quantityTb.TabIndex = 26;
             // 
             // label4
@@ -145,9 +155,10 @@ namespace StockProgram
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(18, 134);
+            this.label4.Location = new System.Drawing.Point(14, 109);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 20);
+            this.label4.Size = new System.Drawing.Size(114, 17);
             this.label4.TabIndex = 25;
             this.label4.Text = "Product Quantity";
             // 
@@ -159,17 +170,18 @@ namespace StockProgram
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.priceLbl);
             this.panel1.Controls.Add(this.priceTb);
-            this.panel1.Location = new System.Drawing.Point(53, 400);
+            this.panel1.Location = new System.Drawing.Point(40, 325);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(685, 188);
+            this.panel1.Size = new System.Drawing.Size(514, 153);
             this.panel1.TabIndex = 27;
             // 
             // MainDatabase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1420, 639);
+            this.ClientSize = new System.Drawing.Size(1028, 519);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.UserControls);
@@ -177,6 +189,7 @@ namespace StockProgram
             this.Controls.Add(this.label1);
             this.Controls.Add(this.stockView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainDatabase";

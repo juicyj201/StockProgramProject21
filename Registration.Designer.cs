@@ -171,8 +171,8 @@ namespace StockProgram
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Registration_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registration_FormClosed);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Registration_FormClosing);
+            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registration_FormClosed);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

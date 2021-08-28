@@ -20,6 +20,10 @@ namespace StockProgram
         private SQLiteConnection conn = new SQLiteConnection(@"data source=.\StockDatabase.db");
         private DataTable table = new DataTable();
 
+        private EditStockPriceView editstuff;
+        private StockTrackingView stocktrackstuff;
+        private UpdateDatabaseView updatestuff;
+
         public MainDatabase()
         {
             ///<summary>
@@ -85,21 +89,21 @@ namespace StockProgram
             UserControls.SizeMode = TabSizeMode.FillToRight;
             UserControls.Appearance = TabAppearance.Normal;
 
-            EditStockPriceView editstuff = new EditStockPriceView();
+            editstuff = new EditStockPriceView();
             editstuff.Dock = DockStyle.Fill;
             TabPage EditPriceStockPage = new TabPage();
             EditPriceStockPage.Controls.Add(editstuff);
             EditPriceStockPage.Text = "Editing and Calculations";
             UserControls.TabPages.Add(EditPriceStockPage);
             
-            StockTrackingView stocktrackstuff = new StockTrackingView();
+            stocktrackstuff = new StockTrackingView();
             stocktrackstuff.Dock = DockStyle.Fill;
             TabPage StockTrackingPage = new TabPage();
             StockTrackingPage.Controls.Add(stocktrackstuff);
             StockTrackingPage.Text = "Stock Tracking";
             UserControls.TabPages.Add(StockTrackingPage);
             
-            UpdateDatabaseView updatestuff = new UpdateDatabaseView();
+            updatestuff = new UpdateDatabaseView();
             updatestuff.Dock = DockStyle.Fill;
             TabPage UpdateDatabasePage = new TabPage();
             UpdateDatabasePage.Controls.Add(updatestuff);
@@ -118,10 +122,12 @@ namespace StockProgram
             string namecell = stockView.CurrentCell.OwningRow.Cells[1].Value.ToString();
             string pricecell = stockView.CurrentCell.OwningRow.Cells[2].Value.ToString();
             string quantitycell = stockView.CurrentCell.OwningRow.Cells[3].Value.ToString();
+            
+            //updatestuff.getTextBox1;
 
-            nameTb.Text = namecell;
-            priceTb.Text = pricecell;
-            quantityTb.Text = quantitycell;
+            //nameTb.Text = namecell;
+            //priceTb.Text = pricecell;
+            //quantityTb.Text = quantitycell;
         }
     }
 }

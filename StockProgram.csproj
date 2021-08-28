@@ -158,6 +158,9 @@
     <EmbeddedResource Include="UserControls\StockTrackingView.resx">
       <DependentUpon>StockTrackingView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UpdateDatabaseView.resx">
+      <DependentUpon>UpdateDatabaseView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="bin\Debug\Login_Registration.db" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

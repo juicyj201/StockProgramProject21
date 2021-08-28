@@ -31,11 +31,11 @@ namespace StockProgram
             else
             {
                 //string query = "SELECT * FROM users WHERE email = @textBox1 AND password = @textBox2";
-                string query = "SELECT * FROM users WHERE password = @password";
-                SQLiteConnection conn = new SQLiteConnection(@"Data Source = C:\Users\joshu\Dropbox\My PC (LAPTOP-GL5QPPVH)\Desktop\StockProgramProject21(develop branch)\bin\Debug\Login_Registration.db; Version = 3;");
+                string query = "SELECT * FROM users WHERE Password = @Password";
+                SQLiteConnection conn = new SQLiteConnection(@"Data Source = Login_Registration.db; Version = 3;");
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                cmd.Parameters.AddWithValue("@password", textBox2.Text);
+                cmd.Parameters.AddWithValue("@Password", textBox2.Text);
                 int alright = 0;
                 cmd.ExecuteNonQuery();
                 alright = cmd.ExecuteNonQuery();

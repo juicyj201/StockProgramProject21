@@ -24,7 +24,7 @@ namespace StockProgram
             FormControl.menu2.Show();
         }
 
-        private SQLiteConnection conn = new SQLiteConnection(@"Data Source = C:\Users\joshu\Dropbox\My PC (LAPTOP-GL5QPPVH)\Desktop\StockProgramProject21(develop branch)\bin\Debug\Login_Registration.db; Version = 3;");
+        private SQLiteConnection conn = new SQLiteConnection(@"Data Source = Login_Registration.db; Version = 3;");
         //SQLiteCommand cmd = new SQLiteCommand();
 
         private void RegisterBtn_Click(object sender, EventArgs e)
@@ -32,21 +32,21 @@ namespace StockProgram
             //if (txtPass.Text == txtCPass.Text)
             //{
             //string register = "INSERT INTO users VALUES('" + txtName.Text + "', '" + txtEmail.Text + "', '" + txtPass.Text + "')";
-            if (txtName.TextLength != 0 && txtEmail.TextLength != 0 && txtPass.TextLength != 0 && txtCPass.TextLength != 0)
+            if (txtName.Text.Length != 0 && txtEmail.Text.Length != 0 && txtPass.Text.Length != 0)
             {
-                string register = "INSERT INTO users VALUES(@name, @email, @password)";
+                string register = "INSERT INTO users(Full Name, Email, Password) VALUES(@Full Name, @Email, @Password)";
                 try
                 {
                     using (conn = new SQLiteConnection(conn))
                     using (SQLiteCommand cmd = new SQLiteCommand(register, conn))
                     {
                         conn.Open();
-
-                        cmd.Parameters.AddWithValue("@name", txtName.Text);
-                        cmd.Parameters.AddWithValue("@email", txtEmail.Text);
-                        cmd.Parameters.AddWithValue("@password", txtPass.Text);
+                        cmd.Parameters.AddWithValue("@Full Name", txtName.Text);
+                        cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+                        cmd.Parameters.AddWithValue("@Password", txtPass.Text);
+                        cmd.ExecuteNonQuery();
                         int ok = cmd.ExecuteNonQuery();
-                        if (ok != 0)
+                        if (ok > 0)
                         {
                             MessageBox.Show("Your account has been successfully created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -85,20 +85,11 @@ namespace StockProgram
                 //}
             }
 
-            if (txtName.Text == "" && txtEmail.Text == "" && txtPass.Text == "" && txtCPass.Text == "")
+            if (txtName.Text.Length == 0 && txtEmail.Text.Length == 0 && txtPass.Text.Length == 0 && txtCPass.Text.Length == 0)
             {
                 MessageBox.Show("Fields are empty", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void Registration_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            CloseForm();
-        }
-
-        private void Registration_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            CloseForm();
-        }
     }
 }

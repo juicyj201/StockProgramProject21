@@ -173,14 +173,14 @@ namespace StockProgram
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label menuLbl;
-        private System.Windows.Forms.Button maindatabaseBtn;
-        private System.Windows.Forms.Button helpBtn;
-        private System.Windows.Forms.Button exitBtn;
-        private System.Windows.Forms.Button aboutUsBtn;
-        private System.Windows.Forms.Button settingsBtn;
-        private System.Windows.Forms.Button registerBtn;
-        private System.Windows.Forms.Button loginBtn;
+        System.Windows.Forms.Panel panel1;
+        System.Windows.Forms.Label menuLbl;
+        System.Windows.Forms.Button maindatabaseBtn;
+        System.Windows.Forms.Button helpBtn;
+        System.Windows.Forms.Button exitBtn;
+        System.Windows.Forms.Button aboutUsBtn;
+        System.Windows.Forms.Button settingsBtn;
+        System.Windows.Forms.Button registerBtn;
+        System.Windows.Forms.Button loginBtn;
     }
 }

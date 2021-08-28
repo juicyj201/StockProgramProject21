@@ -119,17 +119,14 @@ namespace StockProgram
         /// <param name="e"></param>
         private void stockView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            string id = stockView.CurrentCell.OwningRow.Cells[1].Value.ToString();
-            string namecell = stockView.CurrentCell.OwningRow.Cells[2].Value.ToString();
-            string pricecell = stockView.CurrentCell.OwningRow.Cells[3].Value.ToString();
-            string quantitycell = stockView.CurrentCell.OwningRow.Cells[4].Value.ToString();
+            string namecell = stockView.CurrentCell.OwningRow.Cells[1].Value.ToString();
+            string pricecell = stockView.CurrentCell.OwningRow.Cells[2].Value.ToString();
+            string quantitycell = stockView.CurrentCell.OwningRow.Cells[3].Value.ToString();
 
-            updatestuff.gettextBox1.Text = id;
-            updatestuff.gettextBox2.Text = namecell;
-            updatestuff.gettextBox3.Text = pricecell;
-            updatestuff.gettextBox4.Text = quantitycell;
-             
-
+            updatestuff.gettextBox1.Text = namecell;
+            updatestuff.gettextBox2.Text = pricecell;
+            updatestuff.gettextBox3.Text = quantitycell;
+            
             //nameTb.Text = namecell;
             //priceTb.Text = pricecell;
             //quantityTb.Text = quantitycell;

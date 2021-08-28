@@ -122,12 +122,17 @@ namespace StockProgram
             string namecell = stockView.CurrentCell.OwningRow.Cells[1].Value.ToString();
             string pricecell = stockView.CurrentCell.OwningRow.Cells[2].Value.ToString();
             string quantitycell = stockView.CurrentCell.OwningRow.Cells[3].Value.ToString();
-            
-            //updatestuff.getTextBox1;
+
+            UpdateDatabaseView.
 
             //nameTb.Text = namecell;
             //priceTb.Text = pricecell;
             //quantityTb.Text = quantitycell;
+        }
+
+        private void stockView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

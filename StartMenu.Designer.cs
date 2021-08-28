@@ -36,9 +36,6 @@ namespace StockProgram
             this.helpBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.aboutUsBtn = new System.Windows.Forms.Button();
-            this.settingsBtn = new System.Windows.Forms.Button();
-            this.registerBtn = new System.Windows.Forms.Button();
-            this.loginBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,49 +102,39 @@ namespace StockProgram
             this.aboutUsBtn.UseVisualStyleBackColor = true;
             this.aboutUsBtn.Click += new System.EventHandler(this.aboutUsBtn_Click);
             // 
-            // settingsBtn
-            // 
-            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsBtn.Location = new System.Drawing.Point(235, 385);
-            this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.Size = new System.Drawing.Size(299, 57);
-            this.settingsBtn.TabIndex = 9;
-            this.settingsBtn.Text = "Settings";
-            this.settingsBtn.UseVisualStyleBackColor = true;
-            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
-            // 
             // registerBtn
             // 
-            this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerBtn.Location = new System.Drawing.Point(235, 468);
-            this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(299, 57);
-            this.registerBtn.TabIndex = 10;
-            this.registerBtn.Text = "Register";
-            this.registerBtn.UseVisualStyleBackColor = true;
-            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
+            //this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.registerBtn.Location = new System.Drawing.Point(235, 468);
+            //this.registerBtn.Name = "registerBtn";
+            //this.registerBtn.Size = new System.Drawing.Size(299, 57);
+            //this.registerBtn.TabIndex = 10;
+            //this.registerBtn.Text = "Register";
+            //this.registerBtn.UseVisualStyleBackColor = true;
+            //this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // loginBtn
             // 
-            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Location = new System.Drawing.Point(235, 553);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(299, 57);
-            this.loginBtn.TabIndex = 11;
-            this.loginBtn.Text = "Login";
-            this.loginBtn.UseVisualStyleBackColor = true;
-            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            //this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.loginBtn.Location = new System.Drawing.Point(235, 553);
+            //this.loginBtn.Name = "loginBtn";
+            //this.loginBtn.Size = new System.Drawing.Size(299, 57);
+            //this.loginBtn.TabIndex = 11;
+            //this.loginBtn.Text = "Login";
+            //this.loginBtn.UseVisualStyleBackColor = true;
+            //this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // StartMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(782, 503);
+            this.ControlBox = false;
             this.ClientSize = new System.Drawing.Size(782, 753);
             this.ControlBox = false;
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.registerBtn);
-            this.Controls.Add(this.settingsBtn);
             this.Controls.Add(this.aboutUsBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.helpBtn);
@@ -159,6 +146,9 @@ namespace StockProgram
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(800, 550);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(800, 550);
             this.MaximumSize = new System.Drawing.Size(800, 800);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(800, 800);
@@ -179,7 +169,10 @@ namespace StockProgram
         System.Windows.Forms.Button helpBtn;
         System.Windows.Forms.Button exitBtn;
         System.Windows.Forms.Button aboutUsBtn;
+<<<<<<< HEAD
         System.Windows.Forms.Button settingsBtn;
+=======
+>>>>>>> c2e1ab7b59d92bbeaf3fdf6341c2e0fb4d924bbd
         System.Windows.Forms.Button registerBtn;
         System.Windows.Forms.Button loginBtn;
     }

@@ -178,7 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\StockProgram.xml" />
-    <Content Include="Documentation.txt" />
+    <Content Include="readme.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

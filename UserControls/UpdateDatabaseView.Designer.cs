@@ -49,17 +49,6 @@ namespace StockProgram.UserControls
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(64, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(83, 22);
-            this.textBox1.TabIndex = 0;
-            // 
-            // UpdateDatabaseView
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
-            this.Name = "UpdateDatabaseView";
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(188, 83);
             this.textBox1.Name = "textBox1";
@@ -188,6 +177,7 @@ namespace StockProgram.UserControls
             this.button1.TabIndex = 13;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -242,7 +232,7 @@ namespace StockProgram.UserControls
         }
 
         #endregion
-
+        
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
@@ -267,5 +257,6 @@ namespace StockProgram.UserControls
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        
     }
 }

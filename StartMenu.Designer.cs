@@ -169,10 +169,7 @@ namespace StockProgram
         System.Windows.Forms.Button helpBtn;
         System.Windows.Forms.Button exitBtn;
         System.Windows.Forms.Button aboutUsBtn;
-<<<<<<< HEAD
         System.Windows.Forms.Button settingsBtn;
-=======
->>>>>>> c2e1ab7b59d92bbeaf3fdf6341c2e0fb4d924bbd
         System.Windows.Forms.Button registerBtn;
         System.Windows.Forms.Button loginBtn;
     }

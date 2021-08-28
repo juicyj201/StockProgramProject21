@@ -30,8 +30,6 @@ namespace StockProgram.UserControls
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
-=======
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -47,12 +45,10 @@ namespace StockProgram.UserControls
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
->>>>>>> c2e1ab7b59d92bbeaf3fdf6341c2e0fb4d924bbd
             this.SuspendLayout();
             // 
             // textBox1
             // 
-<<<<<<< HEAD
             this.textBox1.Location = new System.Drawing.Point(64, 49);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(83, 22);
@@ -64,7 +60,6 @@ namespace StockProgram.UserControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox1);
             this.Name = "UpdateDatabaseView";
-=======
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(188, 83);
             this.textBox1.Name = "textBox1";
@@ -241,7 +236,6 @@ namespace StockProgram.UserControls
             this.Controls.Add(this.textBox1);
             this.Name = "UpdateDatabaseView";
             this.Size = new System.Drawing.Size(459, 455);
->>>>>>> c2e1ab7b59d92bbeaf3fdf6341c2e0fb4d924bbd
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,14 +244,19 @@ namespace StockProgram.UserControls
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-<<<<<<< HEAD
-        public System.Windows.Forms.TextBox getTextBox1 { get { return textBox1; } }
-=======
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
+
+        public System.Windows.Forms.TextBox gettextBox1 { get { return textBox1; } }
+        public System.Windows.Forms.TextBox gettextBox2 { get { return textBox2; } }
+        public System.Windows.Forms.TextBox gettextBox3 { get { return textBox3; } }
+        public System.Windows.Forms.TextBox gettextBox4 { get { return textBox4; } }
+        public System.Windows.Forms.TextBox gettextBox5 { get { return textBox5; } }
+        public System.Windows.Forms.TextBox gettextBox6 { get { return textBox6; } }
+
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -268,6 +267,5 @@ namespace StockProgram.UserControls
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
->>>>>>> c2e1ab7b59d92bbeaf3fdf6341c2e0fb4d924bbd
     }
 }

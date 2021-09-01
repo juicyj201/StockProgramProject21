@@ -45,6 +45,8 @@ This will occur if the sqlite file located in the installation location, is of t
 * If you exit the program using the exit button on the top-right corner of the screen, the program will continue to run (this is because I haven't found a way to dispose (or end) the forms properly). 
 Rather return to the menu and use the exit button, to properly end the application. 
 
+* The start menu does not currently have working registration or login buttons. There is a bug in those forms, as well as with connecting to the database and it will be fixed by the end of the working year.
+
 (Other than that i suppose there is no other harmful bugs. 
 I tested the program thoroughly to make sure it works in a real-world situation. However there may be several bugs after new features are added to the program.)
 

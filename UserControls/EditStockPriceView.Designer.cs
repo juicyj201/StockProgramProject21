@@ -31,7 +31,7 @@ namespace StockProgram.UserControls
         {
             this.lblTitle = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmblistId = new System.Windows.Forms.ComboBox();
             this.btnEditPrice = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblcomboTitle = new System.Windows.Forms.Label();
@@ -53,20 +53,20 @@ namespace StockProgram.UserControls
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(182, 33);
-            this.textBox1.TabIndex = 1;
+            this.textBox1.TabIndex = 2;
             // 
-            // comboBox1
+            // cmblistId
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(479, 125);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(230, 24);
-            this.comboBox1.TabIndex = 2;
+            this.cmblistId.FormattingEnabled = true;
+            this.cmblistId.Location = new System.Drawing.Point(479, 125);
+            this.cmblistId.Name = "cmblistId";
+            this.cmblistId.Size = new System.Drawing.Size(230, 24);
+            this.cmblistId.TabIndex = 5;
             // 
             // btnEditPrice
             // 
             this.btnEditPrice.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnEditPrice.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditPrice.ForeColor = System.Drawing.Color.White;
             this.btnEditPrice.Location = new System.Drawing.Point(161, 188);
             this.btnEditPrice.Name = "btnEditPrice";
@@ -82,7 +82,7 @@ namespace StockProgram.UserControls
             this.label1.Location = new System.Drawing.Point(20, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 28);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Item Price";
             // 
             // lblcomboTitle
@@ -92,7 +92,7 @@ namespace StockProgram.UserControls
             this.lblcomboTitle.Location = new System.Drawing.Point(475, 63);
             this.lblcomboTitle.Name = "lblcomboTitle";
             this.lblcomboTitle.Size = new System.Drawing.Size(231, 22);
-            this.lblcomboTitle.TabIndex = 5;
+            this.lblcomboTitle.TabIndex = 4;
             this.lblcomboTitle.Text = "Select an id to edit price";
             // 
             // EditStockPriceView
@@ -102,7 +102,7 @@ namespace StockProgram.UserControls
             this.Controls.Add(this.lblcomboTitle);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEditPrice);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmblistId);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblTitle);
             this.Name = "EditStockPriceView";
@@ -116,7 +116,7 @@ namespace StockProgram.UserControls
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmblistId;
         private System.Windows.Forms.Button btnEditPrice;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblcomboTitle;

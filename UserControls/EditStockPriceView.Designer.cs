@@ -42,11 +42,11 @@ namespace StockProgram.UserControls
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20.25F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(203, 22);
+            this.lblTitle.Location = new System.Drawing.Point(13, 30);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(252, 34);
+            this.lblTitle.Size = new System.Drawing.Size(211, 34);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Edit Product Price";
+            this.lblTitle.Text = "Edit Item Price";
             // 
             // txtboxPrice
             // 
@@ -93,7 +93,7 @@ namespace StockProgram.UserControls
             // 
             this.btnCloseApp.BackColor = System.Drawing.Color.Red;
             this.btnCloseApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCloseApp.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseApp.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.btnCloseApp.ForeColor = System.Drawing.Color.White;
             this.btnCloseApp.Location = new System.Drawing.Point(209, 381);
             this.btnCloseApp.Name = "btnCloseApp";

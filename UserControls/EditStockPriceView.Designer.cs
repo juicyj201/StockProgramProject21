@@ -40,25 +40,25 @@ namespace StockProgram.UserControls
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblTitle.Location = new System.Drawing.Point(19, 10);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(258, 33);
+            this.lblTitle.Size = new System.Drawing.Size(252, 34);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Edit Product Price";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 125);
+            this.textBox1.Location = new System.Drawing.Point(161, 142);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 33);
+            this.textBox1.Size = new System.Drawing.Size(271, 30);
             this.textBox1.TabIndex = 2;
             // 
             // cmblistId
             // 
             this.cmblistId.FormattingEnabled = true;
-            this.cmblistId.Location = new System.Drawing.Point(479, 125);
+            this.cmblistId.Location = new System.Drawing.Point(479, 69);
             this.cmblistId.Name = "cmblistId";
             this.cmblistId.Size = new System.Drawing.Size(230, 24);
             this.cmblistId.TabIndex = 5;
@@ -68,9 +68,9 @@ namespace StockProgram.UserControls
             this.btnEditPrice.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnEditPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditPrice.ForeColor = System.Drawing.Color.White;
-            this.btnEditPrice.Location = new System.Drawing.Point(161, 188);
+            this.btnEditPrice.Location = new System.Drawing.Point(161, 202);
             this.btnEditPrice.Name = "btnEditPrice";
-            this.btnEditPrice.Size = new System.Drawing.Size(182, 43);
+            this.btnEditPrice.Size = new System.Drawing.Size(271, 43);
             this.btnEditPrice.TabIndex = 3;
             this.btnEditPrice.Text = "Edit ";
             this.btnEditPrice.UseVisualStyleBackColor = false;
@@ -78,10 +78,10 @@ namespace StockProgram.UserControls
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 130);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11F);
+            this.label1.Location = new System.Drawing.Point(20, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 28);
+            this.label1.Size = new System.Drawing.Size(104, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Item Price";
             // 
@@ -89,7 +89,7 @@ namespace StockProgram.UserControls
             // 
             this.lblcomboTitle.AutoSize = true;
             this.lblcomboTitle.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcomboTitle.Location = new System.Drawing.Point(475, 63);
+            this.lblcomboTitle.Location = new System.Drawing.Point(478, 22);
             this.lblcomboTitle.Name = "lblcomboTitle";
             this.lblcomboTitle.Size = new System.Drawing.Size(231, 22);
             this.lblcomboTitle.TabIndex = 4;
@@ -106,7 +106,7 @@ namespace StockProgram.UserControls
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblTitle);
             this.Name = "EditStockPriceView";
-            this.Size = new System.Drawing.Size(726, 293);
+            this.Size = new System.Drawing.Size(731, 313);
             this.ResumeLayout(false);
             this.PerformLayout();
 

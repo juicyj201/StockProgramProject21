@@ -62,6 +62,7 @@ namespace StockProgram.UserControls
             this.cmblistId.Name = "cmblistId";
             this.cmblistId.Size = new System.Drawing.Size(230, 24);
             this.cmblistId.TabIndex = 5;
+            this.cmblistId.SelectedIndexChanged += new System.EventHandler(this.cmblistId_SelectedIndexChanged);
             // 
             // btnEditPrice
             // 
@@ -107,6 +108,7 @@ namespace StockProgram.UserControls
             this.Controls.Add(this.lblTitle);
             this.Name = "EditStockPriceView";
             this.Size = new System.Drawing.Size(731, 313);
+            this.Load += new System.EventHandler(this.EditStockPriceView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

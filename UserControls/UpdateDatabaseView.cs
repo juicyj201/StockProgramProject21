@@ -77,9 +77,9 @@ namespace StockProgram.UserControls
             conn.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        //private void button1_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
     }
 }

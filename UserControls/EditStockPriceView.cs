@@ -12,17 +12,17 @@ using System.Configuration;
 
 namespace StockProgram.UserControls
 {
-#pragma warning disable CS1591 // Edit Item Price 
+    // Edit Item Price 
     public partial class EditStockPriceView : UserControl
-#pragma warning restore CS1591 // Item will selected by using combobox 
+    // Item will selected by using combobox 
     {
-#pragma warning disable CS1591 // Connection String to the Local Database//Replace to your local connection
+        // Connection String to the Local Database//Replace to your local connection
         public static SqlConnection con = new SqlConnection(@"Data Source=CSLID;Initial Catalog=ProductCombobox;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-#pragma warning restore CS1591 // 'con' is the name of our connection string t
+        // 'con' is the name of our connection string t
 
-#pragma warning disable CS1591 // Constructor
+        // Constructor
         public EditStockPriceView()
-#pragma warning restore CS1591 // Initialize Component
+        // Initialize Component
         {
             InitializeComponent();
         }
@@ -62,12 +62,11 @@ namespace StockProgram.UserControls
             Application.Exit();
         }
 
-
-#pragma warning disable CS1591 // Method to connect to the database
+        // Method to connect to the database
         public void DataConnection()
-#pragma warning restore CS1591 // code to fetch Id from table to the combobox
+        // code to fetch Id from table to the combobox
         {
-    //Connection to the DataBase using SQL-Server
+        //Connection to the DataBase using SQL-Server
 
             #region
             cmbx.Items.Clear();

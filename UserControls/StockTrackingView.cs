@@ -17,5 +17,10 @@ namespace StockProgram.UserControls
         {
             InitializeComponent();
         }
+
+        private void StockTrackingView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

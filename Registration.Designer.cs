@@ -29,6 +29,7 @@ namespace StockProgram
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblCPass = new System.Windows.Forms.Label();
@@ -167,12 +168,11 @@ namespace StockProgram
             this.ClientSize = new System.Drawing.Size(711, 444);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
-            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Registration_FormClosing);
-            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registration_FormClosed);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

@@ -17,7 +17,7 @@ namespace StockProgram.UserControls
     // Item will selected by using combobox 
     {
         // Connection String to the Local Database//Replace to your local connection
-        public static SqlConnection con = new SqlConnection(@"Data Source=CSLID;Initial Catalog=ProductCombobox;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        public static SqlConnection con = new SqlConnection(@"Data Source=.\StockDatabase.db");
         // 'con' is the name of our connection string t
 
         // Constructor
@@ -37,7 +37,7 @@ namespace StockProgram.UserControls
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "select ProdPrice from [pdr].tProducts where ProductId='" + cmbx.SelectedItem.ToString() + "'";
+                cmd.CommandText = "select ProdPrice from Products where ProductId='" + cmbx.SelectedItem.ToString() + "'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -67,23 +67,6 @@ namespace StockProgram.UserControls
         // code to fetch Id from table to the combobox
         {
         //Connection to the DataBase using SQL-Server
-
-            #region
-            cmbx.Items.Clear();
-            con.Open();
-            SqlCommand myCommand = con.CreateCommand();
-            myCommand.CommandType = CommandType.Text;
-            myCommand.CommandText = "Select ProductId from [pdr].tProducts ";
-            myCommand.ExecuteNonQuery();
-            DataTable myDataTable = new DataTable();
-            SqlDataAdapter myDataAdapter = new SqlDataAdapter(myCommand);
-            myDataAdapter.Fill(myDataTable);
-            foreach (DataRow dataRow in myDataTable.Rows)
-            {
-                cmbx.Items.Add(dataRow["ProductId"].ToString());
-            }
-            con.Close();
-            #endregion
 
 
         }

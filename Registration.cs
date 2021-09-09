@@ -13,6 +13,9 @@ namespace StockProgram
 {
     public partial class Registration : Form
     {
+        private SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\Login_Registration.db; Version = 3;");
+        //SQLiteCommand cmd = new SQLiteCommand();
+
         public Registration()
         {
             InitializeComponent();
@@ -20,81 +23,93 @@ namespace StockProgram
 
         private void CloseForm()
         {
-            this.Hide();
-            FormControl.menu2.Show();
         }
 
-        private SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\ogin_Registration.db; Version = 3;");
-        //SQLiteCommand cmd = new SQLiteCommand();
-
+        //wrong one
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
-            //if (txtPass.Text == txtCPass.Text)
-            //{
-            //string register = "INSERT INTO users VALUES('" + txtName.Text + "', '" + txtEmail.Text + "', '" + txtPass.Text + "')";
-            if (txtName.Text.Length != 0 && txtEmail.Text.Length != 0 && txtPass.Text.Length != 0)
+            conn.Open();
+            string register = "INSERT INTO users VALUES(" + txtName.Text + ", " + txtEmail.Text + ", " + txtPass + ")";
+            SQLiteCommand cmd = new SQLiteCommand(register, conn);
+            //cmd.ExecuteNonQuery();
+
+            int ok = cmd.ExecuteNonQuery();
+
+            if (ok > 0)
             {
-                string register = "INSERT INTO users(Full Name, Email, Password) VALUES(@Full Name, @Email, @Password)";
-                try
-                {
-                    using (conn = new SQLiteConnection(conn))
-                    using (SQLiteCommand cmd = new SQLiteCommand(register, conn))
-                    {
-                        conn.Open();
-                        cmd.Parameters.AddWithValue("@Full Name", txtName.Text);
-                        cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
-                        cmd.Parameters.AddWithValue("@Password", txtPass.Text);
-                        cmd.ExecuteNonQuery();
-                        int ok = cmd.ExecuteNonQuery();
-                        if (ok > 0)
-                        {
-                            MessageBox.Show("Your account has been successfully created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Passwords do not match, Please Re-enter", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            txtName.Text = "";
-                            txtEmail.Text = "";
-                            txtPass.Text = "";
-                            txtCPass.Text = "";
-                            txtPass.Focus();
-                        }
-                        conn.Close();
-
-                        /**
-                        cmd = new SQLiteCommand(register, conn);
-                        cmd.Parameters.AddWithValue("@name", txtName.Text);
-                        cmd.Parameters.AddWithValue("@email", txtEmail.Text);
-                        cmd.Parameters.AddWithValue("@password", txtPass.Text);
-                        int yer = 0;
-                        cmd.ExecuteNonQuery();
-                        yer = cmd.ExecuteNonQuery();
-
-                        if (yer != 0) { 
-                            MessageBox.Show("Your account has been successfully created", "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            CloseForm();
-                        }
-                        conn.Close();
-                        **/
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                //}
+                MessageBox.Show("Your account has been successfully created", "Registration Success");
+            }
+            else
+            {
+                MessageBox.Show("Passwords do not match, Please Re-enter", "Registration Failed");
+                txtName.Text = "";
+                txtEmail.Text = "";
+                txtPass.Text = "";
+                txtCPass.Text = "";
+                txtPass.Focus();
             }
 
-            if (txtName.Text.Length == 0 && txtEmail.Text.Length == 0 && txtPass.Text.Length == 0 && txtCPass.Text.Length == 0)
+            conn.Close();
+
+            if (txtName.Text.Length == 0 || txtEmail.Text.Length == 0 || txtPass.Text.Length == 0 || txtCPass.Text.Length == 0)
             {
-                MessageBox.Show("Fields are empty", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Fields are empty", "Registration Failed");
+
+                txtName.Text = "";
+                txtEmail.Text = "";
+                txtPass.Text = "";
+                txtCPass.Text = "";
+                txtPass.Focus();
             }
         }
 
         private void returnBtn_Click(object sender, EventArgs e)
         {
+            txtName.Text = "";
+            txtEmail.Text = "";
+            txtPass.Text = "";
+            txtCPass.Text = "";
+            txtPass.Focus();
+
             this.Hide();
             FormControl.menu2.Show();
+        }
+
+        private void RegisterBtn_Click_1(object sender, EventArgs e)
+        {
+            conn.Open();
+            string register = "INSERT INTO users VALUES('" + txtName.Text + "', '" + txtEmail.Text + "', '" + txtPass.Text + "')";
+            SQLiteCommand cmd = new SQLiteCommand(register, conn);
+            //cmd.ExecuteNonQuery();
+
+            int ok = cmd.ExecuteNonQuery();
+
+            if (ok > 0)
+            {
+                MessageBox.Show("Your account has been successfully created", "Registration Success");
+            }
+            else
+            {
+                MessageBox.Show("Passwords do not match, Please Re-enter", "Registration Failed");
+                txtName.Text = "";
+                txtEmail.Text = "";
+                txtPass.Text = "";
+                txtCPass.Text = "";
+                txtPass.Focus();
+            }
+
+            conn.Close();
+
+            if (txtName.Text.Length == 0 || txtEmail.Text.Length == 0 || txtPass.Text.Length == 0 || txtCPass.Text.Length == 0)
+            {
+                MessageBox.Show("Fields are empty", "Registration Failed");
+
+                txtName.Text = "";
+                txtEmail.Text = "";
+                txtPass.Text = "";
+                txtCPass.Text = "";
+                txtPass.Focus();
+            }
         }
     }
 }

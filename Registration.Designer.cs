@@ -32,6 +32,7 @@ namespace StockProgram
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.returnBtn = new System.Windows.Forms.Button();
             this.lblCPass = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.txtCPass = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@ namespace StockProgram
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.returnBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,19 @@ namespace StockProgram
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(709, 375);
             this.panel2.TabIndex = 2;
+            // 
+            // returnBtn
+            // 
+            this.returnBtn.BackColor = System.Drawing.Color.Gray;
+            this.returnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnBtn.Location = new System.Drawing.Point(57, 300);
+            this.returnBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.returnBtn.Name = "returnBtn";
+            this.returnBtn.Size = new System.Drawing.Size(128, 62);
+            this.returnBtn.TabIndex = 9;
+            this.returnBtn.Text = "Return";
+            this.returnBtn.UseVisualStyleBackColor = false;
+            this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
             // 
             // lblCPass
             // 
@@ -124,6 +137,7 @@ namespace StockProgram
             this.RegisterBtn.TabIndex = 4;
             this.RegisterBtn.Text = "SIGN UP";
             this.RegisterBtn.UseVisualStyleBackColor = false;
+            this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click_1);
             // 
             // lblPass
             // 
@@ -162,19 +176,6 @@ namespace StockProgram
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(359, 30);
             this.txtName.TabIndex = 0;
-            // 
-            // returnBtn
-            // 
-            this.returnBtn.BackColor = System.Drawing.Color.Gray;
-            this.returnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnBtn.Location = new System.Drawing.Point(57, 300);
-            this.returnBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.returnBtn.Name = "returnBtn";
-            this.returnBtn.Size = new System.Drawing.Size(128, 62);
-            this.returnBtn.TabIndex = 9;
-            this.returnBtn.Text = "Return";
-            this.returnBtn.UseVisualStyleBackColor = false;
-            this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
             // 
             // Registration
             // 

@@ -18,8 +18,7 @@ namespace StockProgram
         }
 
         private void CloseForm() {
-            this.Hide();
-            FormControl.menu2.Show();
+
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)
@@ -30,24 +29,30 @@ namespace StockProgram
             }
             else
             {
-                //string query = "SELECT * FROM users WHERE email = @textBox1 AND password = @textBox2";
-                string query = "SELECT * FROM users WHERE Password = @Password";
+                // This works by checking if the value is actually inside the database.
+                // If it returns a password, then that means the password exists and the user will be logged in.
+                string query = "SELECT * FROM users WHERE Password = '"+textBox2.Text+"' AND Email='"+textBox1.Text+"'";
                 SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\Login_Registration.db; Version = 3;");
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Password", textBox2.Text);
-                int alright = 0;
-                cmd.ExecuteNonQuery();
-                alright = cmd.ExecuteNonQuery();
 
-                if (alright > 0)
+                cmd.ExecuteNonQuery();
+                SQLiteDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read() == true)
                 {
                     MessageBox.Show("You are Logged in", "Login successful");
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox1.Focus();
                     CloseForm();
                 }
                 else
                 {
                     MessageBox.Show("Login Failed", "An error occurs");
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox1.Focus();
                 }
                 conn.Close();
             }
@@ -55,13 +60,15 @@ namespace StockProgram
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
-            CloseForm();
         }
 
         private void returnBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
             FormControl.menu2.Show();
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox1.Focus();
         }
     }   
 }

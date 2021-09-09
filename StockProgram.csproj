@@ -161,7 +161,12 @@
     <EmbeddedResource Include="UserControls\UpdateDatabaseView.resx">
       <DependentUpon>UpdateDatabaseView.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bin\Debug\Login_Registration.db" />
+    <None Include="bin\Debug\Login_Registration.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="bin\Debug\StockDatabase.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

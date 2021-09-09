@@ -36,6 +36,8 @@ namespace StockProgram
             this.helpBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.aboutUsBtn = new System.Windows.Forms.Button();
+            this.registerBtn = new System.Windows.Forms.Button();
+            this.loginBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +85,7 @@ namespace StockProgram
             // exitBtn
             // 
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Location = new System.Drawing.Point(235, 637);
+            this.exitBtn.Location = new System.Drawing.Point(235, 541);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(299, 57);
             this.exitBtn.TabIndex = 6;
@@ -104,34 +106,32 @@ namespace StockProgram
             // 
             // registerBtn
             // 
-            //this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            //this.registerBtn.Location = new System.Drawing.Point(235, 468);
-            //this.registerBtn.Name = "registerBtn";
-            //this.registerBtn.Size = new System.Drawing.Size(299, 57);
-            //this.registerBtn.TabIndex = 10;
-            //this.registerBtn.Text = "Register";
-            //this.registerBtn.UseVisualStyleBackColor = true;
-            //this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
+            this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerBtn.Location = new System.Drawing.Point(235, 382);
+            this.registerBtn.Name = "registerBtn";
+            this.registerBtn.Size = new System.Drawing.Size(299, 57);
+            this.registerBtn.TabIndex = 10;
+            this.registerBtn.Text = "Register";
+            this.registerBtn.UseVisualStyleBackColor = true;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // loginBtn
             // 
-            //this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            //this.loginBtn.Location = new System.Drawing.Point(235, 553);
-            //this.loginBtn.Name = "loginBtn";
-            //this.loginBtn.Size = new System.Drawing.Size(299, 57);
-            //this.loginBtn.TabIndex = 11;
-            //this.loginBtn.Text = "Login";
-            //this.loginBtn.UseVisualStyleBackColor = true;
-            //this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginBtn.Location = new System.Drawing.Point(235, 463);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(299, 57);
+            this.loginBtn.TabIndex = 11;
+            this.loginBtn.Text = "Login";
+            this.loginBtn.UseVisualStyleBackColor = true;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // StartMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(782, 503);
-            this.ControlBox = false;
-            this.ClientSize = new System.Drawing.Size(782, 753);
+            this.ClientSize = new System.Drawing.Size(782, 653);
             this.ControlBox = false;
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.registerBtn);
@@ -146,12 +146,9 @@ namespace StockProgram
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(800, 550);
+            this.MaximumSize = new System.Drawing.Size(800, 700);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(800, 550);
-            this.MaximumSize = new System.Drawing.Size(800, 800);
-            this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(800, 800);
+            this.MinimumSize = new System.Drawing.Size(800, 700);
             this.Name = "StartMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartMenu";

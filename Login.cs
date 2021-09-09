@@ -32,7 +32,7 @@ namespace StockProgram
             {
                 //string query = "SELECT * FROM users WHERE email = @textBox1 AND password = @textBox2";
                 string query = "SELECT * FROM users WHERE Password = @Password";
-                SQLiteConnection conn = new SQLiteConnection(@"Data Source = Login_Registration.db; Version = 3;");
+                SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\Login_Registration.db; Version = 3;");
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Password", textBox2.Text);
@@ -56,6 +56,12 @@ namespace StockProgram
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
             CloseForm();
+        }
+
+        private void returnBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormControl.menu2.Show();
         }
     }   
 }

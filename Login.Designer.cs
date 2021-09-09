@@ -39,6 +39,7 @@ namespace StockProgram
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.returnBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@ namespace StockProgram
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Controls.Add(this.returnBtn);
             this.panel2.Controls.Add(this.LoginBtn);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -69,7 +71,7 @@ namespace StockProgram
             // 
             this.LoginBtn.BackColor = System.Drawing.Color.Gray;
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.Location = new System.Drawing.Point(403, 178);
+            this.LoginBtn.Location = new System.Drawing.Point(534, 193);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(101, 62);
@@ -117,15 +119,31 @@ namespace StockProgram
             this.textBox1.Size = new System.Drawing.Size(359, 30);
             this.textBox1.TabIndex = 0;
             // 
+            // returnBtn
+            // 
+            this.returnBtn.BackColor = System.Drawing.Color.Gray;
+            this.returnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnBtn.Location = new System.Drawing.Point(145, 193);
+            this.returnBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.returnBtn.Name = "returnBtn";
+            this.returnBtn.Size = new System.Drawing.Size(101, 62);
+            this.returnBtn.TabIndex = 5;
+            this.returnBtn.Text = "Return";
+            this.returnBtn.UseVisualStyleBackColor = false;
+            this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 360);
+            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -145,5 +163,6 @@ namespace StockProgram
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button returnBtn;
     }
 }

@@ -24,7 +24,7 @@ namespace StockProgram
             FormControl.menu2.Show();
         }
 
-        private SQLiteConnection conn = new SQLiteConnection(@"Data Source = Login_Registration.db; Version = 3;");
+        private SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\ogin_Registration.db; Version = 3;");
         //SQLiteCommand cmd = new SQLiteCommand();
 
         private void RegisterBtn_Click(object sender, EventArgs e)
@@ -91,5 +91,10 @@ namespace StockProgram
             }
         }
 
+        private void returnBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormControl.menu2.Show();
+        }
     }
 }

@@ -40,6 +40,7 @@ namespace StockProgram
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.returnBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +56,7 @@ namespace StockProgram
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Controls.Add(this.returnBtn);
             this.panel2.Controls.Add(this.lblCPass);
             this.panel2.Controls.Add(this.lblName);
             this.panel2.Controls.Add(this.txtCPass);
@@ -160,19 +162,33 @@ namespace StockProgram
             this.txtName.Size = new System.Drawing.Size(359, 30);
             this.txtName.TabIndex = 0;
             // 
+            // returnBtn
+            // 
+            this.returnBtn.BackColor = System.Drawing.Color.Gray;
+            this.returnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnBtn.Location = new System.Drawing.Point(57, 300);
+            this.returnBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.returnBtn.Name = "returnBtn";
+            this.returnBtn.Size = new System.Drawing.Size(128, 62);
+            this.returnBtn.TabIndex = 9;
+            this.returnBtn.Text = "Return";
+            this.returnBtn.UseVisualStyleBackColor = false;
+            this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 444);
+            this.ClientSize = new System.Drawing.Size(711, 443);
+            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
-            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Registration_FormClosing);
-            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registration_FormClosed);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -192,5 +208,6 @@ namespace StockProgram
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtCPass;
         private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Button returnBtn;
     }
 }

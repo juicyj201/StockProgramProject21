@@ -73,11 +73,4 @@ namespace StockProgram
             textBox1.Focus();
         }
     }
-
-    public static class logg
-    {
-        private static bool logged = false;
-        public static bool loggedSet { set { logged = logged; } }
-        public static bool loggedGet { get { return logged; } }
-    }
 }

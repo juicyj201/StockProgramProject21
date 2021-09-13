@@ -12,6 +12,7 @@ using System.Data.SQLite;
 namespace StockProgram
 {
     public partial class Login : Form {
+
         public Login()
         {
             InitializeComponent();
@@ -41,6 +42,7 @@ namespace StockProgram
 
                 if (reader.Read() == true)
                 {
+                    logg.loggedSet = true;
                     MessageBox.Show("You are Logged in", "Login successful");
                     textBox1.Text = "";
                     textBox2.Text = "";
@@ -70,5 +72,12 @@ namespace StockProgram
             textBox2.Text = "";
             textBox1.Focus();
         }
-    }   
+    }
+
+    public static class logg
+    {
+        private static bool logged = false;
+        public static bool loggedSet { set { logged = logged; } }
+        public static bool loggedGet { get { return logged; } }
+    }
 }

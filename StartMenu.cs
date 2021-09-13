@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockProgram;
 
 namespace StockProgram
 {
@@ -20,6 +21,11 @@ namespace StockProgram
         public StartMenu()
         {
             InitializeComponent();
+
+            if (logg.loggedGet == true) {
+                loginBtn.Enabled = false;
+                loginBtn.Visible = false;
+            }
         }
 
         private void maindatabaseBtn_Click(object sender, EventArgs e)

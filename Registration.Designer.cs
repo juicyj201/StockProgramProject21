@@ -42,21 +42,24 @@ namespace StockProgram
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(65)))), ((int)(((byte)(35)))));
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(1, -4);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(709, 74);
+            this.panel1.Size = new System.Drawing.Size(726, 110);
             this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.panel2.Controls.Add(this.returnBtn);
             this.panel2.Controls.Add(this.lblCPass);
             this.panel2.Controls.Add(this.lblName);
@@ -67,20 +70,22 @@ namespace StockProgram
             this.panel2.Controls.Add(this.lblEmail);
             this.panel2.Controls.Add(this.txtEmail);
             this.panel2.Controls.Add(this.txtName);
-            this.panel2.Location = new System.Drawing.Point(1, 69);
+            this.panel2.Location = new System.Drawing.Point(1, 97);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(709, 375);
+            this.panel2.Size = new System.Drawing.Size(733, 421);
             this.panel2.TabIndex = 2;
             // 
             // returnBtn
             // 
-            this.returnBtn.BackColor = System.Drawing.Color.Gray;
+            this.returnBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.returnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.returnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnBtn.Location = new System.Drawing.Point(57, 300);
+            this.returnBtn.ForeColor = System.Drawing.Color.White;
+            this.returnBtn.Location = new System.Drawing.Point(105, 282);
             this.returnBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.returnBtn.Name = "returnBtn";
-            this.returnBtn.Size = new System.Drawing.Size(128, 62);
+            this.returnBtn.Size = new System.Drawing.Size(147, 62);
             this.returnBtn.TabIndex = 9;
             this.returnBtn.Text = "Return";
             this.returnBtn.UseVisualStyleBackColor = false;
@@ -90,7 +95,8 @@ namespace StockProgram
             // 
             this.lblCPass.AutoSize = true;
             this.lblCPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPass.Location = new System.Drawing.Point(52, 225);
+            this.lblCPass.ForeColor = System.Drawing.Color.White;
+            this.lblCPass.Location = new System.Drawing.Point(100, 219);
             this.lblCPass.Name = "lblCPass";
             this.lblCPass.Size = new System.Drawing.Size(187, 25);
             this.lblCPass.TabIndex = 8;
@@ -100,7 +106,8 @@ namespace StockProgram
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(52, 49);
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(100, 43);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(109, 25);
             this.lblName.TabIndex = 7;
@@ -109,33 +116,35 @@ namespace StockProgram
             // txtCPass
             // 
             this.txtCPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPass.Location = new System.Drawing.Point(276, 222);
+            this.txtCPass.Location = new System.Drawing.Point(324, 216);
             this.txtCPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCPass.Name = "txtCPass";
-            this.txtCPass.Size = new System.Drawing.Size(359, 30);
+            this.txtCPass.Size = new System.Drawing.Size(293, 30);
             this.txtCPass.TabIndex = 6;
             this.txtCPass.UseSystemPasswordChar = true;
             // 
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(276, 162);
+            this.txtPass.Location = new System.Drawing.Point(324, 156);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(359, 30);
+            this.txtPass.Size = new System.Drawing.Size(293, 30);
             this.txtPass.TabIndex = 5;
             this.txtPass.UseSystemPasswordChar = true;
             // 
             // RegisterBtn
             // 
-            this.RegisterBtn.BackColor = System.Drawing.Color.Gray;
+            this.RegisterBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterBtn.Location = new System.Drawing.Point(508, 300);
+            this.RegisterBtn.ForeColor = System.Drawing.Color.White;
+            this.RegisterBtn.Location = new System.Drawing.Point(476, 282);
             this.RegisterBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RegisterBtn.Name = "RegisterBtn";
-            this.RegisterBtn.Size = new System.Drawing.Size(128, 62);
+            this.RegisterBtn.Size = new System.Drawing.Size(141, 62);
             this.RegisterBtn.TabIndex = 4;
-            this.RegisterBtn.Text = "SIGN UP";
+            this.RegisterBtn.Text = "Sign Up";
             this.RegisterBtn.UseVisualStyleBackColor = false;
             this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click_1);
             // 
@@ -143,7 +152,8 @@ namespace StockProgram
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.Location = new System.Drawing.Point(52, 166);
+            this.lblPass.ForeColor = System.Drawing.Color.White;
+            this.lblPass.Location = new System.Drawing.Point(100, 160);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(106, 25);
             this.lblPass.TabIndex = 3;
@@ -153,7 +163,8 @@ namespace StockProgram
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(52, 106);
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(100, 100);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(65, 25);
             this.lblEmail.TabIndex = 2;
@@ -162,26 +173,37 @@ namespace StockProgram
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(276, 102);
+            this.txtEmail.Location = new System.Drawing.Point(324, 96);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(359, 30);
+            this.txtEmail.Size = new System.Drawing.Size(293, 30);
             this.txtEmail.TabIndex = 1;
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(276, 46);
+            this.txtName.Location = new System.Drawing.Point(324, 40);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(359, 30);
+            this.txtName.Size = new System.Drawing.Size(293, 30);
             this.txtName.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(43, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(244, 48);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Registration";
             // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 443);
+            this.ClientSize = new System.Drawing.Size(727, 513);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -192,6 +214,8 @@ namespace StockProgram
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -212,5 +236,6 @@ namespace StockProgram
         private System.Windows.Forms.TextBox txtCPass;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button returnBtn;
+        private System.Windows.Forms.Label label3;
     }
 }

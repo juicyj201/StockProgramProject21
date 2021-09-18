@@ -81,7 +81,9 @@ namespace StockProgram
             // 
             // returnBtn
             // 
+            this.returnBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.returnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.returnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnBtn.ForeColor = System.Drawing.Color.White;
             this.returnBtn.Location = new System.Drawing.Point(607, 33);
             this.returnBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -89,7 +91,7 @@ namespace StockProgram
             this.returnBtn.Size = new System.Drawing.Size(131, 46);
             this.returnBtn.TabIndex = 19;
             this.returnBtn.Text = "Return";
-            this.returnBtn.UseVisualStyleBackColor = true;
+            this.returnBtn.UseVisualStyleBackColor = false;
             this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
             // 
             // UserControls
@@ -98,7 +100,7 @@ namespace StockProgram
             this.UserControls.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UserControls.Name = "UserControls";
             this.UserControls.SelectedIndex = 0;
-            this.UserControls.Size = new System.Drawing.Size(593, 555);
+            this.UserControls.Size = new System.Drawing.Size(691, 555);
             this.UserControls.TabIndex = 20;
             // 
             // label2
@@ -160,6 +162,7 @@ namespace StockProgram
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(65)))), ((int)(((byte)(35)))));
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.quantityTb);
             this.panel1.Controls.Add(this.nameTb);
@@ -176,8 +179,8 @@ namespace StockProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1423, 639);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.ClientSize = new System.Drawing.Size(1483, 639);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.UserControls);

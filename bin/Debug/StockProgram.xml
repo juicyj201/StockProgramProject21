@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StockProgram</name>
+    </assembly>
+    <members>
+        <member name="M:StockProgram.AboutBox.#ctor">
+            <summary>
+            This is the About box.
+            It shows information about the group and other additional information the user might need.
+            </summary>
+        </member>
+        <member name="F:StockProgram.AboutBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StockProgram.AboutBox.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:StockProgram.AboutBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:StockProgram.Help.#ctor">
+            <summary>
+            This is the help form.
+            If the user needs help figuring out how to use the program, they can go to this form for additional help.
+            </summary>
+        </member>
+        <member name="F:StockProgram.Help.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StockProgram.Help.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StockProgram.Help.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StockProgram.Login.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StockProgram.Login.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StockProgram.Login.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StockProgram.MainDatabase.conn">
+            <summary>
+            These are the global variables for the MainDatabase class
+            </summary>
+        </member>
+        <member name="M:StockProgram.MainDatabase.OpenConnection">
+            <summary>
+            These are the methods used for opening and closing the connection to the sqlite database.
+            </summary>
+        </member>
+        <member name="M:StockProgram.MainDatabase.ShowStock">
+            <summary>
+            This is a method used to show the items inside the sqlite database
+            </summary>
+        </member>
+        <member name="M:StockProgram.MainDatabase.AddControls">
+            <summary>
+            This is a method used to add the user controls, to the tab control in the MainDatabase form
+            </summary>
+        </member>
+        <member name="M:StockProgram.MainDatabase.stockView_MouseDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            This is a method used to display an item in a selected row.
+            If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:StockProgram.MainDatabase.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StockProgram.MainDatabase.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StockProgram.MainDatabase.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:StockProgram.FormControl">
+            <summary>
+            A static class that allows other forms to access its variables.
+            I am using this class to keep the data in the forms updated and to prevent the closing of any forms (loss of data)
+            </summary>
+        </member>
+        <member name="M:StockProgram.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="F:StockProgram.Registration.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StockProgram.Registration.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StockProgram.Registration.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:StockProgram.Settings.#ctor">
+            <summary>
+            This is an experimental form, that allows the user to change the colour scheme of the program.
+            There are only two colour themes currently: White and Black.
+            (In future, I would like to add more settings and more colour themes to the program)
+            
+            Currently, I will not implement the form as it still needs to be worked on and as I said, it is still experimental.
+            After creating a release for the program, I will implement the settings section as a new feature.
+            </summary>
+        </member>
+        <member name="F:StockProgram.Settings.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StockProgram.Settings.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StockProgram.Settings.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:StockProgram.SplashScreen.#ctor">
+            <summary>
+            This is the Splash screen.
+            It loads for a couple of seconds, and once it is finished loading it closes and the Start menu opens.
+            </summary>
+        </member>
+        <member name="F:StockProgram.SplashScreen.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StockProgram.SplashScreen.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StockProgram.SplashScreen.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:StockProgram.StartMenu.#ctor">
+            <summary>
+            This is the menu form that holds all of the buttons for each of the seperate forms.
+            When the user clicks on a button the form is hidden (and not closed), and a new instance of another form is created and called.
+            </summary>
+        </member>
+        <member name="F:StockProgram.StartMenu.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StockProgram.StartMenu.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StockProgram.StartMenu.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StockProgram.UserControls.EditStockPriceView.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StockProgram.UserControls.EditStockPriceView.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StockProgram.UserControls.EditStockPriceView.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StockProgram.UserControls.StockTrackingView.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StockProgram.UserControls.StockTrackingView.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StockProgram.UserControls.StockTrackingView.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StockProgram.UserControls.UpdateDatabaseView.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StockProgram.UserControls.UpdateDatabaseView.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StockProgram.UserControls.UpdateDatabaseView.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:StockProgram.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:StockProgram.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:StockProgram.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

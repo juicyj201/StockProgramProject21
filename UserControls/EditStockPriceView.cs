@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data.SQLite;
 
 namespace StockProgram.UserControls
 {
@@ -17,7 +18,7 @@ namespace StockProgram.UserControls
     // Item will selected by using combobox 
     {
         // Connection String to the Local Database//Replace to your local connection
-        public static SqlConnection con = new SqlConnection(@"Data Source=.\StockDatabase.db");
+        public static SQLiteConnection con = new SQLiteConnection(@"Data Source=.\StockDatabase.db");
         // 'con' is the name of our connection string t
 
         // Constructor
@@ -36,8 +37,28 @@ namespace StockProgram.UserControls
             try
             {
                 con.Open();
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "select ProdPrice from Products where ProductId='" + cmbx.SelectedItem.ToString() + "'";
+                string stuff = "select ProdId, ProdPrice from Products";
+
+                SQLiteCommand cmd = new SQLiteCommand(stuff, con);
+                //cmd.CommandText = "select ProdPrice from Products where ProductId='" + cmbx.SelectedItem.ToString() + "'";
+
+                SQLiteDataReader reader = cmd.ExecuteReader();
+
+                int id, price, counter = 0; 
+
+                while (reader.Read() == true) {
+                    id = reader.GetInt32(0);
+                    price = reader.GetInt32(1);
+                    counter += 1;
+                    cmbx.Items.Add(id);
+
+                    if (cmbx.SelectedItem.Equals(counter))
+                    {
+                        txtboxPrice.Text = price.ToString();
+                    }
+                }
+
+                /**
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -47,6 +68,9 @@ namespace StockProgram.UserControls
                     txtboxPrice.Text = (dr["ProdPrice"].ToString());
 
                 }
+                **/
+
+
                 con.Close();
             }
             catch (Exception ex)
@@ -54,12 +78,6 @@ namespace StockProgram.UserControls
 
                 throw new Exception("SelectIndexCombobox threw an exception", ex);
             }
-        }
-
-
-        private void btnCloseApp_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         // Method to connect to the database

@@ -64,7 +64,7 @@ namespace StockProgram.UserControls
                 closeConn();
             }
             catch (Exception ex) {
-                
+                MessageBox.Show(ex.Message);
             }
 
         }

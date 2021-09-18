@@ -13,7 +13,7 @@ namespace StockProgram.UserControls
 {
     public partial class StockTrackingView : UserControl
     {
-        private SQLiteConnection con = new SQLiteConnection(@"data source=.\StockDatabase.db");
+        private SQLiteConnection con = new SQLiteConnection(@"data source=.\StockDatabase.db; Version = 3;");
 
         public StockTrackingView()
         {
@@ -22,31 +22,50 @@ namespace StockProgram.UserControls
 
         private void StockTrackingView_Load(object sender, EventArgs e)
         {
-
+           
         }
 
-        private void submitbtn_Click(object sender, EventArgs e)
+        private void submitbtn_MouseClick(object sender, MouseEventArgs e)
         {
-            if (nameLbl.Text != null)
+           
+        }
+
+        private void submitbtn_Click1(object sender, EventArgs e)
+        {
+            try
             {
-                try {
-                    con.Open();
+                con.Open();
 
-                    string sqlstuff = "SELECT * from Products WHERE ProdName = '"+nameLbl.Text+"'";
-                    SQLiteCommand com = new SQLiteCommand(sqlstuff, con);
+                //string sqlstuff = "SELECT * from Products WHERE ProdName = '" + nameLbl.Text + "'";
+                string sqlstuff = "SELECT * from Products WHERE ProdName = @ProdName";
+                SQLiteCommand com = new SQLiteCommand(sqlstuff, con);
 
-                    SQLiteDataReader read = com.ExecuteReader();
+                com.Parameters.AddWithValue("@ProdName", nameLbl.Text);
 
-                    while (read.Read() == true) {
-                        label1.Text = read.GetString(4);
-                        label2.Text = read.GetString(5);
-                    }
+                SQLiteDataReader read = com.ExecuteReader();
 
-                    con.Close();
+                while (read.Read() == true)
+                {
+                    string dateofuse = (string)read["DateOfUse"].ToString();
+                    string dateofpurch = (string)read["DateOfPurchase"].ToString();
+                    label1.Text = dateofuse;
+                    label2.Text = dateofpurch;
+
+                    /**
+                    string use = read.GetString(4);
+                    string purch = read.GetString(5);
+                    label1.Text = use;
+                    label2.Text = purch;
+                    //label1.Text = read.GetString(4);
+                    //label2.Text = read.GetString(5);
+                    **/
                 }
-                catch (SQLiteException ex) {
-                    MessageBox.Show(ex.Message);
-                }
+
+                con.Close();
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

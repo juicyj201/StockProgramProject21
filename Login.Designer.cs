@@ -33,6 +33,7 @@ namespace StockProgram
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.returnBtn = new System.Windows.Forms.Button();
             this.LoginBtn = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@ namespace StockProgram
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -49,11 +49,22 @@ namespace StockProgram
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(65)))), ((int)(((byte)(35)))));
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(0, -6);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(710, 92);
+            this.panel1.Size = new System.Drawing.Size(710, 101);
             this.panel1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(44, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 48);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Login";
             // 
             // panel2
             // 
@@ -140,17 +151,6 @@ namespace StockProgram
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(359, 30);
             this.textBox1.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(44, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 48);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Login";
             // 
             // Login
             // 

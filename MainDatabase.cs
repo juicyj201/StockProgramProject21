@@ -94,20 +94,26 @@ namespace StockProgram
             TabPage EditPriceStockPage = new TabPage();
             EditPriceStockPage.Controls.Add(editstuff);
             EditPriceStockPage.Text = "Editing and Calculations";
+            EditPriceStockPage.ForeColor = Color.White;
+            EditPriceStockPage.BackColor = Color.FromArgb(11, 23, 42);
             UserControls.TabPages.Add(EditPriceStockPage);
-            
+
             stocktrackstuff = new StockTrackingView();
             stocktrackstuff.Dock = DockStyle.Fill;
             TabPage StockTrackingPage = new TabPage();
             StockTrackingPage.Controls.Add(stocktrackstuff);
             StockTrackingPage.Text = "Stock Tracking";
+            StockTrackingPage.ForeColor = Color.White;
+            EditPriceStockPage.BackColor = Color.FromArgb(11, 23, 42);
             UserControls.TabPages.Add(StockTrackingPage);
-            
+
             updatestuff = new UpdateDatabaseView();
             updatestuff.Dock = DockStyle.Fill;
             TabPage UpdateDatabasePage = new TabPage();
             UpdateDatabasePage.Controls.Add(updatestuff);
             UpdateDatabasePage.Text = "Update Database";
+            UpdateDatabasePage.ForeColor = Color.White;
+            EditPriceStockPage.BackColor = Color.FromArgb(11, 23, 42);
             UserControls.TabPages.Add(UpdateDatabasePage);
         }
 
@@ -119,13 +125,19 @@ namespace StockProgram
         /// <param name="e"></param>
         private void stockView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            string idcell = stockView.CurrentCell.OwningRow.Cells[0].Value.ToString();
             string namecell = stockView.CurrentCell.OwningRow.Cells[1].Value.ToString();
             string pricecell = stockView.CurrentCell.OwningRow.Cells[2].Value.ToString();
             string quantitycell = stockView.CurrentCell.OwningRow.Cells[3].Value.ToString();
+            string dateofusecell = stockView.CurrentCell.OwningRow.Cells[4].Value.ToString();
+            string dateofpurchcell = stockView.CurrentCell.OwningRow.Cells[5].Value.ToString();
 
-            updatestuff.gettextBox1.Text = namecell;
-            updatestuff.gettextBox2.Text = pricecell;
-            updatestuff.gettextBox3.Text = quantitycell;
+            updatestuff.gettextBox1.Text = idcell;
+            updatestuff.gettextBox2.Text = namecell;
+            updatestuff.gettextBox3.Text = pricecell;
+            updatestuff.gettextBox4.Text = quantitycell;
+            updatestuff.gettextBox5.Text = dateofusecell;
+            updatestuff.gettextBox6.Text = dateofpurchcell;
             
             //nameTb.Text = namecell;
             //priceTb.Text = pricecell;

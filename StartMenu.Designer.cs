@@ -57,10 +57,11 @@ namespace StockProgram
             // menuLbl
             // 
             this.menuLbl.AutoSize = true;
+            this.menuLbl.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuLbl.Location = new System.Drawing.Point(110, 21);
             this.menuLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.menuLbl.Name = "menuLbl";
-            this.menuLbl.Size = new System.Drawing.Size(78, 33);
+            this.menuLbl.Size = new System.Drawing.Size(82, 33);
             this.menuLbl.TabIndex = 0;
             this.menuLbl.Text = "Menu";
             // 
@@ -68,6 +69,7 @@ namespace StockProgram
             // 
             this.maindatabaseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.maindatabaseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.maindatabaseBtn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maindatabaseBtn.Location = new System.Drawing.Point(235, 165);
             this.maindatabaseBtn.Name = "maindatabaseBtn";
             this.maindatabaseBtn.Size = new System.Drawing.Size(299, 67);
@@ -80,6 +82,7 @@ namespace StockProgram
             // 
             this.helpBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.helpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.helpBtn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpBtn.Location = new System.Drawing.Point(235, 250);
             this.helpBtn.Name = "helpBtn";
             this.helpBtn.Size = new System.Drawing.Size(299, 59);
@@ -92,6 +95,7 @@ namespace StockProgram
             // 
             this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.Location = new System.Drawing.Point(235, 550);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(299, 57);
@@ -104,6 +108,7 @@ namespace StockProgram
             // 
             this.aboutUsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.aboutUsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.aboutUsBtn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aboutUsBtn.Location = new System.Drawing.Point(235, 326);
             this.aboutUsBtn.Name = "aboutUsBtn";
             this.aboutUsBtn.Size = new System.Drawing.Size(299, 57);
@@ -116,6 +121,7 @@ namespace StockProgram
             // 
             this.registerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerBtn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerBtn.Location = new System.Drawing.Point(235, 400);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(299, 57);
@@ -128,6 +134,7 @@ namespace StockProgram
             // 
             this.loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginBtn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.Location = new System.Drawing.Point(235, 475);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(299, 57);

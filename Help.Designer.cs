@@ -59,9 +59,9 @@ namespace StockProgram
             this.menuLbl.Location = new System.Drawing.Point(63, 32);
             this.menuLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.menuLbl.Name = "menuLbl";
-            this.menuLbl.Size = new System.Drawing.Size(124, 48);
+            this.menuLbl.Size = new System.Drawing.Size(106, 48);
             this.menuLbl.TabIndex = 0;
-            this.menuLbl.Text = "Menu";
+            this.menuLbl.Text = "Help";
             // 
             // textBoxDescription
             // 
@@ -71,13 +71,13 @@ namespace StockProgram
             this.textBoxDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.textBoxDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDescription.ForeColor = System.Drawing.Color.White;
-            this.textBoxDescription.Location = new System.Drawing.Point(118, 146);
+            this.textBoxDescription.Location = new System.Drawing.Point(39, 146);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.ReadOnly = true;
             this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxDescription.Size = new System.Drawing.Size(578, 319);
+            this.textBoxDescription.Size = new System.Drawing.Size(737, 319);
             this.textBoxDescription.TabIndex = 24;
             this.textBoxDescription.TabStop = false;
             this.textBoxDescription.Text = "Description";

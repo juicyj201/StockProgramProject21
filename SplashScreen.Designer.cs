@@ -54,7 +54,7 @@ namespace StockProgram
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(28, 21);
+            this.label2.Location = new System.Drawing.Point(36, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(450, 80);
@@ -82,7 +82,7 @@ namespace StockProgram
             this.panel1.Location = new System.Drawing.Point(93, 54);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(508, 122);
+            this.panel1.Size = new System.Drawing.Size(436, 122);
             this.panel1.TabIndex = 3;
             // 
             // LoadTimer

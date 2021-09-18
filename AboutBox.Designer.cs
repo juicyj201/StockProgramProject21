@@ -83,7 +83,7 @@ namespace StockProgram
             // labelProductName
             // 
             this.labelProductName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProductName.Location = new System.Drawing.Point(241, 0);
             this.labelProductName.Margin = new System.Windows.Forms.Padding(8, 0, 4, 0);
             this.labelProductName.MaximumSize = new System.Drawing.Size(0, 21);
@@ -96,7 +96,7 @@ namespace StockProgram
             // labelVersion
             // 
             this.labelVersion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVersion.Location = new System.Drawing.Point(241, 44);
             this.labelVersion.Margin = new System.Windows.Forms.Padding(8, 0, 4, 0);
             this.labelVersion.MaximumSize = new System.Drawing.Size(0, 21);
@@ -109,7 +109,7 @@ namespace StockProgram
             // labelCopyright
             // 
             this.labelCopyright.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCopyright.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCopyright.Location = new System.Drawing.Point(241, 88);
             this.labelCopyright.Margin = new System.Windows.Forms.Padding(8, 0, 4, 0);
             this.labelCopyright.MaximumSize = new System.Drawing.Size(0, 21);
@@ -122,7 +122,7 @@ namespace StockProgram
             // labelCompanyName
             // 
             this.labelCompanyName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCompanyName.Location = new System.Drawing.Point(241, 132);
             this.labelCompanyName.Margin = new System.Windows.Forms.Padding(8, 0, 4, 0);
             this.labelCompanyName.MaximumSize = new System.Drawing.Size(0, 21);

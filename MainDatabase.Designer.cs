@@ -55,7 +55,7 @@ namespace StockProgram
             this.stockView.Name = "stockView";
             this.stockView.RowHeadersWidth = 51;
             this.stockView.RowTemplate.Height = 24;
-            this.stockView.Size = new System.Drawing.Size(685, 546);
+            this.stockView.Size = new System.Drawing.Size(952, 546);
             this.stockView.TabIndex = 0;
             this.stockView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockView_CellContentClick);
             this.stockView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.stockView_MouseDoubleClick);
@@ -77,7 +77,7 @@ namespace StockProgram
             this.returnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.returnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnBtn.ForeColor = System.Drawing.Color.White;
-            this.returnBtn.Location = new System.Drawing.Point(607, 33);
+            this.returnBtn.Location = new System.Drawing.Point(874, 33);
             this.returnBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.returnBtn.Name = "returnBtn";
             this.returnBtn.Size = new System.Drawing.Size(131, 46);
@@ -88,11 +88,11 @@ namespace StockProgram
             // 
             // UserControls
             // 
-            this.UserControls.Location = new System.Drawing.Point(780, 33);
+            this.UserControls.Location = new System.Drawing.Point(1064, 33);
             this.UserControls.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UserControls.Name = "UserControls";
             this.UserControls.SelectedIndex = 0;
-            this.UserControls.Size = new System.Drawing.Size(612, 624);
+            this.UserControls.Size = new System.Drawing.Size(618, 624);
             this.UserControls.TabIndex = 20;
             // 
             // MainDatabase
@@ -100,7 +100,7 @@ namespace StockProgram
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.ClientSize = new System.Drawing.Size(1425, 699);
+            this.ClientSize = new System.Drawing.Size(1714, 699);
             this.ControlBox = false;
             this.Controls.Add(this.UserControls);
             this.Controls.Add(this.returnBtn);
@@ -113,6 +113,7 @@ namespace StockProgram
             this.Name = "MainDatabase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainDatabase";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.stockView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

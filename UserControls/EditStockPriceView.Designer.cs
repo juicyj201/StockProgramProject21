@@ -47,6 +47,7 @@ namespace StockProgram.UserControls
             this.txtboxPrice.Name = "txtboxPrice";
             this.txtboxPrice.Size = new System.Drawing.Size(231, 35);
             this.txtboxPrice.TabIndex = 2;
+            this.txtboxPrice.TextChanged += new System.EventHandler(this.txtboxPrice_TextChanged);
             // 
             // cmbx
             // 

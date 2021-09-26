@@ -57,7 +57,7 @@ namespace StockProgram.UserControls
             this.cmbx.Name = "cmbx";
             this.cmbx.Size = new System.Drawing.Size(231, 24);
             this.cmbx.TabIndex = 5;
-            this.cmbx.SelectedIndexChanged += new System.EventHandler(this.cmblistId_SelectedIndexChanged);
+            this.cmbx.SelectedIndexChanged += new System.EventHandler(this.cmbx_SelectedIndexChanged);
             // 
             // btnEditPrice
             // 
@@ -73,7 +73,7 @@ namespace StockProgram.UserControls
             this.btnEditPrice.TabIndex = 3;
             this.btnEditPrice.Text = "Edit Item Price";
             this.btnEditPrice.UseVisualStyleBackColor = false;
-            this.btnEditPrice.Click += new System.EventHandler(this.btnEditPrice_Click);
+            //this.btnEditPrice.Click += new System.EventHandler(this.btnEditPrice_Click);
             // 
             // label1
             // 

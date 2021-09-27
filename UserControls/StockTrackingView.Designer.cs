@@ -49,7 +49,7 @@ namespace StockProgram.UserControls
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(56, 441);
+            this.label1.Location = new System.Drawing.Point(67, 441);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 20);
             this.label1.TabIndex = 0;
@@ -76,7 +76,7 @@ namespace StockProgram.UserControls
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(56, 509);
+            this.label2.Location = new System.Drawing.Point(67, 509);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 20);
             this.label2.TabIndex = 2;
@@ -106,7 +106,7 @@ namespace StockProgram.UserControls
             this.submitbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitbtn.ForeColor = System.Drawing.Color.White;
-            this.submitbtn.Location = new System.Drawing.Point(402, 188);
+            this.submitbtn.Location = new System.Drawing.Point(401, 188);
             this.submitbtn.Name = "submitbtn";
             this.submitbtn.Size = new System.Drawing.Size(143, 56);
             this.submitbtn.TabIndex = 6;

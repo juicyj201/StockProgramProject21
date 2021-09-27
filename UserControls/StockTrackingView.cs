@@ -18,11 +18,14 @@ namespace StockProgram.UserControls
         public StockTrackingView()
         {
             InitializeComponent();
+
+            label1.Text = "";
+            label2.Text = "";
         }
 
         private void StockTrackingView_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void submitbtn_MouseClick(object sender, MouseEventArgs e)
@@ -32,40 +35,36 @@ namespace StockProgram.UserControls
 
         private void submitbtn_Click1(object sender, EventArgs e)
         {
-            try
+            if (nameLbl.Text != null)
             {
-                con.Open();
-
-                //string sqlstuff = "SELECT * from Products WHERE ProdName = '" + nameLbl.Text + "'";
-                string sqlstuff = "SELECT * from Products WHERE ProdName = @ProdName";
-                SQLiteCommand com = new SQLiteCommand(sqlstuff, con);
-
-                com.Parameters.AddWithValue("@ProdName", nameLbl.Text);
-
-                SQLiteDataReader read = com.ExecuteReader();
-
-                while (read.Read() == true)
+                try
                 {
-                    string dateofuse = (string)read["DateOfUse"].ToString();
-                    string dateofpurch = (string)read["DateOfPurchase"].ToString();
-                    label1.Text = dateofuse;
-                    label2.Text = dateofpurch;
+                    con.Open();
 
-                    /**
-                    string use = read.GetString(4);
-                    string purch = read.GetString(5);
-                    label1.Text = use;
-                    label2.Text = purch;
-                    //label1.Text = read.GetString(4);
-                    //label2.Text = read.GetString(5);
-                    **/
+                    string sqlstuff = "SELECT DateOfUse from Products WHERE ProdName = '" + nameLbl.Text + "'";
+                    SQLiteCommand com = new SQLiteCommand(sqlstuff, con);
+
+                    SQLiteDataReader read = com.ExecuteReader();
+                    
+                    var type = read.GetFieldType(0);
+
+                    if (type.ToString() != null) {
+                        while (read.Read() == true)
+                        {
+                            string dateofuse = read.GetString(0);
+                            string dateofpurch = read.GetString(1);
+
+                            label1.Text = dateofuse;
+                            label2.Text = dateofpurch;
+                        }
+                    }
+
+                    con.Close();
                 }
-
-                con.Close();
-            }
-            catch (SQLiteException ex)
-            {
-                MessageBox.Show(ex.Message);
+                catch (SQLiteException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }

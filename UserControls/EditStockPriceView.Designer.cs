@@ -73,7 +73,6 @@ namespace StockProgram.UserControls
             this.btnEditPrice.TabIndex = 3;
             this.btnEditPrice.Text = "Edit Item Price";
             this.btnEditPrice.UseVisualStyleBackColor = false;
-            //this.btnEditPrice.Click += new System.EventHandler(this.btnEditPrice_Click);
             // 
             // label1
             // 
@@ -104,7 +103,7 @@ namespace StockProgram.UserControls
             this.panel2.Location = new System.Drawing.Point(-4, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(603, 98);
+            this.panel2.Size = new System.Drawing.Size(616, 98);
             this.panel2.TabIndex = 21;
             // 
             // label9
@@ -112,7 +111,7 @@ namespace StockProgram.UserControls
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(164, 24);
+            this.label9.Location = new System.Drawing.Point(160, 24);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(293, 48);
             this.label9.TabIndex = 19;
@@ -131,7 +130,7 @@ namespace StockProgram.UserControls
             this.Controls.Add(this.txtboxPrice);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EditStockPriceView";
-            this.Size = new System.Drawing.Size(591, 417);
+            this.Size = new System.Drawing.Size(612, 417);
             this.Load += new System.EventHandler(this.EditStockPriceView_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -3,7 +3,7 @@
 
 ## Summary
 
-The new version of the database stock program in C#, for Project 2: Group 21.
+The stock inventory application, for Project 2: Group 21.
 
 This program is created for people who work with inventory and inventory control systems. 
 It is a lightweight database software, aimed at efficiency and functional use. 

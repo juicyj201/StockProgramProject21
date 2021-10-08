@@ -33,7 +33,6 @@ namespace StockProgram
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuLbl = new System.Windows.Forms.Label();
             this.maindatabaseBtn = new System.Windows.Forms.Button();
-            this.helpBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.aboutUsBtn = new System.Windows.Forms.Button();
             this.registerBtn = new System.Windows.Forms.Button();
@@ -78,25 +77,12 @@ namespace StockProgram
             this.maindatabaseBtn.UseVisualStyleBackColor = false;
             this.maindatabaseBtn.Click += new System.EventHandler(this.maindatabaseBtn_Click);
             // 
-            // helpBtn
-            // 
-            this.helpBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.helpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.helpBtn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.helpBtn.Location = new System.Drawing.Point(235, 250);
-            this.helpBtn.Name = "helpBtn";
-            this.helpBtn.Size = new System.Drawing.Size(299, 59);
-            this.helpBtn.TabIndex = 5;
-            this.helpBtn.Text = "Help";
-            this.helpBtn.UseVisualStyleBackColor = false;
-            this.helpBtn.Click += new System.EventHandler(this.helpBtn_Click);
-            // 
             // exitBtn
             // 
             this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtn.Location = new System.Drawing.Point(235, 550);
+            this.exitBtn.Location = new System.Drawing.Point(235, 474);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(299, 57);
             this.exitBtn.TabIndex = 6;
@@ -109,7 +95,7 @@ namespace StockProgram
             this.aboutUsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.aboutUsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.aboutUsBtn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aboutUsBtn.Location = new System.Drawing.Point(235, 326);
+            this.aboutUsBtn.Location = new System.Drawing.Point(235, 250);
             this.aboutUsBtn.Name = "aboutUsBtn";
             this.aboutUsBtn.Size = new System.Drawing.Size(299, 57);
             this.aboutUsBtn.TabIndex = 8;
@@ -122,7 +108,7 @@ namespace StockProgram
             this.registerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registerBtn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerBtn.Location = new System.Drawing.Point(235, 400);
+            this.registerBtn.Location = new System.Drawing.Point(235, 324);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(299, 57);
             this.registerBtn.TabIndex = 10;
@@ -135,7 +121,7 @@ namespace StockProgram
             this.loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.Location = new System.Drawing.Point(235, 475);
+            this.loginBtn.Location = new System.Drawing.Point(235, 399);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(299, 57);
             this.loginBtn.TabIndex = 11;
@@ -165,16 +151,16 @@ namespace StockProgram
             // 
             // StartMenu
             // 
+            this.AccessibleName = "Start Menu";
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.ClientSize = new System.Drawing.Size(782, 653);
+            this.ClientSize = new System.Drawing.Size(782, 583);
             this.ControlBox = false;
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.aboutUsBtn);
             this.Controls.Add(this.exitBtn);
-            this.Controls.Add(this.helpBtn);
             this.Controls.Add(this.maindatabaseBtn);
             this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -183,9 +169,9 @@ namespace StockProgram
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(800, 700);
+            this.MaximumSize = new System.Drawing.Size(800, 630);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(800, 700);
+            this.MinimumSize = new System.Drawing.Size(800, 630);
             this.Name = "StartMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartMenu";
@@ -201,7 +187,6 @@ namespace StockProgram
         System.Windows.Forms.Panel panel1;
         System.Windows.Forms.Label menuLbl;
         System.Windows.Forms.Button maindatabaseBtn;
-        System.Windows.Forms.Button helpBtn;
         System.Windows.Forms.Button exitBtn;
         System.Windows.Forms.Button aboutUsBtn;
         System.Windows.Forms.Button settingsBtn;

@@ -1,4 +1,4 @@
-﻿*** This is the actual 'Readme File' :) ***
+﻿*** This is the alternative 'Readme File' ***
 *** Written by Joshua Julies ***
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -32,7 +32,6 @@ Thus, with this piece of software we hope to make working with a stock inventory
 The installation file will only work on a windows (32 / 64(x86)bit) machine. We haven't thought about branching to other machines yet,
  as that would be outside of our project's scope.
 You can install to any location on any drive you choose.
-***list future bugs***
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  2. Known Bugs
@@ -48,7 +47,7 @@ Rather return to the menu and use the exit button, to properly end the applicati
 * The start menu does not currently have working registration or login buttons. There is a bug in those forms, as well as with connecting to the database and it will be fixed by the end of the working year.
 
 (Other than that i suppose there is no other harmful bugs. 
-I tested the program thoroughly to make sure it works in a real-world situation. However there may be several bugs after new features are added to the program.)
+The program has been thoroughly tested to make sure it works in a real-world situation. However there may be several bugs after new features are added to the program.)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  3. Notes
@@ -61,13 +60,13 @@ Having a local file, rather than files and data stored on a server, gives the us
 (also, we aren't that advanced in programming to be able to put in security measures for the database.)
 
 Keep in mind that this program is still fantastically basic, and created with the most fundamental functionality we can put into it within a short time frame. 
-Though that might give it an edge of being functional rather than complex, it doesn't give much to offer yet.
+Though that might give it an edge of being functional rather than complex, it doesn't quite give much to offer yet.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  4. Updates and Releases
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-***The repository link will be made available later after the program is set to release***
+REPOSITORY LINK AND DOWNLOAD LINKS
 
 You can find the program releases and updates on github, ***link***.
 If you find any bugs with the program, please feel free to let us know.
@@ -78,4 +77,4 @@ If you find any bugs with the program, please feel free to let us know.
 
 
 
-Thank you for using this program :)
+P.S. Thank you for using this program :)

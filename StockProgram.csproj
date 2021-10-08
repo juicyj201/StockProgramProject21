@@ -129,6 +129,9 @@
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainDatabase.en-ZA.resx">
+      <DependentUpon>MainDatabase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainDatabase.resx">
       <DependentUpon>MainDatabase.cs</DependentUpon>
     </EmbeddedResource>

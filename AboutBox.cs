@@ -25,6 +25,8 @@ namespace StockProgram
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;
+
+            DescriptionText();
         }
 
         #region Assembly Attribute Accessors
@@ -111,6 +113,10 @@ namespace StockProgram
         {
             this.Hide();
             FormControl.menu2.Show();
+        }
+
+        private void DescriptionText() {
+            this.textBoxDescription.Text += "We are project group 21 and have created this program for the use of an NGO.\nThis is an inventory management system used to track stock items.\nPlease feel free to give your feedback on this program on GitHub, !LINK!.";
         }
     }
 }

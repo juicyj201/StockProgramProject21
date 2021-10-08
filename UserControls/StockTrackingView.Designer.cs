@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace StockProgram.UserControls
 {
     partial class StockTrackingView
@@ -47,17 +49,19 @@ namespace StockProgram.UserControls
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(67, 441);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(56, 441);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 20);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Date of Use";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(230, 439);
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(258, 439);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(315, 22);
@@ -65,7 +69,8 @@ namespace StockProgram.UserControls
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(230, 509);
+            this.textBox2.ForeColor = System.Drawing.Color.Black;
+            this.textBox2.Location = new System.Drawing.Point(258, 509);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(315, 22);
@@ -74,17 +79,18 @@ namespace StockProgram.UserControls
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(67, 509);
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(56, 509);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 20);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 4;
             this.label2.Text = "Date of Purchase";
             // 
             // nametb
             // 
-            this.nametb.Location = new System.Drawing.Point(230, 137);
+            this.nametb.Location = new System.Drawing.Point(258, 136);
             this.nametb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nametb.Name = "nametb";
             this.nametb.Size = new System.Drawing.Size(315, 22);
@@ -106,14 +112,13 @@ namespace StockProgram.UserControls
             this.submitbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitbtn.ForeColor = System.Drawing.Color.White;
-            this.submitbtn.Location = new System.Drawing.Point(401, 188);
+            this.submitbtn.Location = new System.Drawing.Point(430, 188);
             this.submitbtn.Name = "submitbtn";
             this.submitbtn.Size = new System.Drawing.Size(143, 56);
             this.submitbtn.TabIndex = 6;
             this.submitbtn.Text = "submit";
             this.submitbtn.UseVisualStyleBackColor = true;
             this.submitbtn.Click += new System.EventHandler(this.submitbtn_Click1);
-            this.submitbtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.submitbtn_MouseClick);
             // 
             // panel2
             // 
@@ -122,7 +127,7 @@ namespace StockProgram.UserControls
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(615, 98);
+            this.panel2.Size = new System.Drawing.Size(630, 98);
             this.panel2.TabIndex = 21;
             // 
             // label9
@@ -143,7 +148,7 @@ namespace StockProgram.UserControls
             this.panel1.Location = new System.Drawing.Point(-7, 287);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(622, 96);
+            this.panel1.Size = new System.Drawing.Size(630, 96);
             this.panel1.TabIndex = 22;
             // 
             // label3
@@ -173,7 +178,7 @@ namespace StockProgram.UserControls
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StockTrackingView";
-            this.Size = new System.Drawing.Size(612, 604);
+            this.Size = new System.Drawing.Size(620, 600);
             this.Load += new System.EventHandler(this.StockTrackingView_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

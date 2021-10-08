@@ -112,6 +112,11 @@ namespace StockProgram.UserControls
 
         }
 
+        private void EditStockPriceView_SizeChanged(object sender, EventArgs e)
+        {
+            
+        }
+
         private void cmbx_SelectedIndexChanged(object sender, EventArgs e)
         {
             try {

@@ -132,6 +132,7 @@ namespace StockProgram.UserControls
             this.Name = "EditStockPriceView";
             this.Size = new System.Drawing.Size(612, 417);
             this.Load += new System.EventHandler(this.EditStockPriceView_Load);
+            this.SizeChanged += new System.EventHandler(this.EditStockPriceView_SizeChanged);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

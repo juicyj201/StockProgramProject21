@@ -13,7 +13,7 @@ namespace StockProgram.UserControls
 {
     public partial class StockTrackingView : UserControl
     {
-        private SQLiteConnection con = new SQLiteConnection(@"data source=.\StockDatabase.db");
+        private SQLiteConnection con = new SQLiteConnection(@"data source=.\StockDatabase.db;");
         private string dateofuse = null, dateofpurch = null;
 
         public StockTrackingView()
@@ -36,24 +36,26 @@ namespace StockProgram.UserControls
                 {
                     con.Open();
 
-                    string sqlstuff = "SELECT DateOfUse, DateOfPurchase from Products WHERE ProdName = '" + nameLbl.Text + "';";
+                    string sqlstuff = "select DateOfUse, DateOfPurchase from Products where ProdName = '@Name'";
                     SQLiteCommand com = new SQLiteCommand(sqlstuff, con);
+                    com.Parameters.AddWithValue("@Name", nameLbl.Text);
 
                     SQLiteDataReader read = com.ExecuteReader();
+                    SQLiteDataAdapter adapter = new SQLiteDataAdapter();
+                    adapter.SelectCommand = com;
+                    DataSet dataset = new DataSet();
 
-                    read.Read();
-                    dateofuse = read.GetString(0);
-                    dateofpurch = read.GetString(1);
-                    MessageBox.Show(dateofuse);
-                    MessageBox.Show(dateofpurch);
-
-                    while (read.Read())
+                    if (read[0].ToString() != null && read[1].ToString() != null)
                     {
-                        MessageBox.Show(read.GetString(0));
-                        MessageBox.Show(read.GetString(1));
+                        MessageBox.Show(read[0].ToString());
+                        MessageBox.Show(read[1].ToString());
 
-                        textBox1.Text += read.GetString(0);
-                        textBox2.Text += read.GetString(0);
+                        textBox1.Text += read[0].ToString();
+                        textBox2.Text += read[1].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Well the database didnt load the values and i have no idea why.");
                     }
 
                     read.Close();

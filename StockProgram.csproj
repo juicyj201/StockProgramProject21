@@ -167,6 +167,9 @@
     </EmbeddedResource>
     <None Include="bin\Debug\Login_Registration.db" />
     <None Include="bin\Debug\StockDatabase.db" />
+    <None Include="bin\Release\Login_Registration.db" />
+    <None Include="bin\Release\StockDatabase.db" />
+    <None Include="bin\Release\StockProgram.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -183,6 +186,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\StockProgram.xml" />
+    <Content Include="bin\Release\en-ZA\StockProgram.resources.dll" />
+    <Content Include="bin\Release\StockProgram.exe" />
+    <Content Include="bin\Release\StockProgram.pdb" />
+    <Content Include="bin\Release\System.Data.SQLite.dll" />
+    <Content Include="bin\Release\System.Data.SQLite.xml" />
     <Content Include="readme.txt" />
   </ItemGroup>
   <ItemGroup />

@@ -5,7 +5,7 @@
  Stock Inventory Control Software
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This is a program created for workers in an Non-profit Organisation, who deal with inventory and inventory control on a (mostly) daily basis.
+This is a program created for workers in an Non-profit Organisation, namely the 'Help your neighber' NGO, who deal with inventory and inventory control on a (mostly) daily basis.
 This software is intended to relieve the burden of broad and general database software, and provide specialised tools that will help to increase productivity.
 
 Normally, people who make use of database software such as Microsoft Access or Oracle Database, tend to get their work done at a regular pace. 
@@ -14,7 +14,7 @@ can often become complicated and time consuming to use.
 Especially when it comes to calculations, referencing, even data administration. 
 Our project however, makes it much easier to view and retrieve data, perform simple as well as more complex calculations, and even deal with data administration.
 
-Thus, with this piece of software we hope to make working with a stock inventory/ stock inventories, a bit easier.
+Thus, with this piece of software we hope to make working with a stock inventories, a bit easier.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  Index:
@@ -31,16 +31,15 @@ Thus, with this piece of software we hope to make working with a stock inventory
 
 The installation file will only work on a windows (32 / 64(x86)bit) machine. We haven't thought about branching to other machines yet,
  as that would be outside of our project's scope.
-You can install the program to any location on any drive you choose.
+You can install the program to any location, on any drive you choose.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  2. Known Bugs
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*This may not be much a bug, but i have disabled the control box linked to most of the forms.
-
-(Other than that i suppose there is no other harmful bugs. 
-The program has been thoroughly tested to make sure it works in a real-world situation. However there may be several bugs after new features are added to the program.)
+(I suppose there's not really harmful bugs apparent. 
+The program has been tested to make sure it works in a real-world situation. 
+However there may be several bugs after new features are added to the program.)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  3. Notes
@@ -59,9 +58,7 @@ Though that might give it an edge of being functional rather than complex, it do
  4. Updates and Releases
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-REPOSITORY LINK AND DOWNLOAD LINKS
-
-You can find the program releases and updates on github, ***link***.
+You can find the program releases and updates on github, https://github.com/juicyj201/StockProgramProject21.git.
 If you find any bugs with the program, please feel free to let us know.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -70,4 +67,22 @@ If you find any bugs with the program, please feel free to let us know.
 
 
 
-P.S. Thank you for using this program :)
+
+
+
+
+
+
+And Thank you for using this program :)
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -27,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9013164C01DC43DBA31C1C20E454762B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_90310A1782E94B73A72FC951F80F938F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -35,6 +41,12 @@
         {
         "MsmKey" = "8:_B400255B28642B3CF00D5DE4B8BA232E"
         "OwnerKey" = "8:_FF8B6BD60A044512B3080C35D1E9484B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FC669E201553400FBE11183AE94EDB9E"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -175,6 +187,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9013164C01DC43DBA31C1C20E454762B"
+            {
+            "SourcePath" = "8:..\\bin\\Debug\\Login_Registration.db"
+            "TargetName" = "8:Login_Registration.db"
+            "Tag" = "8:"
+            "Folder" = "8:_BA1E18DDD7464A2FA278DEF098C8BBFC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_90310A1782E94B73A72FC951F80F938F"
             {
             "SourcePath" = "8:..\\Icons\\main_form_icon.ico"
@@ -224,6 +256,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FC669E201553400FBE11183AE94EDB9E"
+            {
+            "SourcePath" = "8:..\\bin\\Debug\\StockDatabase.db"
+            "TargetName" = "8:StockDatabase.db"
+            "Tag" = "8:"
+            "Folder" = "8:_BA1E18DDD7464A2FA278DEF098C8BBFC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -295,7 +347,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Stock Manager Setup"
         "ProductCode" = "8:{B27FF3B0-ADEC-469F-AAD5-0BAC8A90F2D6}"
-        "PackageCode" = "8:{2F9F8DDA-ACF5-4AD3-9429-9412449B0396}"
+        "PackageCode" = "8:{AF31801E-7059-415A-8A9D-AF39D16E2152}"
         "UpgradeCode" = "8:{83C226C2-8424-42DC-8E84-F9D43615AF9B}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"

@@ -52,28 +52,16 @@ namespace StockProgram
         /// This is a method used to show the items inside the sqlite database
         /// </summary>
         public void ShowStock() {
-            //the command object
+            //the command object used to retrieve all the rows in the database
             string selectStock = "SELECT* from Products";
             SQLiteCommand selectComm = new SQLiteCommand(selectStock, conn);
 
-            //the adapter
+            //the data adapter used to fill the table
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(selectComm);
             adapter.Fill(table);
 
-            //actually putting it in the form
+            //putting the datagrid in the table
             stockView.DataSource = table;
-
-            stockView.RowsDefaultCellStyle.BackColor = Color.White;
-            stockView.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
-            stockView.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            stockView.DefaultCellStyle.SelectionBackColor = Color.Black;
-            stockView.DefaultCellStyle.SelectionForeColor = Color.White;
-            stockView.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            stockView.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            stockView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            stockView.AllowUserToResizeColumns = false;
-            stockView.SuspendLayout();
-            
         }
 
         private void returnBtn_Click(object sender, EventArgs e)
@@ -119,7 +107,7 @@ namespace StockProgram
 
         /// <summary>
         /// This is a method used to display an item in a selected row.
-        /// If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes.
+        /// If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes in the UpdateDatabaseView user control.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -138,15 +126,14 @@ namespace StockProgram
             updatestuff.gettextBox4.Text = quantitycell;
             updatestuff.gettextBox5.Text = dateofusecell;
             updatestuff.gettextBox6.Text = dateofpurchcell;
-            
-            //nameTb.Text = namecell;
-            //priceTb.Text = pricecell;
-            //quantityTb.Text = quantitycell;
         }
 
-        private void stockView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void MainDatabase_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            this.Hide();
+            this.Close();
+            this.Dispose();
+            Application.Exit();
         }
     }
 }

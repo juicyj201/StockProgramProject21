@@ -35,13 +35,12 @@ namespace StockProgram.UserControls
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.nametb = new System.Windows.Forms.TextBox();
             this.nameLbl = new System.Windows.Forms.Label();
-            this.submitbtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.nameCb = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +51,7 @@ namespace StockProgram.UserControls
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(56, 441);
+            this.label1.Location = new System.Drawing.Point(56, 406);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 20);
             this.label1.TabIndex = 4;
@@ -61,7 +60,7 @@ namespace StockProgram.UserControls
             // textBox1
             // 
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(258, 439);
+            this.textBox1.Location = new System.Drawing.Point(258, 404);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(315, 22);
@@ -70,7 +69,7 @@ namespace StockProgram.UserControls
             // textBox2
             // 
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(258, 509);
+            this.textBox2.Location = new System.Drawing.Point(258, 474);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(315, 22);
@@ -82,19 +81,11 @@ namespace StockProgram.UserControls
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(56, 509);
+            this.label2.Location = new System.Drawing.Point(56, 474);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Date of Purchase";
-            // 
-            // nametb
-            // 
-            this.nametb.Location = new System.Drawing.Point(258, 136);
-            this.nametb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nametb.Name = "nametb";
-            this.nametb.Size = new System.Drawing.Size(315, 22);
-            this.nametb.TabIndex = 5;
             // 
             // nameLbl
             // 
@@ -106,19 +97,6 @@ namespace StockProgram.UserControls
             this.nameLbl.Size = new System.Drawing.Size(116, 20);
             this.nameLbl.TabIndex = 4;
             this.nameLbl.Text = "Product Name";
-            // 
-            // submitbtn
-            // 
-            this.submitbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.submitbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitbtn.ForeColor = System.Drawing.Color.White;
-            this.submitbtn.Location = new System.Drawing.Point(430, 188);
-            this.submitbtn.Name = "submitbtn";
-            this.submitbtn.Size = new System.Drawing.Size(143, 56);
-            this.submitbtn.TabIndex = 6;
-            this.submitbtn.Text = "submit";
-            this.submitbtn.UseVisualStyleBackColor = true;
-            this.submitbtn.Click += new System.EventHandler(this.submitbtn_Click1);
             // 
             // panel2
             // 
@@ -145,10 +123,10 @@ namespace StockProgram.UserControls
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(65)))), ((int)(((byte)(35)))));
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(-7, 287);
+            this.panel1.Location = new System.Drawing.Point(-21, 214);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(630, 96);
+            this.panel1.Size = new System.Drawing.Size(651, 96);
             this.panel1.TabIndex = 22;
             // 
             // label3
@@ -162,15 +140,23 @@ namespace StockProgram.UserControls
             this.label3.TabIndex = 19;
             this.label3.Text = "The date of use and purchase";
             // 
+            // nameCb
+            // 
+            this.nameCb.FormattingEnabled = true;
+            this.nameCb.Location = new System.Drawing.Point(258, 136);
+            this.nameCb.Name = "nameCb";
+            this.nameCb.Size = new System.Drawing.Size(315, 24);
+            this.nameCb.TabIndex = 23;
+            this.nameCb.SelectedIndexChanged += new System.EventHandler(this.nameCb_SelectedIndexChanged);
+            // 
             // StockTrackingView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.Controls.Add(this.nameCb);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.submitbtn);
-            this.Controls.Add(this.nametb);
             this.Controls.Add(this.nameLbl);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
@@ -195,12 +181,11 @@ namespace StockProgram.UserControls
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox nametb;
         private System.Windows.Forms.Label nameLbl;
-        private System.Windows.Forms.Button submitbtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox nameCb;
     }
 }

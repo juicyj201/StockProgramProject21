@@ -31,20 +31,13 @@ Thus, with this piece of software we hope to make working with a stock inventory
 
 The installation file will only work on a windows (32 / 64(x86)bit) machine. We haven't thought about branching to other machines yet,
  as that would be outside of our project's scope.
-You can install to any location on any drive you choose.
+You can install the program to any location on any drive you choose.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  2. Known Bugs
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-* If the executable file starts and you are able to get to the main menu, but you cannot continue onwards to the main database section,
- then try to install the latest version of the program. 
-This will occur if the sqlite file located in the installation location, is of the old version (the old version doesn't have updated tables).
-
-* If you exit the program using the exit button on the top-right corner of the screen, the program will continue to run (this is because I haven't found a way to dispose (or end) the forms properly). 
-Rather return to the menu and use the exit button, to properly end the application. 
-
-* The start menu does not currently have working registration or login buttons. There is a bug in those forms, as well as with connecting to the database and it will be fixed by the end of the working year.
+*This may not be much a bug, but i have disabled the control box linked to most of the forms.
 
 (Other than that i suppose there is no other harmful bugs. 
 The program has been thoroughly tested to make sure it works in a real-world situation. However there may be several bugs after new features are added to the program.)

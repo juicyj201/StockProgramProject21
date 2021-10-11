@@ -64,5 +64,13 @@ namespace StockProgram
             FormControl.login2.Show();
             this.Hide();
         }
+
+        private void StartMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            this.Close();
+            this.Dispose();
+            Application.Exit();
+        }
     }
 }

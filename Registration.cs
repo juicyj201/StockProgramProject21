@@ -111,5 +111,13 @@ namespace StockProgram
                 txtPass.Focus();
             }
         }
+
+        private void Registration_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            this.Close();
+            this.Dispose();
+            Application.Exit();
+        }
     }
 }

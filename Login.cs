@@ -62,6 +62,10 @@ namespace StockProgram
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
+            this.Hide();
+            this.Close();
+            this.Dispose();
+            Application.Exit();
         }
 
         private void returnBtn_Click(object sender, EventArgs e)

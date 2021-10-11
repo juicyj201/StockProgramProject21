@@ -19,7 +19,6 @@ namespace StockProgram.UserControls
     // Item will selected by using combobox 
     {
         private List<int> comboList = new List<int>();
-        private int loaded = 0;
         int id = 0, price = 0;
 
         // Connection String to the Local Database//Replace to your local connection
@@ -31,65 +30,44 @@ namespace StockProgram.UserControls
         // Initialize Component
         {
             InitializeComponent();
-
-            loaded += 1;
         }
         private void EditStockPriceView_Load(object sender, EventArgs e)
         {
             DataConnection();
 
-            if (loaded == 1) {
-                try
+            try
+            {
+                con.Open();
+                string stuff = "select ProdId from Products";
+
+                SQLiteCommand cmd = new SQLiteCommand(stuff, con);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read() == true)
                 {
-                    con.Open();
-                    string stuff = "select ProdId from Products";
-
-                    SQLiteCommand cmd = new SQLiteCommand(stuff, con);
-                    //cmd.CommandText = "select ProdPrice from Products where ProductId='" + cmbx.SelectedItem.ToString() + "'";
-
-                    SQLiteDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read() == true)
-                    {
-                        id = reader.GetInt32(0);
-                        cmbx.Items.Add(id);
-                    }
-
-                    /**
-                    for (int i = 0; i <= cmbx.MaxLength; i++)
-                    {
-                        string pricestuff = "select ProdPrice from Products where ProdId = @ProdId";
-                        SQLiteCommand pricecmd = new SQLiteCommand(pricestuff, con);
-                        pricecmd.Parameters.AddWithValue("@ProdId", cmbx.Items.IndexOf(i));
-                        SQLiteDataReader reader2 = pricecmd.ExecuteReader();
-                        while (reader2.Read() == true)
-                        {
-                            price = reader2.GetInt32(0);
-                            txtboxPrice.Text = price.ToString();
-                        }
-                    }
-                    **/
-
-                    //Serge's original not working code
-
-                    /**
-                    cmd.ExecuteNonQuery();
-                    DataTable dt = new DataTable();
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    da.Fill(dt);
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        txtboxPrice.Text = (dr["ProdPrice"].ToString());
-
-                    }
-                    **/
-
-                    con.Close();
+                    id = reader.GetInt32(0);
+                    cmbx.Items.Add(id);
                 }
-                catch (Exception ex)
+
+                //Serge's original not working code
+
+                /**
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                foreach (DataRow dr in dt.Rows)
                 {
-                    throw new Exception("SelectIndexCombobox threw an exception", ex);
+                    txtboxPrice.Text = (dr["ProdPrice"].ToString());
+
                 }
+                **/
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("SelectIndexCombobox threw an exception", ex);
             }
         }
 

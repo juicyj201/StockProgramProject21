@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace StockProgram.UserControls
 {
@@ -15,21 +16,66 @@ namespace StockProgram.UserControls
     {
         private SQLiteConnection con = new SQLiteConnection(@"data source=.\StockDatabase.db;");
         private string dateofuse = null, dateofpurch = null;
+        string name;
 
         public StockTrackingView()
         {
             InitializeComponent();
-
-            textBox1.Text += "Yer";
         }
 
         private void StockTrackingView_Load(object sender, EventArgs e)
-        { 
-            //empty
+        {
+                try
+                {
+                    con.Open();
+                    string sqlstuff = "select ProdName from Products";
+
+                    SQLiteCommand cmd = new SQLiteCommand(sqlstuff, con);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read() == true)
+                    {
+                        name = reader.GetString(0);
+                        nameCb.Items.Add(name);
+                    }
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.StackTrace);
+                }
+        }
+
+        private void nameCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                string sqlstuff = "select DateOfUse, DateOfPurchase from Products where ProdName = '" + nameCb.SelectedItem + "' and DateOfUse is not null and DateOfPurchase is not null;";
+
+                SQLiteCommand cmd = new SQLiteCommand(sqlstuff, con);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read() == true)
+                {
+                    dateofuse = reader.GetString(0);
+                    textBox1.Text = dateofuse.ToString();
+
+                    dateofpurch = reader.GetString(1);
+                    textBox2.Text = dateofpurch.ToString();
+                }
+
+                con.Close();
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
         }
 
         private void submitbtn_Click1(object sender, EventArgs e)
         {
+            /**
             if (nameLbl.Text.Length > 0)
             {
                 try
@@ -41,9 +87,6 @@ namespace StockProgram.UserControls
                     com.Parameters.AddWithValue("@Name", nameLbl.Text);
 
                     SQLiteDataReader read = com.ExecuteReader();
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter();
-                    adapter.SelectCommand = com;
-                    DataSet dataset = new DataSet();
 
                     if (read[0].ToString() != null && read[1].ToString() != null)
                     {
@@ -66,6 +109,7 @@ namespace StockProgram.UserControls
                     MessageBox.Show(ex.Message);
                 }
             }
+            **/
         }
     }
 }

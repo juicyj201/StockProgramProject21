@@ -156,7 +156,6 @@ namespace StockProgram
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.ClientSize = new System.Drawing.Size(782, 583);
-            this.ControlBox = false;
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.aboutUsBtn);
@@ -175,6 +174,7 @@ namespace StockProgram
             this.Name = "StartMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartMenu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartMenu_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);

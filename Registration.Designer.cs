@@ -31,6 +31,7 @@ namespace StockProgram
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.returnBtn = new System.Windows.Forms.Button();
             this.lblCPass = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@ namespace StockProgram
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +56,17 @@ namespace StockProgram
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(726, 110);
             this.panel1.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(43, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(244, 48);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Registration";
             // 
             // panel2
             // 
@@ -188,17 +199,6 @@ namespace StockProgram
             this.txtName.Size = new System.Drawing.Size(293, 30);
             this.txtName.TabIndex = 0;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(43, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(244, 48);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Registration";
-            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -214,6 +214,7 @@ namespace StockProgram
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registration_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

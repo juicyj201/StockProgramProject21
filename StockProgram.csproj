@@ -183,7 +183,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\StockProgram.xml" />
-    <Content Include="colour stuff.txt" />
     <Content Include="readme.txt" />
   </ItemGroup>
   <ItemGroup />

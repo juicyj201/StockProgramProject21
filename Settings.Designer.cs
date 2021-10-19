@@ -32,13 +32,14 @@ namespace StockProgram
             this.returnBtn = new System.Windows.Forms.Button();
             this.settingsLbl = new System.Windows.Forms.Label();
             this.colourGb = new System.Windows.Forms.GroupBox();
-            this.blackBtn = new System.Windows.Forms.RadioButton();
             this.whiteBtn = new System.Windows.Forms.RadioButton();
+            this.blackBtn = new System.Windows.Forms.RadioButton();
             this.colourGb.SuspendLayout();
             this.SuspendLayout();
             // 
             // returnBtn
             // 
+            this.returnBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(65)))), ((int)(((byte)(35)))));
             this.returnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.returnBtn.ForeColor = System.Drawing.Color.White;
             this.returnBtn.Location = new System.Drawing.Point(371, 14);
@@ -46,7 +47,7 @@ namespace StockProgram
             this.returnBtn.Size = new System.Drawing.Size(153, 54);
             this.returnBtn.TabIndex = 0;
             this.returnBtn.Text = "Return";
-            this.returnBtn.UseVisualStyleBackColor = true;
+            this.returnBtn.UseVisualStyleBackColor = false;
             this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
             // 
             // settingsLbl
@@ -73,35 +74,35 @@ namespace StockProgram
             this.colourGb.TabStop = false;
             this.colourGb.Text = "Colour theme";
             // 
-            // blackBtn
-            // 
-            this.blackBtn.AutoSize = true;
-            this.blackBtn.Location = new System.Drawing.Point(33, 48);
-            this.blackBtn.Name = "blackBtn";
-            this.blackBtn.Size = new System.Drawing.Size(167, 29);
-            this.blackBtn.TabIndex = 2;
-            this.blackBtn.TabStop = true;
-            this.blackBtn.Text = "Black (Modern)";
-            this.blackBtn.UseVisualStyleBackColor = true;
-            this.blackBtn.CheckedChanged += new System.EventHandler(this.blackBtn_CheckedChanged);
-            // 
             // whiteBtn
             // 
             this.whiteBtn.AutoSize = true;
             this.whiteBtn.Location = new System.Drawing.Point(33, 96);
             this.whiteBtn.Name = "whiteBtn";
-            this.whiteBtn.Size = new System.Drawing.Size(170, 29);
+            this.whiteBtn.Size = new System.Drawing.Size(261, 29);
             this.whiteBtn.TabIndex = 3;
             this.whiteBtn.TabStop = true;
-            this.whiteBtn.Text = "White (Modern)";
+            this.whiteBtn.Text = "Black and White (Modern)";
             this.whiteBtn.UseVisualStyleBackColor = true;
             this.whiteBtn.CheckedChanged += new System.EventHandler(this.whiteBtn_CheckedChanged);
+            // 
+            // blackBtn
+            // 
+            this.blackBtn.AutoSize = true;
+            this.blackBtn.Location = new System.Drawing.Point(33, 48);
+            this.blackBtn.Name = "blackBtn";
+            this.blackBtn.Size = new System.Drawing.Size(358, 29);
+            this.blackBtn.TabIndex = 2;
+            this.blackBtn.TabStop = true;
+            this.blackBtn.Text = "Dark blue and Deep orange (Modern)";
+            this.blackBtn.UseVisualStyleBackColor = true;
+            this.blackBtn.CheckedChanged += new System.EventHandler(this.blackBtn_CheckedChanged);
             // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.ClientSize = new System.Drawing.Size(536, 307);
             this.Controls.Add(this.colourGb);
             this.Controls.Add(this.settingsLbl);

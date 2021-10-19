@@ -89,7 +89,7 @@
         <member name="M:StockProgram.MainDatabase.stockView_MouseDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
             <summary>
             This is a method used to display an item in a selected row.
-            If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes.
+            If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes in the UpdateDatabaseView user control.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>

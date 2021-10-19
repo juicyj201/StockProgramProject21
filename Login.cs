@@ -51,6 +51,7 @@ namespace StockProgram
                 }
                 else
                 {
+                    logg.loggedSet = false;
                     MessageBox.Show("Login Failed", "An error occurs");
                     textBox1.Text = "";
                     textBox2.Text = "";

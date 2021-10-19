@@ -39,6 +39,7 @@ namespace StockProgram
             this.loginBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.SettingBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -82,7 +83,7 @@ namespace StockProgram
             this.exitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtn.Location = new System.Drawing.Point(235, 474);
+            this.exitBtn.Location = new System.Drawing.Point(235, 557);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(299, 57);
             this.exitBtn.TabIndex = 6;
@@ -149,13 +150,28 @@ namespace StockProgram
             this.panel3.Size = new System.Drawing.Size(834, 155);
             this.panel3.TabIndex = 2;
             // 
+            // SettingBtn
+            // 
+            this.SettingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.SettingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SettingBtn.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingBtn.Location = new System.Drawing.Point(235, 477);
+            this.SettingBtn.Name = "SettingBtn";
+            this.SettingBtn.Size = new System.Drawing.Size(299, 57);
+            this.SettingBtn.TabIndex = 12;
+            this.SettingBtn.Text = "Settings";
+            this.SettingBtn.UseVisualStyleBackColor = false;
+            this.SettingBtn.Click += new System.EventHandler(this.SettingBtn_Click);
+            // 
             // StartMenu
             // 
             this.AccessibleName = "Start Menu";
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.ClientSize = new System.Drawing.Size(782, 583);
+            this.ClientSize = new System.Drawing.Size(782, 653);
+            this.ControlBox = false;
+            this.Controls.Add(this.SettingBtn);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.aboutUsBtn);
@@ -168,13 +184,13 @@ namespace StockProgram
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(800, 630);
+            this.MaximumSize = new System.Drawing.Size(800, 700);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(800, 630);
+            this.MinimumSize = new System.Drawing.Size(800, 700);
             this.Name = "StartMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartMenu";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartMenu_FormClosed);
+            this.Load += new System.EventHandler(this.StartMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -194,5 +210,18 @@ namespace StockProgram
         System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button SettingBtn;
+
+        public System.Windows.Forms.Panel getPanel2 { get { return panel2; } }
+        public System.Windows.Forms.Panel getPanel3 { get { return panel3; } }
+        public System.Windows.Forms.Button getSettingsBtn { get { return SettingBtn; } }
+        public System.Windows.Forms.Panel getPanel1 { get { return panel1; } }
+        public System.Windows.Forms.Label getMenuLbl { get { return menuLbl; } }
+        public System.Windows.Forms.Button getMaindatabaseBtn { get { return maindatabaseBtn; } }
+        public System.Windows.Forms.Button getExitBtn { get { return exitBtn; } }
+        public System.Windows.Forms.Button getAboutUsBtn { get { return aboutUsBtn; } }
+        public System.Windows.Forms.Button getRegisterBtn { get { return registerBtn; } }
+        public System.Windows.Forms.Button getLoginBtn { get { return loginBtn; } }
+
     }
 }

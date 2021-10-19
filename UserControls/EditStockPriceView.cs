@@ -49,7 +49,7 @@ namespace StockProgram.UserControls
                     cmbx.Items.Add(id);
                 }
 
-                //Serge's original not working code
+                //original not working code
 
                 /**
                 cmd.ExecuteNonQuery();

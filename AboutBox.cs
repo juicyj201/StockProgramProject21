@@ -116,7 +116,7 @@ namespace StockProgram
         }
 
         private void DescriptionText() {
-            this.textBoxDescription.Text += "We are project group 21 and have created this program for the use of an NGO.\nThis is an inventory management system used to track stock items.\nPlease feel free to give your feedback on this program on GitHub, !LINK!.";
+            this.textBoxDescription.Text += "We are project group 21 and have created this program for the use of an NGO. This is an inventory management system used to track stock items. Please feel free to give your feedback on this program on GitHub, https://github.com/juicyj201/StockProgramProject21.git.";
         }
 
         private void AboutBox_FormClosed(object sender, FormClosedEventArgs e)

@@ -22,10 +22,6 @@ namespace StockProgram
         {
             InitializeComponent();
 
-            if (logg.loggedGet == true) {
-                loginBtn.Enabled = false;
-                loginBtn.Visible = false;
-            }
         }
 
         private void maindatabaseBtn_Click(object sender, EventArgs e)
@@ -65,12 +61,26 @@ namespace StockProgram
             this.Hide();
         }
 
-        private void StartMenu_FormClosed(object sender, FormClosedEventArgs e)
+        private void StartMenu_Load(object sender, EventArgs e)
         {
+            if (logg.loggedGet == true)
+            {
+                maindatabaseBtn.Enabled = true;
+                loginBtn.Enabled = false;
+                loginBtn.Visible = false;
+            }
+            else if (logg.loggedGet == false)
+            {
+                maindatabaseBtn.Enabled = false;
+                loginBtn.Enabled = true;
+                loginBtn.Visible = true;
+            }
+        }
+
+        private void SettingBtn_Click(object sender, EventArgs e)
+        {
+            FormControl.settings2.Show();
             this.Hide();
-            this.Close();
-            this.Dispose();
-            Application.Exit();
         }
     }
 }

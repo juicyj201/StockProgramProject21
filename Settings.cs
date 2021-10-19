@@ -21,6 +21,9 @@ namespace StockProgram
         /// After creating a release for the program, I will implement the settings section as a new feature.
         /// </summary>
 
+        private StartMenu menu;
+
+
         public Settings()
         {
             InitializeComponent();
@@ -37,8 +40,8 @@ namespace StockProgram
             if (blackBtn.Checked == true && whiteBtn.Checked == false)
             {
                 //settings
-                Settings.ActiveForm.BackColor = Color.Black;
-                Settings.ActiveForm.ForeColor = Color.White;
+                Settings.ActiveForm.BackColor = Color.FromArgb(11, 23, 42);
+                Settings.ActiveForm.ForeColor = Color.FromArgb(188, 65, 35);
                 settingsLbl.ForeColor = Color.White;
                 colourGb.ForeColor = Color.White;
                 blackBtn.ForeColor = Color.White;
@@ -46,16 +49,17 @@ namespace StockProgram
                 returnBtn.ForeColor = Color.White;
                 returnBtn.FlatStyle = FlatStyle.Flat;
 
-                /**
                 //menu
-                StartMenu.ActiveForm.BackColor = Color.Black;
-                StartMenu.ActiveForm.ForeColor = Color.White;
-                StartMenu.menuLbl2.ForeColor = Color.White;
-                StartMenu.mainsdatabaseBtn2.ForeColor = Color.White;
-                StartMenu.helpBtn2.ForeColor = Color.White;
-                StartMenu.helpBtn2.ForeColor = Color.White;
-                StartMenu.aboutUsBtn2.ForeColor = Color.White;
-                **/
+                FormControl.menu2.getPanel2.BackColor = Color.FromArgb(11, 23, 42);
+                FormControl.menu2.getPanel3.BackColor = Color.FromArgb(188, 65, 35);
+                FormControl.menu2.getSettingsBtn.BackColor = Color.FromArgb(11, 23, 42);
+                FormControl.menu2.getPanel1.BackColor = Color.FromArgb(188, 65, 35);
+                FormControl.menu2.getMenuLbl.ForeColor = Color.White;
+                FormControl.menu2.getMaindatabaseBtn.BackColor = Color.FromArgb(11, 23, 42);
+                FormControl.menu2.getExitBtn.BackColor = Color.FromArgb(11, 23, 42);
+                FormControl.menu2.getAboutUsBtn.BackColor = Color.FromArgb(11, 23, 42);
+                FormControl.menu2.getRegisterBtn.BackColor = Color.FromArgb(11, 23, 42);
+                FormControl.menu2.getLoginBtn.BackColor = Color.FromArgb(11, 23, 42);
             }
         }
         private void whiteBtn_CheckedChanged(object sender, EventArgs e)
@@ -63,26 +67,28 @@ namespace StockProgram
             if (whiteBtn.Checked == true && blackBtn.Checked == false)
             {
                 //settings
-                Settings.ActiveForm.BackColor = Color.White;
-                Settings.ActiveForm.ForeColor = Color.Black;
-                settingsLbl.ForeColor = Color.Black;
-                colourGb.ForeColor = Color.Black;
-                blackBtn.ForeColor = Color.Black;
-                whiteBtn.ForeColor = Color.Black;
-                returnBtn.ForeColor = Color.Black;
+                Settings.ActiveForm.BackColor = Color.Black;
+                Settings.ActiveForm.ForeColor = Color.White;
+                settingsLbl.ForeColor = Color.White;
+                colourGb.ForeColor = Color.White;
+                blackBtn.ForeColor = Color.White;
+                whiteBtn.ForeColor = Color.White;
+                returnBtn.ForeColor = Color.White;
+                returnBtn.BackColor = Color.Black;
                 returnBtn.FlatStyle = FlatStyle.Flat;
 
-                /**
                 //menu
-                StartMenu.ActiveForm.BackColor = Color.Black;
-                StartMenu.ActiveForm.ForeColor = Color.White;
-                StartMenu.menuLbl2.ForeColor = Color.White;
-                StartMenu.mainsdatabaseBtn2.ForeColor = Color.White;
-                StartMenu.helpBtn2.ForeColor = Color.White;
-                StartMenu.helpBtn2.ForeColor = Color.White;
-                StartMenu.aboutUsBtn2.ForeColor = Color.White;
-                StartMenu.settingsBtn2.ForeColor = Color.White
-                **/
+                FormControl.menu2.BackColor = Color.Black;
+                FormControl.menu2.getPanel2.BackColor = Color.Black;
+                FormControl.menu2.getPanel3.BackColor = Color.Black;
+                FormControl.menu2.getSettingsBtn.BackColor = Color.Black;
+                FormControl.menu2.getPanel1.BackColor = Color.Black;
+                FormControl.menu2.getMenuLbl.ForeColor = Color.White;
+                FormControl.menu2.getMaindatabaseBtn.BackColor = Color.Black;
+                FormControl.menu2.getExitBtn.BackColor = Color.Black;
+                FormControl.menu2.getAboutUsBtn.BackColor = Color.Black;
+                FormControl.menu2.getRegisterBtn.BackColor = Color.Black;
+                FormControl.menu2.getLoginBtn.BackColor = Color.Black;
             }
         }
     }

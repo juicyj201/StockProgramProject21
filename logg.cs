@@ -8,7 +8,7 @@ namespace StockProgram
 {
     static class logg
     {
-        private static bool logged = false;
+        private static bool logged;
         public static bool loggedSet { set { logged = logged; } }
         public static bool loggedGet { get { return logged; } }
     }

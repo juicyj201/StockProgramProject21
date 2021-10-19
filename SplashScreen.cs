@@ -29,6 +29,7 @@ namespace StockProgram
             {
                 this.Hide();
                 this.Close();
+                this.Dispose();
                 //FormControl.menu2.Show();
             }
         }

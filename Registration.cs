@@ -25,6 +25,14 @@ namespace StockProgram
         {
         }
 
+        private void ClearForm() {
+            txtName.Text = "";
+            txtEmail.Text = "";
+            txtPass.Text = "";
+            txtCPass.Text = "";
+            txtPass.Focus();
+        }
+
         //wrong one
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
@@ -42,11 +50,7 @@ namespace StockProgram
             else
             {
                 MessageBox.Show("Passwords do not match, Please Re-enter", "Registration Failed");
-                txtName.Text = "";
-                txtEmail.Text = "";
-                txtPass.Text = "";
-                txtCPass.Text = "";
-                txtPass.Focus();
+                ClearForm();
             }
 
             conn.Close();
@@ -55,21 +59,13 @@ namespace StockProgram
             {
                 MessageBox.Show("Fields are empty", "Registration Failed");
 
-                txtName.Text = "";
-                txtEmail.Text = "";
-                txtPass.Text = "";
-                txtCPass.Text = "";
-                txtPass.Focus();
+                ClearForm();
             }
         }
 
         private void returnBtn_Click(object sender, EventArgs e)
         {
-            txtName.Text = "";
-            txtEmail.Text = "";
-            txtPass.Text = "";
-            txtCPass.Text = "";
-            txtPass.Focus();
+            ClearForm();
 
             this.Hide();
             FormControl.menu2.Show();
@@ -91,11 +87,7 @@ namespace StockProgram
             else
             {
                 MessageBox.Show("Passwords do not match, Please Re-enter", "Registration Failed");
-                txtName.Text = "";
-                txtEmail.Text = "";
-                txtPass.Text = "";
-                txtCPass.Text = "";
-                txtPass.Focus();
+                ClearForm();
             }
 
             conn.Close();
@@ -104,11 +96,7 @@ namespace StockProgram
             {
                 MessageBox.Show("Fields are empty", "Registration Failed");
 
-                txtName.Text = "";
-                txtEmail.Text = "";
-                txtPass.Text = "";
-                txtCPass.Text = "";
-                txtPass.Focus();
+                ClearForm();
             }
         }
 

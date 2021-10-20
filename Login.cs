@@ -42,16 +42,15 @@ namespace StockProgram
 
                 if (reader.Read() == true)
                 {
-                    logg.loggedSet = true;
+                    LoggedIn.loggedSet = true;
                     MessageBox.Show("You are Logged in", "Login successful");
                     textBox1.Text = "";
                     textBox2.Text = "";
                     textBox1.Focus();
-                    CloseForm();
                 }
                 else
                 {
-                    logg.loggedSet = false;
+                    LoggedIn.loggedSet = false;
                     MessageBox.Show("Login Failed", "An error occurs");
                     textBox1.Text = "";
                     textBox2.Text = "";
@@ -59,14 +58,6 @@ namespace StockProgram
                 }
                 conn.Close();
             }
-        }
-
-        private void Login_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Hide();
-            this.Close();
-            this.Dispose();
-            Application.Exit();
         }
 
         private void returnBtn_Click(object sender, EventArgs e)

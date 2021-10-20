@@ -57,7 +57,7 @@ namespace StockProgram.UserControls
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(297, 30);
             this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            //this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -189,7 +189,7 @@ namespace StockProgram.UserControls
             this.button1.TabIndex = 13;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            //this.button1.Click += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button2
             // 
@@ -219,6 +219,7 @@ namespace StockProgram.UserControls
             this.button3.TabIndex = 15;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel2
             // 

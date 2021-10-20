@@ -27,6 +27,8 @@ namespace StockProgram
         public Settings()
         {
             InitializeComponent();
+
+            blackBtn.Checked = true;
         }
 
         private void returnBtn_Click(object sender, EventArgs e)
@@ -46,10 +48,11 @@ namespace StockProgram
                 colourGb.ForeColor = Color.White;
                 blackBtn.ForeColor = Color.White;
                 whiteBtn.ForeColor = Color.White;
-                returnBtn.ForeColor = Color.White;
+                returnBtn.BackColor = Color.FromArgb(188, 65, 35);
                 returnBtn.FlatStyle = FlatStyle.Flat;
 
                 //menu
+                FormControl.menu2.BackColor = Color.FromArgb(11, 23, 42);
                 FormControl.menu2.getPanel2.BackColor = Color.FromArgb(11, 23, 42);
                 FormControl.menu2.getPanel3.BackColor = Color.FromArgb(188, 65, 35);
                 FormControl.menu2.getSettingsBtn.BackColor = Color.FromArgb(11, 23, 42);

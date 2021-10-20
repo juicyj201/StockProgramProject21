@@ -46,6 +46,7 @@ namespace StockProgram.UserControls
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.ResetBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,6 @@ namespace StockProgram.UserControls
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(297, 30);
             this.textBox1.TabIndex = 0;
-            //this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -185,11 +185,11 @@ namespace StockProgram.UserControls
             this.button1.Location = new System.Drawing.Point(49, 500);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 53);
+            this.button1.Size = new System.Drawing.Size(128, 53);
             this.button1.TabIndex = 13;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
-            //this.button1.Click += new System.EventHandler(this.textBox1_TextChanged);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -197,10 +197,10 @@ namespace StockProgram.UserControls
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(227, 500);
+            this.button2.Location = new System.Drawing.Point(185, 500);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 53);
+            this.button2.Size = new System.Drawing.Size(118, 53);
             this.button2.TabIndex = 14;
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = false;
@@ -212,10 +212,10 @@ namespace StockProgram.UserControls
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(409, 500);
+            this.button3.Location = new System.Drawing.Point(311, 500);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 53);
+            this.button3.Size = new System.Drawing.Size(123, 53);
             this.button3.TabIndex = 15;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
@@ -242,11 +242,27 @@ namespace StockProgram.UserControls
             this.label9.TabIndex = 19;
             this.label9.Text = "Update Stock";
             // 
+            // ResetBtn
+            // 
+            this.ResetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.ResetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetBtn.ForeColor = System.Drawing.Color.White;
+            this.ResetBtn.Location = new System.Drawing.Point(442, 500);
+            this.ResetBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.ResetBtn.Name = "ResetBtn";
+            this.ResetBtn.Size = new System.Drawing.Size(115, 53);
+            this.ResetBtn.TabIndex = 21;
+            this.ResetBtn.Text = "Reset";
+            this.ResetBtn.UseVisualStyleBackColor = false;
+            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
+            // 
             // UpdateDatabaseView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.Controls.Add(this.ResetBtn);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -266,6 +282,7 @@ namespace StockProgram.UserControls
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateDatabaseView";
             this.Size = new System.Drawing.Size(612, 590);
+            this.Load += new System.EventHandler(this.UpdateDatabaseView_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -300,5 +317,6 @@ namespace StockProgram.UserControls
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button ResetBtn;
     }
 }

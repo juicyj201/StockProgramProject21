@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="stockView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 111</value>
+    <value>53, 383</value>
   </data>
   <data name="stockView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -133,7 +133,7 @@
     <value>51</value>
   </data>
   <data name="stockView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>874, 520</value>
+    <value>774, 248</value>
   </data>
   <data name="stockView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;stockView.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -178,7 +178,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="returnBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -187,7 +187,7 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="returnBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>796, 43</value>
+    <value>696, 43</value>
   </data>
   <data name="returnBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -211,19 +211,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;returnBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="UserControls.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="UserControls.Location" type="System.Drawing.Point, System.Drawing">
-    <value>945, 33</value>
+    <value>844, 33</value>
   </data>
   <data name="UserControls.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="UserControls.Size" type="System.Drawing.Size, System.Drawing">
-    <value>657, 600</value>
+    <value>608, 600</value>
   </data>
   <data name="UserControls.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -238,19 +238,70 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;UserControls.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="listBox1.ItemHeight" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 41</value>
+  </data>
+  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>729, 179</value>
+  </data>
+  <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listBox1.Name" xml:space="preserve">
+    <value>listBox1</value>
+  </data>
+  <data name="&gt;&gt;listBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listBox1.Parent" xml:space="preserve">
+    <value>DatabaseSelectionBox</value>
+  </data>
+  <data name="&gt;&gt;listBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="DatabaseSelectionBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="DatabaseSelectionBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 105</value>
+  </data>
+  <data name="DatabaseSelectionBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>774, 256</value>
+  </data>
+  <data name="DatabaseSelectionBox.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="DatabaseSelectionBox.Text" xml:space="preserve">
+    <value>Database selection</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSelectionBox.Name" xml:space="preserve">
+    <value>DatabaseSelectionBox</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSelectionBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSelectionBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSelectionBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.AccessibleName" xml:space="preserve">
     <value>Main Database</value>
   </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1632, 663</value>
+    <value>1482, 663</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

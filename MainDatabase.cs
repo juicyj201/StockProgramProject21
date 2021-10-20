@@ -31,6 +31,12 @@ namespace StockProgram
             ///<summary>
             InitializeComponent();
 
+            listBox1.Items.Add("This sample database");
+            listBox1.Items.Add("Another sample database");
+            listBox1.Items.Add("Third sample database");
+            listBox1.Items.Add("Fourth sample database");
+            listBox1.Items.Add("Fifth sample database");
+
             OpenConnection();
             ShowStock();
             AddControls();
@@ -62,6 +68,9 @@ namespace StockProgram
 
             //putting the datagrid in the table
             stockView.DataSource = table;
+
+            //stockView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.None);
+            //stockView.AutoResizeRows(DataGridViewAutoSizeRowsMode.None);
         }
 
         private void returnBtn_Click(object sender, EventArgs e)
@@ -129,6 +138,11 @@ namespace StockProgram
             //updatestuff.gettextBox4.Text = quantitycell;
             //updatestuff.gettextBox5.Text = dateofusecell;
             //updatestuff.gettextBox6.Text = dateofpurchcell;
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //have a function that will change the database
         }
     }
 }

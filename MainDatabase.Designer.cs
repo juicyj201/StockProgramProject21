@@ -30,27 +30,31 @@ namespace StockProgram
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainDatabase));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.stockView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.returnBtn = new System.Windows.Forms.Button();
             this.UserControls = new System.Windows.Forms.TabControl();
+            this.DatabaseSelectionBox = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.stockView)).BeginInit();
+            this.DatabaseSelectionBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // stockView
             // 
             resources.ApplyResources(this.stockView, "stockView");
+            this.stockView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.stockView.BackgroundColor = System.Drawing.Color.White;
             this.stockView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.stockView.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.stockView.DefaultCellStyle = dataGridViewCellStyle8;
             this.stockView.Name = "stockView";
             this.stockView.RowTemplate.Height = 24;
             this.stockView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.stockView_MouseDoubleClick);
@@ -76,21 +80,37 @@ namespace StockProgram
             this.UserControls.Name = "UserControls";
             this.UserControls.SelectedIndex = 0;
             // 
+            // DatabaseSelectionBox
+            // 
+            this.DatabaseSelectionBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(65)))), ((int)(((byte)(35)))));
+            this.DatabaseSelectionBox.Controls.Add(this.listBox1);
+            resources.ApplyResources(this.DatabaseSelectionBox, "DatabaseSelectionBox");
+            this.DatabaseSelectionBox.Name = "DatabaseSelectionBox";
+            this.DatabaseSelectionBox.TabStop = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            resources.ApplyResources(this.listBox1, "listBox1");
+            this.listBox1.Name = "listBox1";
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // MainDatabase
             // 
             resources.ApplyResources(this, "$this");
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.ControlBox = false;
+            this.Controls.Add(this.DatabaseSelectionBox);
             this.Controls.Add(this.UserControls);
             this.Controls.Add(this.returnBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.stockView);
             this.Name = "MainDatabase";
             this.TopMost = true;
-            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainDatabase_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.stockView)).EndInit();
+            this.DatabaseSelectionBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +122,8 @@ namespace StockProgram
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button returnBtn;
         private System.Windows.Forms.TabControl UserControls;
+        private System.Windows.Forms.GroupBox DatabaseSelectionBox;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

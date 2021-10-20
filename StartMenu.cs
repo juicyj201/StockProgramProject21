@@ -19,8 +19,6 @@ namespace StockProgram
         /// When the user clicks on a button the form is hidden (and not closed), and a new instance of another form is created and called.
         /// </summary>
 
-        private Thread t;
-
         public StartMenu()
         {
             InitializeComponent();

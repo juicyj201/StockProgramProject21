@@ -80,7 +80,7 @@ namespace StockProgram
             // 
             resources.ApplyResources(this, "$this");
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.ControlBox = false;
             this.Controls.Add(this.UserControls);
@@ -89,7 +89,7 @@ namespace StockProgram
             this.Controls.Add(this.stockView);
             this.Name = "MainDatabase";
             this.TopMost = true;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainDatabase_FormClosed);
+            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainDatabase_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.stockView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -108,6 +108,9 @@ namespace StockProgram
         /// <summary>
         /// This is a method used to display an item in a selected row.
         /// If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes in the UpdateDatabaseView user control.
+        /// 
+        /// (Update)
+        /// was previously used to retrieve items and display them in the textboxes, but wont be used anymore.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -120,20 +123,12 @@ namespace StockProgram
             string dateofusecell = stockView.CurrentCell.OwningRow.Cells[4].Value.ToString();
             string dateofpurchcell = stockView.CurrentCell.OwningRow.Cells[5].Value.ToString();
 
-            updatestuff.gettextBox1.Text = idcell;
-            updatestuff.gettextBox2.Text = namecell;
-            updatestuff.gettextBox3.Text = pricecell;
-            updatestuff.gettextBox4.Text = quantitycell;
-            updatestuff.gettextBox5.Text = dateofusecell;
-            updatestuff.gettextBox6.Text = dateofpurchcell;
-        }
-
-        private void MainDatabase_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Hide();
-            this.Close();
-            this.Dispose();
-            Application.Exit();
+            //updatestuff.gettextBox1.Text = idcell;
+            //updatestuff.gettextBox2.Text = namecell;
+            //updatestuff.gettextBox3.Text = pricecell;
+            //updatestuff.gettextBox4.Text = quantitycell;
+            //updatestuff.gettextBox5.Text = dateofusecell;
+            //updatestuff.gettextBox6.Text = dateofpurchcell;
         }
     }
 }

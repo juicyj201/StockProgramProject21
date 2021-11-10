@@ -90,6 +90,9 @@
             <summary>
             This is a method used to display an item in a selected row.
             If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes in the UpdateDatabaseView user control.
+            
+            (Update)
+            was previously used to retrieve items and display them in the textboxes, but wont be used anymore.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
@@ -139,7 +142,7 @@
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="M:StockProgram.Settings.#ctor">
+        <member name="F:StockProgram.Settings.menu">
             <summary>
             This is an experimental form, that allows the user to change the colour scheme of the program.
             There are only two colour themes currently: White and Black.
@@ -193,6 +196,12 @@
             <summary>
             This is the menu form that holds all of the buttons for each of the seperate forms.
             When the user clicks on a button the form is hidden (and not closed), and a new instance of another form is created and called.
+            </summary>
+        </member>
+        <member name="M:StockProgram.StartMenu.CheckIfLoggedIn">
+            <summary>
+            The CheckIfLoggedIn method checks whether the Logged in getter, is actually set to true or false.
+            If it set to true then the login button is disabled, otherwise the main database button is disabled.
             </summary>
         </member>
         <member name="F:StockProgram.StartMenu.components">

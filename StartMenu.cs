@@ -23,7 +23,7 @@ namespace StockProgram
         {
             InitializeComponent();
             
-            CheckIfLoggedIn();
+            //CheckIfLoggedIn();
         }
 
         /// <summary>

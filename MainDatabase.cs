@@ -34,11 +34,9 @@ namespace StockProgram
             ///<summary>
             InitializeComponent();
 
-            listBox1.Items.Add(tablelist.IndexOf(1));
-            listBox1.Items.Add(tablelist.IndexOf(2));
-
             OpenConnection();
-            ShowStock();
+            //ShowStock();
+            ShowTables();
             AddControls();
             CloseConnection();
         }
@@ -58,6 +56,8 @@ namespace StockProgram
         /// This is a method used to show the items inside the sqlite database
         /// </summary>
         public void ShowStock() {
+            table.Reset();
+
             //the command object used to retrieve all the rows in the database
             string selectStock = "SELECT* from Products";
             SQLiteCommand selectComm = new SQLiteCommand(selectStock, conn);
@@ -73,9 +73,31 @@ namespace StockProgram
             //stockView.AutoResizeRows(DataGridViewAutoSizeRowsMode.None);
         }
 
-        private void ShowTables() { 
+        public void ShowCustList() {
+            table.Reset();
+
+            //the command object used to retrieve all the rows in the database
+            string selectCustomer = "select * from CustomerList";
+            SQLiteCommand selectComm = new SQLiteCommand(selectCustomer, conn);
+
+            //the data adapter used to fill the table
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter(selectComm);
+            adapter.Fill(table);
+
+            //putting the datagrid in the table
+            stockView.DataSource = table;
+        }
+
+        private void ShowTables() {
             //retrieving all the tables from the database
-            
+            string productTable = "Products";
+            string customerListTable = "CustomerList";
+
+            tablelist.Add(productTable);
+            tablelist.Add(customerListTable);
+
+            listBox1.Items.Add(tablelist[0]);
+            listBox1.Items.Add(tablelist[1]);
         }
 
         private void returnBtn_Click(object sender, EventArgs e)
@@ -147,10 +169,17 @@ namespace StockProgram
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             //have a function that will change the database
-            if (tablelist.Contains(listBox1.SelectedItem)) { 
-                
+            if (listBox1.SelectedItem == tablelist[0])
+            {
+                ShowStock();
             }
+            else if (listBox1.SelectedItem == tablelist[1])
+            {
+                ShowCustList();
+            }
+
         }
     }
 }

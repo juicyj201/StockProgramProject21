@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using StockProgram.UserControls;
+using System.Collections;
 
 namespace StockProgram
 {
@@ -24,6 +25,8 @@ namespace StockProgram
         private StockTrackingView stocktrackstuff;
         private UpdateDatabaseView updatestuff;
 
+        private ArrayList tablelist = new ArrayList();
+
         public MainDatabase()
         {
             ///<summary>
@@ -31,11 +34,8 @@ namespace StockProgram
             ///<summary>
             InitializeComponent();
 
-            listBox1.Items.Add("This sample database");
-            listBox1.Items.Add("Another sample database");
-            listBox1.Items.Add("Third sample database");
-            listBox1.Items.Add("Fourth sample database");
-            listBox1.Items.Add("Fifth sample database");
+            listBox1.Items.Add(tablelist.IndexOf(1));
+            listBox1.Items.Add(tablelist.IndexOf(2));
 
             OpenConnection();
             ShowStock();
@@ -71,6 +71,11 @@ namespace StockProgram
 
             //stockView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.None);
             //stockView.AutoResizeRows(DataGridViewAutoSizeRowsMode.None);
+        }
+
+        private void ShowTables() { 
+            //retrieving all the tables from the database
+            
         }
 
         private void returnBtn_Click(object sender, EventArgs e)
@@ -143,6 +148,9 @@ namespace StockProgram
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //have a function that will change the database
+            if (tablelist.Contains(listBox1.SelectedItem)) { 
+                
+            }
         }
     }
 }

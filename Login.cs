@@ -16,7 +16,9 @@ namespace StockProgram
 
         //regex
         private Regex regEmail = new Regex(@"^([a-zA-Z0-9_])+@([a-zA-Z])+\.([a-zA-Z])+$");
-        private Regex regPass = new Regex(@"^(\w|\W|\S){0,8}$"); 
+        private Regex regPass = new Regex(@"^(\w|\W|\S){0,8}$");
+
+        private bool clearToCont = false;
 
         public Login()
         {
@@ -64,11 +66,13 @@ namespace StockProgram
                     textBox1.Text = "";
                     textBox2.Text = "";
                     textBox1.Focus();
+                    this.Hide();
+                    FormControl.menu2.Show();
                 }
                 else
                 {
                     LoggedIn.loggedSet = false;
-                    MessageBox.Show("Login Failed", "An error occurs");
+                    MessageBox.Show("Login Failed", "An error has occured");
                     textBox1.Text = "";
                     textBox2.Text = "";
                     textBox1.Focus();

@@ -74,6 +74,7 @@ namespace StockProgram
                 FormControl.main2.getReturnBtn.BackColor = Color.FromArgb(11, 23, 42);
                 FormControl.main2.getUserControls.BackColor = Color.FromArgb(11, 23, 42);
                 FormControl.main2.getDatabaseSelectionBox.BackColor = Color.FromArgb(188, 65, 35);
+                FormControl.main2.getDatabaseSelectionBox.ForeColor = Color.White;
             }
         }
         private void whiteBlackBtn_CheckedChanged(object sender, EventArgs e)
@@ -110,6 +111,8 @@ namespace StockProgram
                 FormControl.main2.getLabel1.ForeColor = Color.White;
                 FormControl.main2.getReturnBtn.BackColor = Color.Black;
                 FormControl.main2.getUserControls.BackColor = Color.Black;
+                FormControl.main2.getDatabaseSelectionBox.BackColor = Color.Black;
+                FormControl.main2.getDatabaseSelectionBox.ForeColor = Color.White;
 
             }
         }

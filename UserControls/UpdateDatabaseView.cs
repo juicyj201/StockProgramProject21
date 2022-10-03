@@ -19,7 +19,7 @@ namespace StockProgram.UserControls
 
         //regex
         private Regex regName = new Regex(@"^(\w|\s)+$");
-        private Regex regDate = new Regex(@"^(19[0-9][0-9]|2[0-9][0-9][0-9]){0,4}([/- ])([0-9]|1[0-2]){0,2}([/- ])([0-9]|1[0-9]|2[0-9]|3[0-2]){0,2}$");
+        private Regex regDate = new Regex(@"^(19[0-9][0-9]|2[0-9][0-9][0-9]){0,4}([" + Regex.Unescape(@"\") + "- ])([0-9]|1[0-2]){0,2}([" + Regex.Unescape(@"\") + "- ])([0-9]|1[0-9]|2[0-9]|3[0-2]){0,2}$");
 
         public UpdateDatabaseView()
         {
@@ -105,6 +105,10 @@ namespace StockProgram.UserControls
                     MessageBox.Show(ex.Message);
                 }
             }
+            else
+            {
+                MessageBox.Show("Product data is not valid. Enter correct details before proceeding.");
+            }
         }
 
         private void stockBtn2_Click(object sender, EventArgs e)
@@ -144,6 +148,10 @@ namespace StockProgram.UserControls
                     MessageBox.Show(ex.Message);
                 }
             }
+            else
+            {
+                MessageBox.Show("Product data is not valid. Enter correct details before proceeding.");
+            }
         }
 
         private void stockBtn3_Click(object sender, EventArgs e)
@@ -181,6 +189,10 @@ namespace StockProgram.UserControls
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Product data is not valid. Enter correct details before proceeding.");
             }
         }
 

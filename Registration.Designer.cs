@@ -157,7 +157,7 @@ namespace StockProgram
             this.RegisterBtn.TabIndex = 4;
             this.RegisterBtn.Text = "Sign Up";
             this.RegisterBtn.UseVisualStyleBackColor = false;
-            this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click_1);
+            this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
             // 
             // lblPass
             // 

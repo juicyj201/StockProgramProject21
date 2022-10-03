@@ -22,6 +22,11 @@ namespace StockProgram.UserControls
         private Regex regEmail = new Regex(@"^([a-zA-Z0-9_])+@([a-zA-Z])+\.([a-zA-Z])+$");
         private Regex regPhone = new Regex(@"^([0-9+]){0,10}$");
 
+        /// <summary>
+        ///     <para>
+        ///         The method to initialise the view form of UpdateCustList
+        ///     </para>
+        /// </summary>
         public UpdateCustListView()
         {
             InitializeComponent();
@@ -103,6 +108,10 @@ namespace StockProgram.UserControls
                     MessageBox.Show(ex.Message);
                 }
             }
+            else {
+                MessageBox.Show("User data is not valid. Enter correct details before proceeding.");
+                //throw new RegexMatchTimeoutException();
+            }
         }
 
         private void custBtn2_Click(object sender, EventArgs e)
@@ -140,6 +149,11 @@ namespace StockProgram.UserControls
                     MessageBox.Show(ex.Message);
                 }
             }
+            else
+            {
+                MessageBox.Show("User data is not valid. Enter correct details before proceeding.");
+                //throw new RegexMatchTimeoutException();
+            }
         }
 
         private void custBtn3_Click(object sender, EventArgs e)
@@ -175,6 +189,11 @@ namespace StockProgram.UserControls
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
+            else
+            {
+                MessageBox.Show("User data is not valid. Enter correct details before proceeding.");
+                //throw new RegexMatchTimeoutException();
             }
         }
 

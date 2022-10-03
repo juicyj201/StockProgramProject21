@@ -99,11 +99,8 @@ namespace StockProgram
         /// </summary>
         private void ShowTables() {
             //retrieving all the tables from the database
-            string productTable = "Products";
-            string customerListTable = "CustomerList";
-
-            tablelist.Add(productTable);
-            tablelist.Add(customerListTable);
+            tablelist.Add("Products");
+            tablelist.Add("CustomerList");
 
             listBox1.Items.Add(tablelist[0]);
             listBox1.Items.Add(tablelist[1]);
@@ -153,68 +150,6 @@ namespace StockProgram
             UpdateCustListPage.ForeColor = Color.White;
             UpdateCustListPage.BackColor = Color.FromArgb(11, 23, 42);
             UserControls.TabPages.Add(UpdateCustListPage);
-
-            /**
-            if (listBox1.SelectedItem == tablelist[0])
-            {
-                ((Control)UpdateCustListPage).Enabled = false;
-            }
-            **/
-        }
-
-        /// <summary>
-        ///     <para>
-        ///         This is a method used to display an item in a selected row.
-        ///         If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes in the UpdateDatabaseView user control.
-        /// 
-        ///         (Update)
-        ///         This method was previously used to retrieve items and display them in the textboxes, but wont be used anymore.
-        ///     </para>
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void stockView_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            /**
-            if (listBox1.SelectedItem == tablelist[0])
-            {
-                string idcell = stockView.CurrentCell.OwningRow.Cells[0].Value.ToString();
-                string namecell = stockView.CurrentCell.OwningRow.Cells[1].Value.ToString();
-                string pricecell = stockView.CurrentCell.OwningRow.Cells[2].Value.ToString();
-                string quantitycell = stockView.CurrentCell.OwningRow.Cells[3].Value.ToString();
-                string dateofusecell = stockView.CurrentCell.OwningRow.Cells[4].Value.ToString();
-                string dateofpurchcell = stockView.CurrentCell.OwningRow.Cells[5].Value.ToString();
-            } else if(listBox1.SelectedItem == tablelist[1]) { 
-                string idcell = stockView.CurrentCell.OwningRow.Cells[0].Value.ToString();
-                string namecell = stockView.CurrentCell.OwningRow.Cells[1].Value.ToString();
-                string emailcell = stockView.CurrentCell.OwningRow.Cells[2].Value.ToString();
-                string phonecell = stockView.CurrentCell.OwningRow.Cells[3].Value.ToString();
-            }
-            **/
-        }
-
-        /// <summary>
-        ///     <para>
-        ///         This method is used to change the list box to the seperate CustomerList and Products tables, within SQlite
-        ///     </para>
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // TODO - Make sure that this method is either only called once, or multiple times that resets the table but still shows the data at least
-            table.Reset();
-            int counter = 0;
-            counter += 1;
-            
-            if (listBox1.SelectedItem == tablelist[0] && counter != 2)
-            {
-                ShowStock();
-            }
-            else if (listBox1.SelectedItem == tablelist[1] && counter != 2)
-            {
-                ShowCustList();
-            }
         }
 
 
@@ -229,6 +164,31 @@ namespace StockProgram
         {
             this.Hide();
             FormControl.menu2.Show();
+        }
+
+        private void TableUpdater(object sender)
+        {
+            ListBox box = (ListBox)sender;
+            SQLiteDataAdapter prodadapter = new SQLiteDataAdapter(new SQLiteCommand("select * from Products", conn));
+            SQLiteDataAdapter custadapter = new SQLiteDataAdapter(new SQLiteCommand("select * from CustomerList", conn));
+
+            //table.Reset();
+            stockView.DataSource = table;
+
+            if (box.SelectedIndex == tablelist.IndexOf(0))
+            {
+                
+                prodadapter.Fill(table);
+            }
+            else if (box.SelectedIndex == tablelist.IndexOf(1))
+            {
+                custadapter.Fill(table);
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TableUpdater(sender);
         }
     }
 }

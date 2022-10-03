@@ -108,28 +108,6 @@
                 </para>
             </summary>
         </member>
-        <member name="M:StockProgram.MainDatabase.stockView_MouseDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
-            <summary>
-                <para>
-                    This is a method used to display an item in a selected row.
-                    If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes in the UpdateDatabaseView user control.
-            
-                    (Update)
-                    This method was previously used to retrieve items and display them in the textboxes, but wont be used anymore.
-                </para>
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:StockProgram.MainDatabase.listBox1_SelectedIndexChanged(System.Object,System.EventArgs)">
-            <summary>
-                <para>
-                    This method is used to change the list box to the seperate CustomerList and Products tables, within SQlite
-                </para>
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
         <member name="M:StockProgram.MainDatabase.returnBtn_Click(System.Object,System.EventArgs)">
             <summary>
                 <para>
@@ -301,6 +279,13 @@
             <summary> 
             Required method for Designer support - do not modify 
             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:StockProgram.UserControls.UpdateCustListView.#ctor">
+            <summary>
+                <para>
+                    The method to initialise the view form of UpdateCustList
+                </para>
             </summary>
         </member>
         <member name="F:StockProgram.UserControls.UpdateCustListView.components">

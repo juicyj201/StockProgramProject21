@@ -32,8 +32,8 @@ namespace StockProgram
             this.returnBtn = new System.Windows.Forms.Button();
             this.settingsLbl = new System.Windows.Forms.Label();
             this.colourGb = new System.Windows.Forms.GroupBox();
-            this.whiteBtn = new System.Windows.Forms.RadioButton();
-            this.blackBtn = new System.Windows.Forms.RadioButton();
+            this.whiteBlackBtn = new System.Windows.Forms.RadioButton();
+            this.darkBlueDeepOrangeBtn = new System.Windows.Forms.RadioButton();
             this.colourGb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,8 +63,8 @@ namespace StockProgram
             // 
             // colourGb
             // 
-            this.colourGb.Controls.Add(this.whiteBtn);
-            this.colourGb.Controls.Add(this.blackBtn);
+            this.colourGb.Controls.Add(this.whiteBlackBtn);
+            this.colourGb.Controls.Add(this.darkBlueDeepOrangeBtn);
             this.colourGb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colourGb.ForeColor = System.Drawing.Color.White;
             this.colourGb.Location = new System.Drawing.Point(67, 119);
@@ -74,29 +74,29 @@ namespace StockProgram
             this.colourGb.TabStop = false;
             this.colourGb.Text = "Colour theme";
             // 
-            // whiteBtn
+            // whiteBlackBtn
             // 
-            this.whiteBtn.AutoSize = true;
-            this.whiteBtn.Location = new System.Drawing.Point(33, 96);
-            this.whiteBtn.Name = "whiteBtn";
-            this.whiteBtn.Size = new System.Drawing.Size(261, 29);
-            this.whiteBtn.TabIndex = 3;
-            this.whiteBtn.TabStop = true;
-            this.whiteBtn.Text = "Black and White (Modern)";
-            this.whiteBtn.UseVisualStyleBackColor = true;
-            this.whiteBtn.CheckedChanged += new System.EventHandler(this.whiteBtn_CheckedChanged);
+            this.whiteBlackBtn.AutoSize = true;
+            this.whiteBlackBtn.Location = new System.Drawing.Point(33, 96);
+            this.whiteBlackBtn.Name = "whiteBlackBtn";
+            this.whiteBlackBtn.Size = new System.Drawing.Size(261, 29);
+            this.whiteBlackBtn.TabIndex = 3;
+            this.whiteBlackBtn.TabStop = true;
+            this.whiteBlackBtn.Text = "Black and White (Modern)";
+            this.whiteBlackBtn.UseVisualStyleBackColor = true;
+            this.whiteBlackBtn.CheckedChanged += new System.EventHandler(this.whiteBlackBtn_CheckedChanged);
             // 
-            // blackBtn
+            // darkBlueDeepOrangeBtn
             // 
-            this.blackBtn.AutoSize = true;
-            this.blackBtn.Location = new System.Drawing.Point(33, 48);
-            this.blackBtn.Name = "blackBtn";
-            this.blackBtn.Size = new System.Drawing.Size(358, 29);
-            this.blackBtn.TabIndex = 2;
-            this.blackBtn.TabStop = true;
-            this.blackBtn.Text = "Dark blue and Deep orange (Modern)";
-            this.blackBtn.UseVisualStyleBackColor = true;
-            this.blackBtn.CheckedChanged += new System.EventHandler(this.blackBtn_CheckedChanged);
+            this.darkBlueDeepOrangeBtn.AutoSize = true;
+            this.darkBlueDeepOrangeBtn.Location = new System.Drawing.Point(33, 48);
+            this.darkBlueDeepOrangeBtn.Name = "darkBlueDeepOrangeBtn";
+            this.darkBlueDeepOrangeBtn.Size = new System.Drawing.Size(358, 29);
+            this.darkBlueDeepOrangeBtn.TabIndex = 2;
+            this.darkBlueDeepOrangeBtn.TabStop = true;
+            this.darkBlueDeepOrangeBtn.Text = "Dark blue and Deep orange (Modern)";
+            this.darkBlueDeepOrangeBtn.UseVisualStyleBackColor = true;
+            this.darkBlueDeepOrangeBtn.CheckedChanged += new System.EventHandler(this.darkBlueDeepOrangeBtn_CheckedChanged);
             // 
             // Settings
             // 
@@ -122,7 +122,7 @@ namespace StockProgram
         private System.Windows.Forms.Button returnBtn;
         private System.Windows.Forms.Label settingsLbl;
         private System.Windows.Forms.GroupBox colourGb;
-        private System.Windows.Forms.RadioButton whiteBtn;
-        private System.Windows.Forms.RadioButton blackBtn;
+        private System.Windows.Forms.RadioButton whiteBlackBtn;
+        private System.Windows.Forms.RadioButton darkBlueDeepOrangeBtn;
     }
 }

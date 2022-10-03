@@ -116,6 +116,12 @@
     <Compile Include="UserControls\StockTrackingView.Designer.cs">
       <DependentUpon>StockTrackingView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UpdateCustListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UpdateCustListView.Designer.cs">
+      <DependentUpon>UpdateCustListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UpdateDatabaseView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     <EmbeddedResource Include="UserControls\StockTrackingView.resx">
       <DependentUpon>StockTrackingView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UpdateCustListView.resx">
+      <DependentUpon>UpdateCustListView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UpdateDatabaseView.resx">
       <DependentUpon>UpdateDatabaseView.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +202,7 @@
     <Content Include="bin\Release\StockProgram.pdb" />
     <Content Include="bin\Release\System.Data.SQLite.dll" />
     <Content Include="bin\Release\System.Data.SQLite.xml" />
+    <Content Include="Notes.txt" />
     <Content Include="readme.txt" />
   </ItemGroup>
   <ItemGroup />

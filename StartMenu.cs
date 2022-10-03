@@ -15,8 +15,10 @@ namespace StockProgram
     public partial class StartMenu : Form
     {
         /// <summary>
-        /// This is the menu form that holds all of the buttons for each of the seperate forms.
-        /// When the user clicks on a button the form is hidden (and not closed), and a new instance of another form is created and called.
+        ///     <para>
+        ///         This is the menu form that holds all of the buttons for each of the seperate forms.
+        ///         When the user clicks on a button the form is hidden (and not closed), and a new instance of another form is created and called.
+        ///     </para>
         /// </summary>
 
         public StartMenu()
@@ -27,10 +29,11 @@ namespace StockProgram
         }
 
         /// <summary>
-        /// The CheckIfLoggedIn method checks whether the Logged in getter, is actually set to true or false.
-        /// If it set to true then the login button is disabled, otherwise the main database button is disabled.
+        ///     <para>
+        ///         The CheckIfLoggedIn method checks whether the Logged in getter, is actually set to true or false.
+        ///         If it set to true then the login button is disabled, otherwise the main database button is disabled.
+        ///     </para>
         /// </summary>
-
         private void CheckIfLoggedIn() { 
             if (LoggedIn.loggedGet == true)
             {

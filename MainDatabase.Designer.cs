@@ -124,6 +124,13 @@ namespace StockProgram
         private System.Windows.Forms.TabControl UserControls;
         private System.Windows.Forms.GroupBox DatabaseSelectionBox;
         private System.Windows.Forms.ListBox listBox1;
+
+        public System.Windows.Forms.DataGridView getStockView { get { return stockView; } }
+        public System.Windows.Forms.Label getLabel1 { get { return label1; } }
+        public System.Windows.Forms.Button getReturnBtn { get { return returnBtn; } }
+        public System.Windows.Forms.TabControl getUserControls { get { return UserControls; } }
+        public System.Windows.Forms.GroupBox getDatabaseSelectionBox { get { return DatabaseSelectionBox; } }
+        public System.Windows.Forms.ListBox getListBox1 { get { return listBox1; } }
     }
 }
 

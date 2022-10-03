@@ -38,8 +38,12 @@ You can install the program to any location, on any drive you choose.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 (I suppose there's not really harmful bugs apparent. 
-The program has been tested to make sure it works in a real-world situation. 
+The program has been tested to make sure it works in a real-world situation, 
 However there may be several bugs after new features are added to the program.)
+
+A lesser bug may include the removal of a regular windows exit button. This is due to the fact that the application works 
+with a database and does not necessarily close the application itself only. To circumvent this problem we have placed an exit button
+in the menu of the program. (Sorry but this is probably the fastest way to fix that problem)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  3. Notes
@@ -53,6 +57,7 @@ Having a local file, rather than files and data stored on a server, gives the us
 
 Keep in mind that this program is still fantastically basic, and created with the most fundamental functionality we can put into it within a short time frame. 
 Though that might give it an edge of being functional rather than complex, it doesn't quite give much to offer yet.
+Nonetheless it still serves as both a stock intake and adminstration application.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
  4. Updates and Releases
@@ -73,8 +78,10 @@ If you find any bugs with the program, please feel free to let us know.
 
 
 
-And Thank you for using this program :)
+And THANK YOU for using this program :)
 
+
+(yes you reading this file)
 
 
 

@@ -25,3 +25,4 @@ C:\Users\joshu\source\repos\STOCK MANAGER v1\StockProgramProject21\obj\Debug\en-
 C:\Users\joshu\source\repos\STOCK MANAGER v1\StockProgramProject21\obj\Debug\StockProgram.csproj.CopyComplete
 C:\Users\joshu\source\repos\STOCK MANAGER v1\StockProgramProject21\obj\Debug\StockProgram.exe
 C:\Users\joshu\source\repos\STOCK MANAGER v1\StockProgramProject21\obj\Debug\StockProgram.pdb
+C:\Users\joshu\source\repos\STOCK MANAGER v1\StockProgramProject21\obj\Debug\StockProgram.UserControls.UpdateCustListView.resources

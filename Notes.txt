@@ -1,0 +1,7 @@
+﻿********************* Things that i need to keep in mind *********************************
+
+1) UpdateDatabase form needs to be changed to UpdateStock form, since multiple databases need to be added and changed and updated.
+2) The login procedure needs to be changed so that if you are logged in the form reverts back to the main menu.
+3) The color changing, Settings form needs to be updated for each form.
+4) The database picker needs to be updated so that the database table that is shown does not delete the data that exists within the database (the table currently resets all information on each form after a new table is chosen/picked).
+5) The username should be automatically selected upon entering the login, and admin sign up.

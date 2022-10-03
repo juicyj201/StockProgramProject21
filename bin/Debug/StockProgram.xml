@@ -68,31 +68,73 @@
         </member>
         <member name="F:StockProgram.MainDatabase.conn">
             <summary>
-            These are the global variables for the MainDatabase class
+                <para>
+                    These are the global variables for the MainDatabase class
+                </para>
             </summary>
         </member>
         <member name="M:StockProgram.MainDatabase.OpenConnection">
             <summary>
-            These are the methods used for opening and closing the connection to the sqlite database.
+                <para>
+                    These are the methods used for opening and closing the connection to the sqlite database.
+                </para>
             </summary>
         </member>
         <member name="M:StockProgram.MainDatabase.ShowStock">
             <summary>
-            This is a method used to show the items inside the sqlite database
+                <para>
+                    This method is used to retrieve Product table data directly from the sqlite database
+                </para>
+            </summary>
+        </member>
+        <member name="M:StockProgram.MainDatabase.ShowCustList">
+            <summary>
+                <para>
+                    This method is used to retrieve CustomerList table data directly from the sqlite database
+                </para>
+            </summary>
+        </member>
+        <member name="M:StockProgram.MainDatabase.ShowTables">
+            <summary>
+                <para>
+                    This Method is used to show either CustomerList or Product tables respectively        
+                </para>
             </summary>
         </member>
         <member name="M:StockProgram.MainDatabase.AddControls">
             <summary>
-            This is a method used to add the user controls, to the tab control in the MainDatabase form
+                <para>
+                    This is a method used to add the user controls, to the tab control in the MainDatabase form
+                </para>
             </summary>
         </member>
         <member name="M:StockProgram.MainDatabase.stockView_MouseDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
             <summary>
-            This is a method used to display an item in a selected row.
-            If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes in the UpdateDatabaseView user control.
+                <para>
+                    This is a method used to display an item in a selected row.
+                    If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes in the UpdateDatabaseView user control.
             
-            (Update)
-            was previously used to retrieve items and display them in the textboxes, but wont be used anymore.
+                    (Update)
+                    This method was previously used to retrieve items and display them in the textboxes, but wont be used anymore.
+                </para>
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StockProgram.MainDatabase.listBox1_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+                <para>
+                    This method is used to change the list box to the seperate CustomerList and Products tables, within SQlite
+                </para>
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:StockProgram.MainDatabase.returnBtn_Click(System.Object,System.EventArgs)">
+            <summary>
+                <para>
+                    This button method returns the user to the menu screen
+                </para>
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
@@ -144,12 +186,14 @@
         </member>
         <member name="F:StockProgram.Settings.menu">
             <summary>
-            This is an experimental form, that allows the user to change the colour scheme of the program.
-            There are only two colour themes currently: White and Black.
-            (In future, I would like to add more settings and more colour themes to the program)
+                <para>
+                    This is an experimental form, that allows the user to change the colour scheme of the program.
+                    There are only two colour themes currently: White and Black.
+                    (In future, I would like to add more settings and more colour themes to the program)
             
-            Currently, I will not implement the form as it still needs to be worked on and as I said, it is still experimental.
-            After creating a release for the program, I will implement the settings section as a new feature.
+                    Currently, I will not implement the form as it still needs to be worked on and as I said, it is still experimental.
+                    After creating a release for the program, I will implement the settings section as a new feature.
+                </para>
             </summary>
         </member>
         <member name="F:StockProgram.Settings.components">
@@ -194,14 +238,18 @@
         </member>
         <member name="M:StockProgram.StartMenu.#ctor">
             <summary>
-            This is the menu form that holds all of the buttons for each of the seperate forms.
-            When the user clicks on a button the form is hidden (and not closed), and a new instance of another form is created and called.
+                <para>
+                    This is the menu form that holds all of the buttons for each of the seperate forms.
+                    When the user clicks on a button the form is hidden (and not closed), and a new instance of another form is created and called.
+                </para>
             </summary>
         </member>
         <member name="M:StockProgram.StartMenu.CheckIfLoggedIn">
             <summary>
-            The CheckIfLoggedIn method checks whether the Logged in getter, is actually set to true or false.
-            If it set to true then the login button is disabled, otherwise the main database button is disabled.
+                <para>
+                    The CheckIfLoggedIn method checks whether the Logged in getter, is actually set to true or false.
+                    If it set to true then the login button is disabled, otherwise the main database button is disabled.
+                </para>
             </summary>
         </member>
         <member name="F:StockProgram.StartMenu.components">
@@ -250,6 +298,23 @@
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
         <member name="M:StockProgram.UserControls.StockTrackingView.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:StockProgram.UserControls.UpdateCustListView.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:StockProgram.UserControls.UpdateCustListView.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:StockProgram.UserControls.UpdateCustListView.InitializeComponent">
             <summary> 
             Required method for Designer support - do not modify 
             the contents of this method with the code editor.

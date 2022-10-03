@@ -8,14 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Text.RegularExpressions;
 
 namespace StockProgram
 {
     public partial class Login : Form {
 
+        //regex
+        private Regex regEmail = new Regex(@"^([a-zA-Z0-9_])+@([a-zA-Z])+\.([a-zA-Z])+$");
+        private Regex regPass = new Regex(@"^(\w|\W|\S){0,8}$"); 
+
         public Login()
         {
             InitializeComponent();
+        }
+
+        private bool CheckText()
+        {
+            if (regEmail.IsMatch(textBox1.Text) && regPass.IsMatch(textBox2.Text))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private void CloseForm() {
@@ -40,7 +57,7 @@ namespace StockProgram
                 cmd.ExecuteNonQuery();
                 SQLiteDataReader reader = cmd.ExecuteReader();
 
-                if (reader.Read() == true)
+                if (reader.Read() && CheckText())
                 {
                     LoggedIn.loggedSet = true;
                     MessageBox.Show("You are Logged in", "Login successful");

@@ -6,6 +6,7 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,7 +16,10 @@ namespace StockProgram.UserControls
     public partial class UpdateDatabaseView : UserControl
     {
         private SQLiteConnection conn = new SQLiteConnection(@"data source=.\StockDatabase.db");
-        private Thread t;
+
+        //regex
+        private Regex regName = new Regex(@"^(\w|\s)+$");
+        private Regex regDate = new Regex(@"^(19[0-9][0-9]|2[0-9][0-9][0-9]){0,4}([/- ])([0-9]|1[0-2]){0,2}([/- ])([0-9]|1[0-9]|2[0-9]|3[0-2]){0,2}$");
 
         public UpdateDatabaseView()
         {
@@ -24,111 +28,50 @@ namespace StockProgram.UserControls
             //CheckIfItemIsEntered();
         }
 
+        private bool CheckText()
+        {
+            if (regName.IsMatch(stockBox2.Text) && regDate.IsMatch(stockBox5.Text) && regDate.IsMatch(stockBox6.Text))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private void CheckIfItemIsEntered() {
-            if (textBox1.Text.Length == 0 && textBox2.Text.Length == 0 && textBox3.Text.Length == 0 && textBox4.Text.Length == 0 && textBox5.Text.Length == 0 && textBox6.Text.Length == 0)
+            if (stockBox1.Text.Length == 0 && stockBox2.Text.Length == 0 && stockBox3.Text.Length == 0 && stockBox4.Text.Length == 0 && stockBox5.Text.Length == 0 && stockBox6.Text.Length == 0)
             {
                 ResetBtn.Enabled = false;
-                button1.Enabled = false;
-                button2.Enabled = false;
-                button3.Enabled = false;
+                stockBtn1.Enabled = false;
+                stockBtn2.Enabled = false;
+                stockBtn3.Enabled = false;
             }
-            else if (textBox1.Text.Length != 0 && textBox2.Text.Length != 0 && textBox3.Text.Length != 0 && textBox4.Text.Length != 0 && textBox5.Text.Length != 0 && textBox6.Text.Length != 0)
+            else if (stockBox1.Text.Length != 0 && stockBox2.Text.Length != 0 && stockBox3.Text.Length != 0 && stockBox4.Text.Length != 0 && stockBox5.Text.Length != 0 && stockBox6.Text.Length != 0)
             {
                 ResetBtn.Enabled = true;
-                button1.Enabled = true;
-                button2.Enabled = true;
-                button3.Enabled = true;
+                stockBtn1.Enabled = true;
+                stockBtn2.Enabled = true;
+                stockBtn3.Enabled = true;
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void openConn()
         {
-            //UPDATE
-            if (textBox2.Text.Length > 0 && textBox3.Text.Length > 0 && textBox4.Text.Length > 0 && textBox5.Text.Length > 0 && textBox6.Text.Length > 0)
-            {
-                try
-                {
-                    openConn();
-
-                    string sql = "update Products set ProdName = @ProdName, ProdPrice = @ProdPrice, ProdQuantity = @ProdQuantity, DateOfUse = @DateOfUse, DateOfPurchase = @DateOfPurchase where ProdName = @ProdName and ProdPrice = @ProdPrice and ProdQuantity = @ProdQuantity and DateOfUse = @DateOfUse and DateOfPurchase = @DateOfPurchase;";
-                    SQLiteCommand comm = new SQLiteCommand(sql, conn);
-
-                    comm.Parameters.AddWithValue("@ProdName", textBox2.Text);
-                    comm.Parameters.AddWithValue("@ProdPrice", textBox3.Text);
-                    comm.Parameters.AddWithValue("@ProdQuantity", textBox4.Text);
-                    comm.Parameters.AddWithValue("@DateOfUse", textBox5.Text);
-                    comm.Parameters.AddWithValue("@DateOfPurchase", textBox6.Text);
-
-                    int ok = 0;
-                    ok = comm.ExecuteNonQuery();
-
-                    if (ok > 0)
-                    {
-                        MessageBox.Show("Item successfully updated.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("No item has been updated. Please try again. ");
-                    }
-
-                    closeConn();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
-
-        private void openConn() {
             conn.Open();
         }
 
-        private void closeConn() {
+        private void closeConn()
+        {
             conn.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void stockBtn1_Click_1(object sender, EventArgs e)
         {
-            //DELETE
-            if (textBox2.Text.Length > 0 && textBox3.Text.Length > 0 && textBox4.Text.Length > 0 && textBox5.Text.Length > 0 && textBox6.Text.Length > 0) {
-                try
-                {
-                    openConn();
-
-                    string sql = "delete from Products where ProdName = @ProdName and ProdPrice = @ProdPrice and ProdQuantity = @ProdQuantity and DateOfUse = @DateOfUse and DateOfPurchase = @DateOfPurchase;";
-                    SQLiteCommand comm = new SQLiteCommand(sql, conn);
-
-                    comm.Parameters.AddWithValue("@ProdName", textBox2.Text);
-                    comm.Parameters.AddWithValue("@ProdPrice", textBox3.Text);
-                    comm.Parameters.AddWithValue("@ProdQuantity", textBox4.Text);
-                    comm.Parameters.AddWithValue("@DateOfUse", textBox5.Text);
-                    comm.Parameters.AddWithValue("@DateOfPurchase", textBox6.Text);
-
-                    int ok = 0;
-                    ok = comm.ExecuteNonQuery();
-
-                    if (ok > 0)
-                    {
-                        MessageBox.Show("Item successfully deleted.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("No item has been deleted. Please try again. ");
-                    }
-
-                    closeConn();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            if (textBox2.Text.Length > 0 && textBox3.Text.Length > 0 && textBox4.Text.Length > 0 && textBox5.Text.Length > 0 && textBox6.Text.Length > 0)
+            //ADD
+            if (stockBox2.Text.Length > 0 && stockBox3.Text.Length > 0 && stockBox4.Text.Length > 0 && stockBox5.Text.Length > 0 && stockBox6.Text.Length > 0 && CheckText())
             {
                 try
                 {
@@ -137,11 +80,11 @@ namespace StockProgram.UserControls
                     string sql = "insert into Products (ProdName, ProdPrice, ProdQuantity, DateOfUse, DateOfPurchase) values (@ProdName, @ProdPrice, @ProdQuantity, @DateOfUse, @DateOfPurchase);";
                     SQLiteCommand comm = new SQLiteCommand(sql, conn);
 
-                    comm.Parameters.AddWithValue("@ProdName", textBox2.Text);
-                    comm.Parameters.AddWithValue("@ProdPrice", textBox3.Text);
-                    comm.Parameters.AddWithValue("@ProdQuantity", textBox4.Text);
-                    comm.Parameters.AddWithValue("@DateOfUse", textBox5.Text);
-                    comm.Parameters.AddWithValue("@DateOfPurchase", textBox6.Text);
+                    comm.Parameters.AddWithValue("@ProdName", stockBox2.Text);
+                    comm.Parameters.AddWithValue("@ProdPrice", stockBox3.Text);
+                    comm.Parameters.AddWithValue("@ProdQuantity", stockBox4.Text);
+                    comm.Parameters.AddWithValue("@DateOfUse", stockBox5.Text);
+                    comm.Parameters.AddWithValue("@DateOfPurchase", stockBox6.Text);
 
                     int ok = 0;
                     ok = comm.ExecuteNonQuery();
@@ -164,14 +107,92 @@ namespace StockProgram.UserControls
             }
         }
 
+        private void stockBtn2_Click(object sender, EventArgs e)
+        {
+            //UPDATE
+            if (stockBox2.Text.Length > 0 && stockBox3.Text.Length > 0 && stockBox4.Text.Length > 0 && stockBox5.Text.Length > 0 && stockBox6.Text.Length > 0 && CheckText())
+            {
+                try
+                {
+                    openConn();
+
+                    string sql = "update Products set ProdName = @ProdName, ProdPrice = @ProdPrice, ProdQuantity = @ProdQuantity, DateOfUse = @DateOfUse, DateOfPurchase = @DateOfPurchase where ProdName = @ProdName and ProdPrice = @ProdPrice and ProdQuantity = @ProdQuantity and DateOfUse = @DateOfUse and DateOfPurchase = @DateOfPurchase;";
+                    SQLiteCommand comm = new SQLiteCommand(sql, conn);
+
+                    comm.Parameters.AddWithValue("@ProdName", stockBox2.Text);
+                    comm.Parameters.AddWithValue("@ProdPrice", stockBox3.Text);
+                    comm.Parameters.AddWithValue("@ProdQuantity", stockBox4.Text);
+                    comm.Parameters.AddWithValue("@DateOfUse", stockBox5.Text);
+                    comm.Parameters.AddWithValue("@DateOfPurchase", stockBox6.Text);
+
+                    int ok = 0;
+                    ok = comm.ExecuteNonQuery();
+
+                    if (ok > 0)
+                    {
+                        MessageBox.Show("Item successfully updated.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No item has been updated. Please try again. ");
+                    }
+
+                    closeConn();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void stockBtn3_Click(object sender, EventArgs e)
+        {
+            //DELETE
+            if (stockBox2.Text.Length > 0 && stockBox3.Text.Length > 0 && stockBox4.Text.Length > 0 && stockBox5.Text.Length > 0 && stockBox6.Text.Length > 0 && CheckText()) {
+                try
+                {
+                    openConn();
+
+                    string sql = "delete from Products where ProdName = @ProdName and ProdPrice = @ProdPrice and ProdQuantity = @ProdQuantity and DateOfUse = @DateOfUse and DateOfPurchase = @DateOfPurchase;";
+                    SQLiteCommand comm = new SQLiteCommand(sql, conn);
+
+                    comm.Parameters.AddWithValue("@ProdName", stockBox2.Text);
+                    comm.Parameters.AddWithValue("@ProdPrice", stockBox3.Text);
+                    comm.Parameters.AddWithValue("@ProdQuantity", stockBox4.Text);
+                    comm.Parameters.AddWithValue("@DateOfUse", stockBox5.Text);
+                    comm.Parameters.AddWithValue("@DateOfPurchase", stockBox6.Text);
+
+                    int ok = 0;
+                    ok = comm.ExecuteNonQuery();
+
+                    if (ok > 0)
+                    {
+                        MessageBox.Show("Item successfully deleted.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No item has been deleted. Please try again. ");
+                    }
+
+                    closeConn();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        
         private void ResetBtn_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
+            stockBox1.Text = "";
+            stockBox2.Text = "";
+            stockBox3.Text = "";
+            stockBox4.Text = "";
+            stockBox5.Text = "";
+            stockBox6.Text = "";
         }
 
         private void UpdateDatabaseView_Load(object sender, EventArgs e)

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Text.RegularExpressions;
 
 namespace StockProgram
 {
@@ -16,11 +17,27 @@ namespace StockProgram
         private SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\Login_Registration.db; Version = 3;");
         //SQLiteCommand cmd = new SQLiteCommand();
 
+        //regex
+        private Regex regName = new Regex(@"^([a-zA-Z0-9 ])+$");
+        private Regex regEmail = new Regex(@"^([a-zA-Z0-9_])+@([a-zA-Z])+\.([a-zA-Z])+$");
+        private Regex regPass = new Regex(@"^(\w|\W|\S){0,8}$");
+
         public Registration()
         {
             InitializeComponent();
         }
 
+        private bool CheckText() {
+            if (regName.IsMatch(txtName.Text) && regEmail.IsMatch(txtEmail.Text) && regPass.IsMatch(txtPass.Text) && regPass.IsMatch(txtCPass.Text))
+            {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        // ?? Unclear as to why this method is needed currently
         private void CloseForm()
         {
         }
@@ -31,9 +48,12 @@ namespace StockProgram
             txtPass.Text = "";
             txtCPass.Text = "";
             txtPass.Focus();
+            
+            //return to menu
+            this.Hide();
+            FormControl.menu2.Show();
         }
 
-        //wrong one
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -43,7 +63,36 @@ namespace StockProgram
 
             int ok = cmd.ExecuteNonQuery();
 
-            if (ok > 0)
+            if (ok > 0 && CheckText())
+            {
+                MessageBox.Show("Your account has been successfully created", "Registration Success");
+            }
+            else
+            {
+                MessageBox.Show("Passwords do not match, Please Re-enter", "Registration Failed");
+                ClearForm();
+            }
+
+            conn.Close();
+
+            if (txtName.Text.Length == 0 || txtEmail.Text.Length == 0 || txtPass.Text.Length == 0 || txtCPass.Text.Length == 0)
+            {
+                MessageBox.Show("Fields are empty", "Registration Failed");
+
+                ClearForm();
+            }
+        }
+
+        private void RegisterBtn_Click_1(object sender, EventArgs e)
+        {
+            conn.Open();
+            string register = "INSERT INTO users VALUES('" + txtName.Text + "', '" + txtEmail.Text + "', '" + txtPass.Text + "')";
+            SQLiteCommand cmd = new SQLiteCommand(register, conn);
+            //cmd.ExecuteNonQuery();
+
+            int ok = cmd.ExecuteNonQuery();
+
+            if (ok > 0 && CheckText())
             {
                 MessageBox.Show("Your account has been successfully created", "Registration Success");
             }
@@ -69,35 +118,6 @@ namespace StockProgram
 
             this.Hide();
             FormControl.menu2.Show();
-        }
-
-        private void RegisterBtn_Click_1(object sender, EventArgs e)
-        {
-            conn.Open();
-            string register = "INSERT INTO users VALUES('" + txtName.Text + "', '" + txtEmail.Text + "', '" + txtPass.Text + "')";
-            SQLiteCommand cmd = new SQLiteCommand(register, conn);
-            //cmd.ExecuteNonQuery();
-
-            int ok = cmd.ExecuteNonQuery();
-
-            if (ok > 0)
-            {
-                MessageBox.Show("Your account has been successfully created", "Registration Success");
-            }
-            else
-            {
-                MessageBox.Show("Passwords do not match, Please Re-enter", "Registration Failed");
-                ClearForm();
-            }
-
-            conn.Close();
-
-            if (txtName.Text.Length == 0 || txtEmail.Text.Length == 0 || txtPass.Text.Length == 0 || txtCPass.Text.Length == 0)
-            {
-                MessageBox.Show("Fields are empty", "Registration Failed");
-
-                ClearForm();
-            }
         }
 
         private void Registration_FormClosed(object sender, FormClosedEventArgs e)

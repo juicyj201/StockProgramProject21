@@ -16,33 +16,35 @@ namespace StockProgram
     public partial class MainDatabase : Form
     {
         /// <summary>
-        /// These are the global variables for the MainDatabase class
+        ///     <para>
+        ///         These are the global variables for the MainDatabase class
+        ///     </para>
         /// </summary>
         private SQLiteConnection conn = new SQLiteConnection(@"data source=.\StockDatabase.db");
         private DataTable table = new DataTable();
 
-        private EditStockPriceView editstuff;
-        private StockTrackingView stocktrackstuff;
-        private UpdateDatabaseView updatestuff;
+        private EditStockPriceView edit;
+        private StockTrackingView stocktrack;
+        private UpdateDatabaseView updateprod;
+        private UpdateCustListView updatecust;
 
         private ArrayList tablelist = new ArrayList();
 
         public MainDatabase()
         {
-            ///<summary>
-            /// We initialise the components and reference the methods that the program uses, inside this constructor
-            ///<summary>
+            ///init method call 
             InitializeComponent();
 
             OpenConnection();
-            //ShowStock();
             ShowTables();
             AddControls();
             CloseConnection();
         }
 
         /// <summary>
-        /// These are the methods used for opening and closing the connection to the sqlite database.
+        ///     <para>
+        ///         These are the methods used for opening and closing the connection to the sqlite database.
+        ///     </para>
         /// </summary>
         public void OpenConnection() {
             conn.Open();
@@ -53,13 +55,14 @@ namespace StockProgram
         }
 
         /// <summary>
-        /// This is a method used to show the items inside the sqlite database
+        ///     <para>
+        ///         This method is used to retrieve Product table data directly from the sqlite database
+        ///     </para>
         /// </summary>
         public void ShowStock() {
-            table.Reset();
 
             //the command object used to retrieve all the rows in the database
-            string selectStock = "SELECT* from Products";
+            string selectStock = "select * from Products";
             SQLiteCommand selectComm = new SQLiteCommand(selectStock, conn);
 
             //the data adapter used to fill the table
@@ -68,13 +71,14 @@ namespace StockProgram
 
             //putting the datagrid in the table
             stockView.DataSource = table;
-
-            //stockView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.None);
-            //stockView.AutoResizeRows(DataGridViewAutoSizeRowsMode.None);
         }
 
+        /// <summary>
+        ///     <para>
+        ///         This method is used to retrieve CustomerList table data directly from the sqlite database
+        ///     </para>
+        /// </summary>
         public void ShowCustList() {
-            table.Reset();
 
             //the command object used to retrieve all the rows in the database
             string selectCustomer = "select * from CustomerList";
@@ -88,6 +92,11 @@ namespace StockProgram
             stockView.DataSource = table;
         }
 
+        /// <summary>
+        ///     <para>
+        ///         This Method is used to show either CustomerList or Product tables respectively        
+        ///     </para>
+        /// </summary>
         private void ShowTables() {
             //retrieving all the tables from the database
             string productTable = "Products";
@@ -100,86 +109,126 @@ namespace StockProgram
             listBox1.Items.Add(tablelist[1]);
         }
 
-        private void returnBtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormControl.menu2.Show();
-        }
-
         /// <summary>
-        /// This is a method used to add the user controls, to the tab control in the MainDatabase form
+        ///     <para>
+        ///         This is a method used to add the user controls, to the tab control in the MainDatabase form
+        ///     </para>
         /// </summary>
         private void AddControls() {
             UserControls.SizeMode = TabSizeMode.FillToRight;
             UserControls.Appearance = TabAppearance.Normal;
 
-            editstuff = new EditStockPriceView();
-            editstuff.Dock = DockStyle.Fill;
+            edit = new EditStockPriceView();
+            edit.Dock = DockStyle.Fill;
             TabPage EditPriceStockPage = new TabPage();
-            EditPriceStockPage.Controls.Add(editstuff);
+            EditPriceStockPage.Controls.Add(edit);
             EditPriceStockPage.Text = "Editing and Calculations";
             EditPriceStockPage.ForeColor = Color.White;
             EditPriceStockPage.BackColor = Color.FromArgb(11, 23, 42);
             UserControls.TabPages.Add(EditPriceStockPage);
 
-            stocktrackstuff = new StockTrackingView();
-            stocktrackstuff.Dock = DockStyle.Fill;
+            stocktrack = new StockTrackingView();
+            stocktrack.Dock = DockStyle.Fill;
             TabPage StockTrackingPage = new TabPage();
-            StockTrackingPage.Controls.Add(stocktrackstuff);
+            StockTrackingPage.Controls.Add(stocktrack);
             StockTrackingPage.Text = "Stock Tracking";
             StockTrackingPage.ForeColor = Color.White;
-            EditPriceStockPage.BackColor = Color.FromArgb(11, 23, 42);
+            StockTrackingPage.BackColor = Color.FromArgb(11, 23, 42);
             UserControls.TabPages.Add(StockTrackingPage);
 
-            updatestuff = new UpdateDatabaseView();
-            updatestuff.Dock = DockStyle.Fill;
+            updateprod = new UpdateDatabaseView();
+            updateprod.Dock = DockStyle.Fill;
             TabPage UpdateDatabasePage = new TabPage();
-            UpdateDatabasePage.Controls.Add(updatestuff);
+            UpdateDatabasePage.Controls.Add(updateprod);
             UpdateDatabasePage.Text = "Update Database";
             UpdateDatabasePage.ForeColor = Color.White;
-            EditPriceStockPage.BackColor = Color.FromArgb(11, 23, 42);
+            UpdateDatabasePage.BackColor = Color.FromArgb(11, 23, 42);
             UserControls.TabPages.Add(UpdateDatabasePage);
+
+            updatecust = new UpdateCustListView();
+            updatecust.Dock = DockStyle.Fill;
+            TabPage UpdateCustListPage = new TabPage();
+            UpdateCustListPage.Controls.Add(updatecust);
+            UpdateCustListPage.Text = "Update Customer List";
+            UpdateCustListPage.ForeColor = Color.White;
+            UpdateCustListPage.BackColor = Color.FromArgb(11, 23, 42);
+            UserControls.TabPages.Add(UpdateCustListPage);
+
+            /**
+            if (listBox1.SelectedItem == tablelist[0])
+            {
+                ((Control)UpdateCustListPage).Enabled = false;
+            }
+            **/
         }
 
         /// <summary>
-        /// This is a method used to display an item in a selected row.
-        /// If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes in the UpdateDatabaseView user control.
+        ///     <para>
+        ///         This is a method used to display an item in a selected row.
+        ///         If you double click on a row in the dataGridView, then the item information will be displayed in seperate text boxes in the UpdateDatabaseView user control.
         /// 
-        /// (Update)
-        /// was previously used to retrieve items and display them in the textboxes, but wont be used anymore.
+        ///         (Update)
+        ///         This method was previously used to retrieve items and display them in the textboxes, but wont be used anymore.
+        ///     </para>
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void stockView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            string idcell = stockView.CurrentCell.OwningRow.Cells[0].Value.ToString();
-            string namecell = stockView.CurrentCell.OwningRow.Cells[1].Value.ToString();
-            string pricecell = stockView.CurrentCell.OwningRow.Cells[2].Value.ToString();
-            string quantitycell = stockView.CurrentCell.OwningRow.Cells[3].Value.ToString();
-            string dateofusecell = stockView.CurrentCell.OwningRow.Cells[4].Value.ToString();
-            string dateofpurchcell = stockView.CurrentCell.OwningRow.Cells[5].Value.ToString();
-
-            //updatestuff.gettextBox1.Text = idcell;
-            //updatestuff.gettextBox2.Text = namecell;
-            //updatestuff.gettextBox3.Text = pricecell;
-            //updatestuff.gettextBox4.Text = quantitycell;
-            //updatestuff.gettextBox5.Text = dateofusecell;
-            //updatestuff.gettextBox6.Text = dateofpurchcell;
+            /**
+            if (listBox1.SelectedItem == tablelist[0])
+            {
+                string idcell = stockView.CurrentCell.OwningRow.Cells[0].Value.ToString();
+                string namecell = stockView.CurrentCell.OwningRow.Cells[1].Value.ToString();
+                string pricecell = stockView.CurrentCell.OwningRow.Cells[2].Value.ToString();
+                string quantitycell = stockView.CurrentCell.OwningRow.Cells[3].Value.ToString();
+                string dateofusecell = stockView.CurrentCell.OwningRow.Cells[4].Value.ToString();
+                string dateofpurchcell = stockView.CurrentCell.OwningRow.Cells[5].Value.ToString();
+            } else if(listBox1.SelectedItem == tablelist[1]) { 
+                string idcell = stockView.CurrentCell.OwningRow.Cells[0].Value.ToString();
+                string namecell = stockView.CurrentCell.OwningRow.Cells[1].Value.ToString();
+                string emailcell = stockView.CurrentCell.OwningRow.Cells[2].Value.ToString();
+                string phonecell = stockView.CurrentCell.OwningRow.Cells[3].Value.ToString();
+            }
+            **/
         }
 
+        /// <summary>
+        ///     <para>
+        ///         This method is used to change the list box to the seperate CustomerList and Products tables, within SQlite
+        ///     </para>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            //have a function that will change the database
-            if (listBox1.SelectedItem == tablelist[0])
+            // TODO - Make sure that this method is either only called once, or multiple times that resets the table but still shows the data at least
+            table.Reset();
+            int counter = 0;
+            counter += 1;
+            
+            if (listBox1.SelectedItem == tablelist[0] && counter != 2)
             {
                 ShowStock();
             }
-            else if (listBox1.SelectedItem == tablelist[1])
+            else if (listBox1.SelectedItem == tablelist[1] && counter != 2)
             {
                 ShowCustList();
             }
+        }
 
+
+        /// <summary>
+        ///     <para>
+        ///         This button method returns the user to the menu screen
+        ///     </para>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void returnBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormControl.menu2.Show();
         }
     }
 }

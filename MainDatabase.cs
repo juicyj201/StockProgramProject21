@@ -21,7 +21,7 @@ namespace StockProgram
         ///     </para>
         /// </summary>
         private SQLiteConnection conn = new SQLiteConnection(@"data source=.\StockDatabase.db");
-        private DataTable table = new DataTable();
+        //private DataTable table = new DataTable();
 
         private EditStockPriceView edit;
         private StockTrackingView stocktrack;
@@ -38,6 +38,7 @@ namespace StockProgram
             OpenConnection();
             ShowTables();
             AddControls();
+            custdatachanged();
             CloseConnection();
         }
 
@@ -67,6 +68,7 @@ namespace StockProgram
 
             //the data adapter used to fill the table
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(selectComm);
+            DataTable table = new DataTable();
             adapter.Fill(table);
 
             //putting the datagrid in the table
@@ -86,6 +88,7 @@ namespace StockProgram
 
             //the data adapter used to fill the table
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(selectComm);
+            DataTable table = new DataTable();
             adapter.Fill(table);
 
             //putting the datagrid in the table
@@ -99,6 +102,7 @@ namespace StockProgram
         /// </summary>
         private void ShowTables() {
             //retrieving all the tables from the database
+
             tablelist.Add("Products");
             tablelist.Add("CustomerList");
 
@@ -166,29 +170,33 @@ namespace StockProgram
             FormControl.menu2.Show();
         }
 
-        private void TableUpdater(object sender)
-        {
-            ListBox box = (ListBox)sender;
-            SQLiteDataAdapter prodadapter = new SQLiteDataAdapter(new SQLiteCommand("select * from Products", conn));
-            SQLiteDataAdapter custadapter = new SQLiteDataAdapter(new SQLiteCommand("select * from CustomerList", conn));
-
-            //table.Reset();
-            stockView.DataSource = table;
-
-            if (box.SelectedIndex == tablelist.IndexOf(0))
-            {
-                
-                prodadapter.Fill(table);
-            }
-            else if (box.SelectedIndex == tablelist.IndexOf(1))
-            {
-                custadapter.Fill(table);
+        private void custdatachanged() { 
+            if (updatecust.custupdated == true){
+                stockView.Update();
             }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TableUpdater(sender);
+            SQLiteDataAdapter prodadapter = new SQLiteDataAdapter(new SQLiteCommand("select * from Products", conn));
+            SQLiteDataAdapter custadapter = new SQLiteDataAdapter(new SQLiteCommand("select * from CustomerList", conn));
+
+            stockView.Refresh();
+            
+            if (listBox1.SelectedIndex == 0)
+            {
+                DataTable table = new DataTable();
+                prodadapter.Fill(table);
+                stockView.DataSource = table;
+                stockView.Update();
+            }
+            else if (listBox1.SelectedIndex == 1)
+            {
+                DataTable table = new DataTable();
+                custadapter.Fill(table);
+                stockView.DataSource = table;
+                stockView.Update();
+            }
         }
     }
 }

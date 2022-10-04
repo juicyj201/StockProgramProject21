@@ -16,6 +16,7 @@ namespace StockProgram.UserControls
     public partial class UpdateCustListView : UserControl
     {
         private SQLiteConnection conn = new SQLiteConnection(@"data source=.\StockDatabase.db");
+        public bool custupdated = false; 
 
         //regex
         private Regex regName = new Regex(@"^([a-zA-Z0-9 ])+$");
@@ -95,6 +96,7 @@ namespace StockProgram.UserControls
                     if (ok > 0)
                     {
                         MessageBox.Show("Customer has successfully been added.");
+                        custupdated = true;
                     }
                     else
                     {
@@ -136,6 +138,7 @@ namespace StockProgram.UserControls
                     if (ok > 0)
                     {
                         MessageBox.Show("Customer has successfully been updated.");
+                        custupdated = true;
                     }
                     else
                     {
@@ -177,6 +180,7 @@ namespace StockProgram.UserControls
                     if (ok > 0)
                     {
                         MessageBox.Show("Customer has successfully been deleted.");
+                        custupdated = true;
                     }
                     else
                     {

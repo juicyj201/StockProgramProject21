@@ -51,17 +51,20 @@ namespace StockProgram
             if (ok > 0 && CheckText())
             {
                 MessageBox.Show("Your account has been successfully created", "Registration Success");
+                LoggedIn.loggedSet = true;
                 this.Hide();
                 FormControl.menu2.Show();
             }
             else if (txtName.Text.Length == 0 || txtEmail.Text.Length == 0 || txtPass.Text.Length == 0 || txtCPass.Text.Length == 0)
             {
                 MessageBox.Show("Fields are empty", "Registration Failed");
+                LoggedIn.loggedSet = false;
                 ClearForm();
             }
             else
             {
                 MessageBox.Show("Passwords do not match, Please Re-enter", "Registration Failed");
+                LoggedIn.loggedSet = false;
                 ClearForm();
             }
 
@@ -83,15 +86,9 @@ namespace StockProgram
         
         private void returnBtn_Click(object sender, EventArgs e)
         {
-            ClearForm();
-        }
-
-        private void Registration_FormClosed(object sender, FormClosedEventArgs e)
-        {
             this.Hide();
-            this.Close();
-            this.Dispose();
-            Application.Exit();
+            FormControl.menu2.Show();
+            ClearForm();
         }
     }
 }

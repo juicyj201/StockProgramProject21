@@ -121,7 +121,6 @@ namespace StockProgram
 
         private void AboutBox_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide();
             FormControl.about2.Close();
             FormControl.about2.Dispose();
             Application.Exit();

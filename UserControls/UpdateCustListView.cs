@@ -25,14 +25,12 @@ namespace StockProgram.UserControls
 
         /// <summary>
         ///     <para>
-        ///         The method to initialise the view form of UpdateCustList
+        ///         The methoded to initialise the view form of UpdateCustList
         ///     </para>
         /// </summary>
         public UpdateCustListView()
         {
             InitializeComponent();
-
-            //CheckIfItemIsEntered();
         }
 
         private bool CheckText()
@@ -93,17 +91,7 @@ namespace StockProgram.UserControls
                     int ok = 0;
                     ok = comm.ExecuteNonQuery();
 
-                    if (ok > 0)
-                    {
-                        MessageBox.Show("Customer has successfully been added.");
-                        custupdated = true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Customer has not been added. Please try again. ");
-                    }
-
-                    closeConn();
+                    queryCheck(ok, "created");
                 }
                 catch (Exception ex)
                 {
@@ -112,7 +100,6 @@ namespace StockProgram.UserControls
             }
             else {
                 MessageBox.Show("User data is not valid. Enter correct details before proceeding.");
-                //throw new RegexMatchTimeoutException();
             }
         }
 
@@ -132,20 +119,9 @@ namespace StockProgram.UserControls
                     comm.Parameters.AddWithValue("@CustEmail", custBox3.Text);
                     comm.Parameters.AddWithValue("@CustPhone", custBox4.Text);
 
-                    int ok = 0;
-                    ok = comm.ExecuteNonQuery();
+                    int ok = comm.ExecuteNonQuery();
 
-                    if (ok > 0)
-                    {
-                        MessageBox.Show("Customer has successfully been updated.");
-                        custupdated = true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Customer has not been updated. Please try again. ");
-                    }
-
-                    closeConn();
+                    queryCheck(ok, "updated");
                 }
                 catch (Exception ex)
                 {
@@ -155,7 +131,6 @@ namespace StockProgram.UserControls
             else
             {
                 MessageBox.Show("User data is not valid. Enter correct details before proceeding.");
-                //throw new RegexMatchTimeoutException();
             }
         }
 
@@ -174,20 +149,9 @@ namespace StockProgram.UserControls
                     comm.Parameters.AddWithValue("@ProdPrice", custBox3.Text);
                     comm.Parameters.AddWithValue("@ProdQuantity", custBox4.Text);
 
-                    int ok = 0;
-                    ok = comm.ExecuteNonQuery();
+                    int ok = comm.ExecuteNonQuery();
 
-                    if (ok > 0)
-                    {
-                        MessageBox.Show("Customer has successfully been deleted.");
-                        custupdated = true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Customer has not been deleted. Please try again. ");
-                    }
-
-                    closeConn();
+                    queryCheck(ok, "deleted");
                 }
                 catch (Exception ex)
                 {
@@ -197,8 +161,21 @@ namespace StockProgram.UserControls
             else
             {
                 MessageBox.Show("User data is not valid. Enter correct details before proceeding.");
-                //throw new RegexMatchTimeoutException();
             }
+        }
+
+        private void queryCheck(int ok, string type) {
+            if (ok > 0)
+            {
+                MessageBox.Show("Customer has successfully been "+type+".");
+                custupdated = true;
+            }
+            else
+            {
+                MessageBox.Show("Customer has not been "+type+". Please try again. ");
+            }
+
+            closeConn();
         }
 
         private void ResetBtn_Click(object sender, EventArgs e)

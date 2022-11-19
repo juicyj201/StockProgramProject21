@@ -9,107 +9,153 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace StockProgram.UserControls
 {
     public partial class StockTrackingView : UserControl
     {
         private SQLiteConnection con = new SQLiteConnection(@"data source=.\StockDatabase.db;");
-        private string dateofuse = null, dateofpurch = null;
-        string name;
+        private List<String> months = new List<String>();
+        private List<String> years = new List<String>();
+
+        //regex
+        private Regex reg = new Regex("/");
+        private bool canGenReport;
+
 
         public StockTrackingView()
         {
             InitializeComponent();
+
+            //add all months and years for the combo boxes
+            addMonths();
+            addYears();
         }
 
-        private void StockTrackingView_Load(object sender, EventArgs e)
+        private void addMonths() {
+            for (int i = 0; i <= 12; i++)
+            {
+                if (months.Contains(i.ToString()))
+                {
+                    i += 1;
+                    monthCb.Items.Add(i.ToString());
+                }
+                else {
+                    monthCb.Items.Add(i.ToString());
+                }
+            }
+        }
+
+        private void addYears() {
+            yearCb.Items.Add("2020");
+            yearCb.Items.Add("2021");
+            yearCb.Items.Add("2022");
+        }
+
+        private void yearCb_SelectedIndexChanged(object sender, EventArgs e)
         {
-                try
-                {
-                    con.Open();
-                    string sqlstuff = "select ProdName from Products";
-
-                    SQLiteCommand cmd = new SQLiteCommand(sqlstuff, con);
-                    SQLiteDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read() == true)
-                    {
-                        name = reader.GetString(0);
-                        nameCb.Items.Add(name);
-                    }
-                    con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.StackTrace);
-                }
+            string year = GetDate("year");
+            if (yearCb.Items.Contains(year) == false)
+            {
+                MessageBox.Show("You have selected a year that is not found in the database. Please try again");
+                canGenReport = false;
+            }
+            else {
+                canGenReport = true;
+            }
         }
 
-        private void nameCb_SelectedIndexChanged(object sender, EventArgs e)
+        private void monthCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string month = GetDate("month");
+            if (monthCb.Items.Contains(month) == false)
+            {
+                MessageBox.Show("You have selected a month that is not found on the database. Please try again");
+                canGenReport = false;
+            }
+            else {
+                canGenReport = true;
+            }
+        }
+
+        private void genReportBtn_Click(object sender, EventArgs e)
+        {
+            if (canGenReport == true) {
+                string[] list = GetData();
+
+                reportText.Text = list.ToString();
+            }
+        }
+
+        private string[] GetData()
         {
             try
             {
                 con.Open();
-                string sqlstuff = "select DateOfUse, DateOfPurchase from Products where ProdName = '" + nameCb.SelectedItem + "' and DateOfUse is not null and DateOfPurchase is not null;";
+                string sqlstuff = "select * from Products";
 
                 SQLiteCommand cmd = new SQLiteCommand(sqlstuff, con);
                 SQLiteDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read() == true)
                 {
-                    dateofuse = reader.GetString(0);
-                    textBox1.Text = dateofuse.ToString();
+                    string[] list = new string[6];
+                    string id = reader.GetString(0); list.Append(id);
+                    string name = reader.GetString(1); list.Append(name);
+                    string price = reader.GetString(2); list.Append(price);
+                    string quantity = reader.GetString(3); list.Append(quantity);
+                    string dateofuse = reader.GetString(4); list.Append(dateofuse);
+                    string dateofpurch = reader.GetString(5); list.Append(dateofpurch);
 
-                    dateofpurch = reader.GetString(1);
-                    textBox2.Text = dateofpurch.ToString();
+                    return list;
                 }
-
                 con.Close();
             }
-            catch (SQLiteException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace);
             }
+
+            return null;
         }
+        
+    
 
-        private void submitbtn_Click1(object sender, EventArgs e)
-        {
-            /**
-            if (nameLbl.Text.Length > 0)
+        private string GetDate(string type) {
+            try
             {
-                try
+                con.Open();
+                string sqlstuff = "select DateOfPurchase from Products";
+
+                SQLiteCommand cmd = new SQLiteCommand(sqlstuff, con);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read() == true)
                 {
-                    con.Open();
+                    string dateofpurch = reader.GetString(0);
+                    string[] date = reg.Split(dateofpurch);
+                    string day = date[0];
+                    string month = date[1];
+                    string year = date[2];
 
-                    string sqlstuff = "select DateOfUse, DateOfPurchase from Products where ProdName = '@Name'";
-                    SQLiteCommand com = new SQLiteCommand(sqlstuff, con);
-                    com.Parameters.AddWithValue("@Name", nameLbl.Text);
-
-                    SQLiteDataReader read = com.ExecuteReader();
-
-                    if (read[0].ToString() != null && read[1].ToString() != null)
+                    if (type.Equals("month"))
                     {
-                        MessageBox.Show(read[0].ToString());
-                        MessageBox.Show(read[1].ToString());
-
-                        textBox1.Text += read[0].ToString();
-                        textBox2.Text += read[1].ToString();
+                        return month;
                     }
-                    else
+                    else if (type.Equals("year"))
                     {
-                        MessageBox.Show("Well the database didnt load the values and i have no idea why.");
+                        return year;
                     }
-
-                    read.Close();
-                    con.Close();
                 }
-                catch (SQLiteException ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                con.Close();
             }
-            **/
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
+
+            return null;
         }
     }
 }

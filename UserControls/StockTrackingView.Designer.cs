@@ -31,72 +31,29 @@ namespace StockProgram.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.nameLbl = new System.Windows.Forms.Label();
+            this.monthLbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.nameCb = new System.Windows.Forms.ComboBox();
+            this.monthCb = new System.Windows.Forms.ComboBox();
+            this.reportText = new System.Windows.Forms.RichTextBox();
+            this.yearCb = new System.Windows.Forms.ComboBox();
+            this.yearLbl = new System.Windows.Forms.Label();
+            this.monthlyReportBox = new System.Windows.Forms.GroupBox();
+            this.genReportBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.monthlyReportBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // monthLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(56, 406);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Date of Use";
-            // 
-            // textBox1
-            // 
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(258, 404);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(315, 22);
-            this.textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(258, 474);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(315, 22);
-            this.textBox2.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(56, 474);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Date of Purchase";
-            // 
-            // nameLbl
-            // 
-            this.nameLbl.AutoSize = true;
-            this.nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLbl.ForeColor = System.Drawing.Color.White;
-            this.nameLbl.Location = new System.Drawing.Point(56, 136);
-            this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(116, 20);
-            this.nameLbl.TabIndex = 4;
-            this.nameLbl.Text = "Product Name";
+            this.monthLbl.AutoSize = true;
+            this.monthLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthLbl.ForeColor = System.Drawing.Color.White;
+            this.monthLbl.Location = new System.Drawing.Point(51, 200);
+            this.monthLbl.Name = "monthLbl";
+            this.monthLbl.Size = new System.Drawing.Size(201, 20);
+            this.monthLbl.TabIndex = 4;
+            this.monthLbl.Text = "Month for inventory report";
             // 
             // panel2
             // 
@@ -119,73 +76,102 @@ namespace StockProgram.UserControls
             this.label9.TabIndex = 19;
             this.label9.Text = "Stock Tracking";
             // 
-            // panel1
+            // monthCb
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(65)))), ((int)(((byte)(35)))));
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(-21, 214);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(651, 96);
-            this.panel1.TabIndex = 22;
+            this.monthCb.FormattingEnabled = true;
+            this.monthCb.Location = new System.Drawing.Point(281, 196);
+            this.monthCb.Name = "monthCb";
+            this.monthCb.Size = new System.Drawing.Size(292, 24);
+            this.monthCb.TabIndex = 23;
+            this.monthCb.SelectedIndexChanged += new System.EventHandler(this.monthCb_SelectedIndexChanged);
             // 
-            // label3
+            // reportText
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(148, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(348, 29);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "The date of use and purchase";
+            this.reportText.Location = new System.Drawing.Point(6, 38);
+            this.reportText.Name = "reportText";
+            this.reportText.Size = new System.Drawing.Size(506, 210);
+            this.reportText.TabIndex = 24;
+            this.reportText.Text = "";
             // 
-            // nameCb
+            // yearCb
             // 
-            this.nameCb.FormattingEnabled = true;
-            this.nameCb.Location = new System.Drawing.Point(258, 136);
-            this.nameCb.Name = "nameCb";
-            this.nameCb.Size = new System.Drawing.Size(315, 24);
-            this.nameCb.TabIndex = 23;
-            this.nameCb.SelectedIndexChanged += new System.EventHandler(this.nameCb_SelectedIndexChanged);
+            this.yearCb.FormattingEnabled = true;
+            this.yearCb.Location = new System.Drawing.Point(281, 142);
+            this.yearCb.Name = "yearCb";
+            this.yearCb.Size = new System.Drawing.Size(292, 24);
+            this.yearCb.TabIndex = 26;
+            this.yearCb.SelectedIndexChanged += new System.EventHandler(this.yearCb_SelectedIndexChanged);
+            // 
+            // yearLbl
+            // 
+            this.yearLbl.AutoSize = true;
+            this.yearLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearLbl.ForeColor = System.Drawing.Color.White;
+            this.yearLbl.Location = new System.Drawing.Point(51, 146);
+            this.yearLbl.Name = "yearLbl";
+            this.yearLbl.Size = new System.Drawing.Size(189, 20);
+            this.yearLbl.TabIndex = 25;
+            this.yearLbl.Text = "Year for inventory report";
+            // 
+            // monthlyReportBox
+            // 
+            this.monthlyReportBox.Controls.Add(this.reportText);
+            this.monthlyReportBox.ForeColor = System.Drawing.Color.White;
+            this.monthlyReportBox.Location = new System.Drawing.Point(55, 315);
+            this.monthlyReportBox.Name = "monthlyReportBox";
+            this.monthlyReportBox.Size = new System.Drawing.Size(518, 254);
+            this.monthlyReportBox.TabIndex = 27;
+            this.monthlyReportBox.TabStop = false;
+            this.monthlyReportBox.Text = "Monthly Report";
+            // 
+            // genReportBtn
+            // 
+            this.genReportBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.genReportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.genReportBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.genReportBtn.ForeColor = System.Drawing.Color.White;
+            this.genReportBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.genReportBtn.Location = new System.Drawing.Point(55, 251);
+            this.genReportBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.genReportBtn.Name = "genReportBtn";
+            this.genReportBtn.Size = new System.Drawing.Size(518, 39);
+            this.genReportBtn.TabIndex = 28;
+            this.genReportBtn.Text = "Generate Monthly Report";
+            this.genReportBtn.UseVisualStyleBackColor = false;
+            this.genReportBtn.Click += new System.EventHandler(this.genReportBtn_Click);
             // 
             // StockTrackingView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.Controls.Add(this.nameCb);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.genReportBtn);
+            this.Controls.Add(this.monthlyReportBox);
+            this.Controls.Add(this.yearCb);
+            this.Controls.Add(this.yearLbl);
+            this.Controls.Add(this.monthCb);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.nameLbl);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.monthLbl);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StockTrackingView";
             this.Size = new System.Drawing.Size(620, 600);
-            this.Load += new System.EventHandler(this.StockTrackingView_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.monthlyReportBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label nameLbl;
+        private System.Windows.Forms.Label monthLbl;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox nameCb;
+        private System.Windows.Forms.ComboBox monthCb;
+        private System.Windows.Forms.RichTextBox reportText;
+        private System.Windows.Forms.ComboBox yearCb;
+        private System.Windows.Forms.Label yearLbl;
+        private System.Windows.Forms.GroupBox monthlyReportBox;
+        private System.Windows.Forms.Button genReportBtn;
     }
 }
